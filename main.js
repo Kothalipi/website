@@ -60,9 +60,9 @@ const BN = {
 };
 
 const SAMPLES = {
-  bn: "আজকে বিকেলে মিটিংটা কি পাঁচটায় হবে?",
-  en: "Can we move the meeting to five today?",
-  bl: "ajke bikele meetingta ki pachtay hobe?",
+  bn: "আজকে বিকেলে কি দেখা হবে?",
+  en: "Can we meet this afternoon?",
+  bl: "ajke bikele ki dekha hobe?",
 };
 
 const en = {};
