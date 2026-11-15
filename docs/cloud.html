@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud & API keys · Kothalipi docs</title>
+  <meta name="description" content="Use your own Gemini or ChatGPT key, with automatic fallback to offline.">
+  <meta name="theme-color" content="#006A4E">
+  <link rel="canonical" href="https://kothalipi.tashanto.com/docs/cloud.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta property="og:title" content="Cloud & API keys · Kothalipi docs">
+  <meta property="og:description" content="Use your own Gemini or ChatGPT key, with automatic fallback to offline.">
+  <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <meta property="og:url" content="https://kothalipi.tashanto.com/docs/cloud.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html" aria-label="Kothalipi home">
+        <img src="../assets/kothalipi-mark.svg" alt="" width="30" height="31">
+        <span>Kothalipi</span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="../download.html" data-i18n="nav.download">Download</a>
+        <a href="../docs/index.html" aria-current="page" data-i18n="nav.docs">Docs</a>
+        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        
+        <a class="btn btn-small" href="../download.html">Download</a>
+      </div>
+    </div>
+  </header>
+  <main class="docs">
+    <nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="index.html">Getting started</a><a href="shortcuts.html">Keys & shortcuts</a><a href="cloud.html" aria-current="page">Cloud & API keys</a><h4>Install</h4><a href="macos.html">macOS</a><a href="windows.html">Windows</a><a href="linux.html">Linux</a><h4>Help</h4><a href="troubleshooting.html">Troubleshooting</a><a href="../privacy.html">Privacy</a></nav>
+    <article class="doc">
+      
+      <h1>Cloud &amp; API keys</h1>
+      <p class="lead">Cloud mode sends your recording to the provider you choose, using your own key. It is the most accurate option, especially when you mix Bangla and English.</p>
+      <h2>How fallback works</h2>
+      <div class="flow" style="justify-content:flex-start"><div class="step"><b>Gemini</b><span>first</span></div><div class="arrow">→</div><div class="step"><b>ChatGPT</b><span>if Gemini fails</span></div><div class="arrow">→</div><div class="step"><b>Offline</b><span>always there</span></div></div>
+      <p>If a key is over its limit, rejected, the provider is down, or you have no internet, Kothalipi moves to the next one. When every cloud key fails it uses your offline model. With no offline model either, it asks you to download one, so <b>keep the Bangla model downloaded</b> as a backup.</p>
+      <h2 id="gemini">Get a free Gemini key</h2>
+      <ol>
+        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in with a Google account.</li>
+        <li>Click <b>Create API key</b> and copy it.</li>
+        <li>In Kothalipi: <b>Settings → General → Listening</b>, choose <b>Cloud</b>, paste the key under Google Gemini and click <b>Check &amp; Save</b>.</li>
+      </ol>
+      <p>Gemini has a free tier with daily limits. Usage above it is billed by Google to your account. Kothalipi uses the <code>gemini-3.5-transcribe</code> model by default; you can change it in Settings.</p>
+      <h2 id="openai">Add a ChatGPT (OpenAI) key</h2>
+      <ol>
+        <li>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a>. OpenAI's API is paid per minute of audio.</li>
+        <li>Paste it under <b>OpenAI (ChatGPT)</b> and click <b>Check &amp; Save</b>.</li>
+      </ol>
+      <p>Default model: <code>gpt-transcribe</code>. Use the arrows in Settings to try OpenAI before Gemini.</p>
+      <h2 id="claude">What about Claude?</h2>
+      <p>Claude doesn't take audio input, so it can't turn speech into text. It can <b>polish</b> the text afterwards (fix spelling, punctuation, tone): set it up in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
+      <h2>Where your keys and audio go</h2>
+      <ul>
+        <li>Keys are stored in Kothalipi's settings on your computer and sent only to their provider.</li>
+        <li>Audio goes straight from your computer to that provider. It never passes through Kothalipi's servers; there are none.</li>
+        <li>Offline mode sends nothing anywhere.</li>
+      </ul>
+
+      <div class="pager"><a href="shortcuts.html">← Keys & shortcuts</a><a href="macos.html">macOS →</a></div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="../index.html"><img src="../assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
+        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 for everyone.</p>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../docs/cloud.html">Cloud &amp; API keys</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="../docs/macos.html">macOS</a></li>
+        <li><a href="../docs/windows.html">Windows</a></li>
+        <li><a href="../docs/linux.html">Linux</a></li>
+        <li><a href="../docs/troubleshooting.html">Troubleshooting</a></li>
+      </ul></div>
+      <div><h4>Open source</h4><ul>
+        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
+        <li><a href="https://github.com/cjpais/Handy">Built on Handy</a></li>
+      </ul></div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+</html>

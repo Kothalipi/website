@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kothalipi · Open-source voice typing for Bangla, English and Banglish</title>
-  <meta name="description" content="Hold a key, speak Bangla, English or Banglish, and your words appear in any app. Free, open source, offline by default.">
+  <title>Kothalipi · Voice typing in Bangla and English</title>
+  <meta name="description" content="Hold a key, speak Bangla or English, and your words appear in any app. Free, open source, works offline.">
   <meta name="theme-color" content="#006A4E">
+  <link rel="canonical" href="https://kothalipi.tashanto.com/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:title" content="Kothalipi · Speak. It's written.">
-  <meta property="og:description" content="Open-source voice typing for Bangla, English and Banglish. Offline by default.">
+  <meta property="og:title" content="Kothalipi · Voice typing in Bangla and English">
+  <meta property="og:description" content="Hold a key, speak Bangla or English, and your words appear in any app. Free, open source, works offline.">
   <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
   <meta property="og:url" content="https://kothalipi.tashanto.com/">
   <meta name="twitter:card" content="summary_large_image">
@@ -20,136 +21,161 @@
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Kothalipi home">
-      <img src="assets/kothalipi-mark.svg" alt="" width="30" height="31">
-      <span>Kothalipi</span>
-    </a>
-    <nav class="links">
-      <a href="#how" data-i18n="nav.how">How it works</a>
-      <a href="#modes" data-i18n="nav.modes">Modes</a>
-      <a href="#why" data-i18n="nav.why">Why Kothalipi</a>
-      <a href="#faq" data-i18n="nav.faq">FAQ</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="lang" id="lang" type="button" aria-label="Switch language">বাংলা</button>
-      <a class="btn btn-small" href="https://github.com/Kothalipi/kothalipi">GitHub</a>
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Kothalipi home">
+        <img src="assets/kothalipi-mark.svg" alt="" width="30" height="31">
+        <span>Kothalipi</span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="download.html" data-i18n="nav.download">Download</a>
+        <a href="docs/index.html" data-i18n="nav.docs">Docs</a>
+        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang" id="lang" type="button" aria-label="Switch language">বাংলা</button>
+        <a class="btn btn-small" href="download.html">Download</a>
+      </div>
     </div>
   </header>
-
-  <main id="top">
+  <main>
     <section class="hero">
-      <div class="hero-copy">
-        <span class="pill"><i></i><span data-i18n="hero.status">Early development · open source</span></span>
+      <div>
+        <span class="pill"><i></i><span data-i18n="hero.status">Free · Open source · Works offline</span></span>
         <h1 data-i18n="hero.title">Speak.<br>It's written.</h1>
-        <p class="lead" data-i18n="hero.lead">Voice typing for Bangla, English and Banglish. Hold a key, talk, and your words appear in any app. Free, open source, and offline by default.</p>
+        <p class="lead" data-i18n="hero.lead">Voice typing in Bangla and English, in any app. Hold a key, talk, let go, and your words appear. Works offline, or in the cloud when you want the best accuracy.</p>
         <div class="cta">
-          <a class="btn" href="https://github.com/Kothalipi/kothalipi" data-i18n="hero.star">★ Star on GitHub</a>
-          <a class="btn btn-ghost" href="https://github.com/Kothalipi/kothalipi/subscription" data-i18n="hero.watch">Get notified on release</a>
+          <a class="btn btn-big" href="download.html" data-i18n="hero.download">Download free</a>
+          <a class="btn btn-ghost btn-big" href="https://github.com/Kothalipi/kothalipi-desktop" data-i18n="hero.github">View on GitHub</a>
         </div>
       </div>
-
       <div class="demo" aria-label="Interactive preview">
         <div class="demo-tabs" role="tablist">
           <button role="tab" data-mode="bn" class="on">বাংলা</button>
           <button role="tab" data-mode="en">English</button>
-          <button role="tab" data-mode="bl">Banglish</button>
         </div>
         <div class="window">
           <div class="window-bar"><span></span><span></span><span></span><em data-i18n="demo.app">Messages</em></div>
-          <div class="window-body">
-            <p class="typed" id="typed"><span class="cursor"></span></p>
-          </div>
+          <div class="window-body"><p class="typed" id="typed"><span class="cursor"></span></p></div>
         </div>
-        <button class="hold" id="hold" type="button">
-          <span class="mic" aria-hidden="true"></span>
-          <span data-i18n="demo.hold">Hold to speak</span>
-        </button>
-        <p class="demo-note" data-i18n="demo.note">Preview animation. In the app you hold a hotkey and your real words appear.</p>
+        <button class="hold" id="hold" type="button"><span class="mic" aria-hidden="true"></span><span data-i18n="demo.hold">Hold to speak</span> <kbd id="hold-key">Right ⌘</kbd></button>
+        <p class="demo-note" data-i18n="demo.note">Preview. In the app you hold a key and your real words appear.</p>
       </div>
     </section>
 
-    <section id="how" class="section">
-      <h2 data-i18n="how.title">Hold. Speak. Let go.</h2>
-      <div class="steps">
-        <article><b>1</b><h3 data-i18n="how.s1">Hold your hotkey</h3><p data-i18n="how.s1p">One key for Bangla, one for English, one for Banglish. Change them any time.</p></article>
-        <article><b>2</b><h3 data-i18n="how.s2">Speak naturally</h3><p data-i18n="how.s2p">Talk the way you talk. Mixing Bangla and English in one sentence is normal, and Kothalipi is built for it.</p></article>
-        <article><b>3</b><h3 data-i18n="how.s3">Let go</h3><p data-i18n="how.s3p">Your words appear wherever your cursor is: chat, email, docs, code editor.</p></article>
+    <section class="section" id="keys">
+      <div class="section-head">
+        <h2 data-i18n="keys.title">One key for each language</h2>
+        <p data-i18n="keys.sub">Hold a key, speak, let go. Mixing Bangla and English in one sentence works too.</p>
       </div>
-    </section>
-
-    <section id="modes" class="section">
-      <h2 data-i18n="modes.title">Three ways to write</h2>
-      <div class="modes">
-        <article>
-          <h3>বাংলা</h3>
-          <p class="say"><span data-i18n="modes.say">You say</span>: “তুমি কেমন আছো?”</p>
-          <p class="out">তুমি কেমন আছো?</p>
-          <p data-i18n="modes.bn">Proper Bangla script with dari (।) and punctuation.</p>
+      <div class="grid-2">
+        <article class="card accent">
+          <span class="tag">বাংলা</span>
+          <h3>আজকে মিটিং কয়টায়?</h3>
+          <p data-i18n="keys.bn">Proper Bangla script, with dari (।) and punctuation.</p>
+          <div class="keys-row"><span class="keycap">Right ⌘ Command</span></div>
         </article>
-        <article>
-          <h3>English</h3>
-          <p class="say"><span data-i18n="modes.say">You say</span>: “See you at five”</p>
-          <p class="out">See you at five.</p>
-          <p data-i18n="modes.en">Clean English for emails and messages.</p>
-        </article>
-        <article class="accent">
-          <h3>Banglish</h3>
-          <p class="say"><span data-i18n="modes.say">You say</span>: “তুমি কেমন আছো?”</p>
-          <p class="out">tumi kemon achho?</p>
-          <p data-i18n="modes.bl">Speak Bangla, get romanized text, just like you type in chat.</p>
+        <article class="card">
+          <span class="tag">English</span>
+          <h3>See you at five.</h3>
+          <p data-i18n="keys.en">Clean English for emails and messages.</p>
+          <div class="keys-row"><span class="keycap">fn</span></div>
         </article>
       </div>
+      <p class="muted center" style="margin-top:18px" data-i18n="keys.change">On Windows: Right Alt and Right Ctrl. Change either key any time.</p>
     </section>
 
-    <section id="why" class="section">
-      <h2 data-i18n="why.title">Why Kothalipi</h2>
-      <div class="features">
-        <article><h3 data-i18n="why.f1">Built for Bangla</h3><p data-i18n="why.f1p">Most voice typing tools run models that struggle with Bangla. Kothalipi uses models fine-tuned on Bangla speech, and we test them on a public benchmark anyone can check.</p></article>
-        <article><h3 data-i18n="why.f2">Private by default</h3><p data-i18n="why.f2p">Speech recognition runs on your computer. Your voice never leaves it unless you turn on a cloud engine with your own key.</p></article>
-        <article><h3 data-i18n="why.f3">Fully open source</h3><p data-i18n="why.f3p">Every line of code is public under the MIT license. No account, no trial, no hidden data collection.</p></article>
-        <article><h3 data-i18n="why.f4">Every platform</h3><p data-i18n="why.f4p">macOS, Windows and Linux first, then Android and iOS keyboards.</p></article>
+    <section class="section" id="listen">
+      <div class="section-head">
+        <h2 data-i18n="listen.title">Free offline, or cloud</h2>
+        <p data-i18n="listen.sub">Pick one when you set up. Switch any time.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="tag">Offline</span>
+          <h3 data-i18n="listen.offTitle">Offline · Free</h3>
+          <p data-i18n="listen.off">Works without internet. Your voice never leaves your computer. Download the Bangla model once.</p>
+        </article>
+        <article class="card accent">
+          <span class="tag">Cloud</span>
+          <h3 data-i18n="listen.cloudTitle">Cloud · Most accurate</h3>
+          <p data-i18n="listen.cloud">Your own free Google Gemini key, or ChatGPT. Best when you mix Bangla and English.</p>
+        </article>
+      </div>
+      <div class="section-head" style="margin-top:48px">
+        <h3 data-i18n="fallback.title">It never stops typing</h3>
+        <p data-i18n="fallback.sub">When a key hits its limit, Kothalipi tries the next one. No internet? It switches to offline.</p>
+      </div>
+      <div class="flow" aria-label="Fallback order">
+        <div class="step"><b>Gemini</b><span>your free key</span></div><div class="arrow">→</div>
+        <div class="step"><b>ChatGPT</b><span>optional key</span></div><div class="arrow">→</div>
+        <div class="step"><b>Offline</b><span>on your computer</span></div>
       </div>
     </section>
 
     <section class="section">
-      <h2 data-i18n="plat.title">Where we are</h2>
+      <div class="section-head"><h2 data-i18n="why.title">Why Kothalipi</h2></div>
+      <div class="grid-4">
+        <article class="card"><h3 data-i18n="why.f1">Built for Bangla</h3><p data-i18n="why.f1p">Models trained on Bangla speech make far fewer mistakes than general voice typing.</p></article>
+        <article class="card"><h3 data-i18n="why.f2">Private</h3><p data-i18n="why.f2p">Offline mode never sends audio anywhere. No account needed.</p></article>
+        <article class="card"><h3 data-i18n="why.f3">Light and fast</h3><p data-i18n="why.f3p">Written in Rust. Low memory, quiet in the background.</p></article>
+        <article class="card"><h3 data-i18n="why.f4">Fully open source</h3><p data-i18n="why.f4p">MIT licensed. Every line is on GitHub.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2 data-i18n="plat.title">On every computer</h2></div>
       <div class="platforms">
-        <div><span>macOS</span><em class="wip" data-i18n="plat.wip">In development</em></div>
-        <div><span>Windows</span><em class="wip" data-i18n="plat.wip">In development</em></div>
-        <div><span>Linux</span><em class="wip" data-i18n="plat.wip">In development</em></div>
-        <div><span>Android</span><em data-i18n="plat.plan">Planned</em></div>
-        <div><span>iOS</span><em data-i18n="plat.plan">Planned</em></div>
-      </div>
-      <p class="muted center"><a href="https://github.com/Kothalipi/kothalipi/blob/main/docs/ROADMAP.md" data-i18n="plat.roadmap">See the full roadmap →</a></p>
-    </section>
-
-    <section id="contribute" class="section band">
-      <h2 data-i18n="help.title">Help build it</h2>
-      <p class="lead center" data-i18n="help.lead">Kothalipi is made by its community. You can help even if you don't write code.</p>
-      <div class="help">
-        <a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md"><b>🎙️</b><span data-i18n="help.h1">Record Bangla samples</span></a>
-        <a href="https://github.com/Kothalipi/kothalipi/issues/new?template=wrong_transcription.md"><b>🔤</b><span data-i18n="help.h2">Fix Banglish spellings</span></a>
-        <a href="https://github.com/Kothalipi/kothalipi/blob/main/docs/MODELS.md"><b>📊</b><span data-i18n="help.h3">Test speech models</span></a>
-        <a href="https://github.com/Kothalipi/kothalipi/issues/new?template=language_request.md"><b>🌍</b><span data-i18n="help.h4">Bring your language</span></a>
+        <div><span>macOS</span><em class="ok">Apple Silicon &amp; Intel</em></div>
+        <div><span>Windows</span><em class="ok">10 &amp; 11</em></div>
+        <div><span>Linux</span><em class="ok">.deb, .rpm, AppImage</em></div>
+        <div><span>Android</span><em>Coming</em></div>
+        <div><span>iOS</span><em>Coming</em></div>
       </div>
     </section>
 
-    <section id="faq" class="section faq">
-      <h2 data-i18n="faq.title">Questions</h2>
-      <details><summary data-i18n="faq.q1">Is it free?</summary><p data-i18n="faq.a1">Yes. Kothalipi is open source under the MIT license. Offline mode costs nothing to run. If you choose a cloud engine, you use your own API key with that provider.</p></details>
-      <details><summary data-i18n="faq.q2">When can I download it?</summary><p data-i18n="faq.a2">We are building the first desktop version now. Watch the GitHub repo to get notified when the first release is out.</p></details>
-      <details><summary data-i18n="faq.q3">Where do my recordings go?</summary><p data-i18n="faq.a3">Nowhere. In offline mode audio is processed on your device and discarded. Cloud mode is optional and always off by default.</p></details>
-      <details><summary data-i18n="faq.q4">Can it handle Bangla mixed with English?</summary><p data-i18n="faq.a4">That is a core goal. Mixed speech is part of our test set from day one, and we publish how each model does.</p></details>
-      <details><summary data-i18n="faq.q5">Will it support other languages?</summary><p data-i18n="faq.a5">Yes. Bangla comes first, and the project is designed so any community can add its language, including romanized forms like Hinglish or Arabizi.</p></details>
+    <section class="band">
+      <h2 data-i18n="band.title">Start writing with your voice</h2>
+      <p data-i18n="band.sub">Set up in two minutes. Completely free.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn btn-big" href="download.html" data-i18n="band.download">Download</a>
+        <a class="btn btn-ghost btn-big" href="docs/index.html" data-i18n="band.guide">Setup guide</a>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <h2 class="center" data-i18n="faq.title">Questions</h2>
+      <details><summary data-i18n="faq.q1">Is it really free?</summary><p data-i18n="faq.a1">Yes. No account, no trial, no card. Offline mode costs nothing to run. Cloud mode uses your own key; Google Gemini has a free tier with daily limits, billed by Google to you if you go over.</p></details>
+      <details><summary data-i18n="faq.q2">Where do my recordings go?</summary><p data-i18n="faq.a2">Offline: nowhere. Cloud: only to the provider you chose (Google or OpenAI), never to us.</p></details>
+      <details><summary data-i18n="faq.q3">Which computers does it run on?</summary><p data-i18n="faq.a3">macOS (Apple Silicon and Intel), Windows 10 and 11, and Linux. Android and iOS are coming.</p></details>
+      <details><summary data-i18n="faq.q4">Does it work in every app?</summary><p data-i18n="faq.a4">Anywhere you can type: chat, email, browsers, documents, code editors.</p></details>
+      <details><summary data-i18n="faq.q5">Can I change the keys?</summary><p data-i18n="faq.a5">Yes, in the app's Settings → General.</p></details>
     </section>
   </main>
-
   <footer class="footer">
-    <div class="brand"><img src="assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></div>
-    <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 for everyone.</p>
-    <p><a href="https://github.com/Kothalipi">GitHub</a> · <a href="https://github.com/Kothalipi/kothalipi/blob/main/LICENSE">MIT License</a> · <a href="https://github.com/Kothalipi/kothalipi/discussions" data-i18n="foot.talk">Discussions</a></p>
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
+        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 for everyone.</p>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="docs/cloud.html">Cloud &amp; API keys</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="docs/macos.html">macOS</a></li>
+        <li><a href="docs/windows.html">Windows</a></li>
+        <li><a href="docs/linux.html">Linux</a></li>
+        <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
+      </ul></div>
+      <div><h4>Open source</h4><ul>
+        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
+        <li><a href="https://github.com/cjpais/Handy">Built on Handy</a></li>
+      </ul></div>
+    </div>
   </footer>
-
   <script src="main.js"></script>
 </body>
 </html>

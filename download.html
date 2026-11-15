@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download Kothalipi</title>
+  <meta name="description" content="Download Kothalipi for macOS, Windows and Linux, or install it from the terminal.">
+  <meta name="theme-color" content="#006A4E">
+  <link rel="canonical" href="https://kothalipi.tashanto.com/download.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:title" content="Download Kothalipi">
+  <meta property="og:description" content="Download Kothalipi for macOS, Windows and Linux, or install it from the terminal.">
+  <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <meta property="og:url" content="https://kothalipi.tashanto.com/download.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Kothalipi home">
+        <img src="assets/kothalipi-mark.svg" alt="" width="30" height="31">
+        <span>Kothalipi</span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="download.html" aria-current="page" data-i18n="nav.download">Download</a>
+        <a href="docs/index.html" data-i18n="nav.docs">Docs</a>
+        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        
+        <a class="btn btn-small" href="download.html">Download</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="dl-hero">
+      <h1>Download Kothalipi</h1>
+      <p class="lead center">Free for macOS, Windows and Linux. Set up in two minutes.</p>
+      <div class="dl-main" id="dl-main">
+        <a class="btn btn-big" id="dl-button" href="https://github.com/Kothalipi/kothalipi-desktop/releases/latest"><span id="dl-label">Download</span></a>
+        <span class="dl-meta" id="dl-size">Finding the latest version…</span>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="os-cards">
+        <article class="card os-card"><h3>macOS</h3><p>macOS 10.15 or later.</p><ul data-files="mac"></ul></article>
+        <article class="card os-card"><h3>Windows</h3><p>Windows 10 or 11.</p><ul data-files="windows"></ul></article>
+        <article class="card os-card"><h3>Linux</h3><p>X11 and Wayland.</p><ul data-files="linux"></ul></article>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="section-head"><h2>Install from the terminal</h2><p>One line. It downloads the latest release from GitHub and installs it.</p></div>
+      <div class="doc" style="margin:0 auto">
+        <div class="code-label">macOS and Linux</div><div class="code"><pre>curl -fsSL https://kothalipi.tashanto.com/install.sh | sh</pre></div>
+        <div class="code-label">Windows (PowerShell)</div><div class="code"><pre>irm https://kothalipi.tashanto.com/install.ps1 | iex</pre></div>
+        <p class="muted">Read the scripts first if you like: <a href="install.sh">install.sh</a> · <a href="install.ps1">install.ps1</a></p>
+        <div class="note"><p><b>First run:</b> allow the microphone, then (on Mac) Accessibility. Step by step: <a href="docs/macos.html">macOS</a> · <a href="docs/windows.html">Windows</a> · <a href="docs/linux.html">Linux</a>.</p></div>
+        <p class="muted">All versions and checksums are on <a href="https://github.com/Kothalipi/kothalipi-desktop/releases">GitHub Releases</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
+        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 for everyone.</p>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="docs/cloud.html">Cloud &amp; API keys</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="docs/macos.html">macOS</a></li>
+        <li><a href="docs/windows.html">Windows</a></li>
+        <li><a href="docs/linux.html">Linux</a></li>
+        <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
+      </ul></div>
+      <div><h4>Open source</h4><ul>
+        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
+        <li><a href="https://github.com/cjpais/Handy">Built on Handy</a></li>
+      </ul></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kothalipi.tashanto.com/sitemap.xml

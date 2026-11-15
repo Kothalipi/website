@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting started · Kothalipi docs</title>
+  <meta name="description" content="Install Kothalipi and dictate your first sentence in Bangla or English.">
+  <meta name="theme-color" content="#006A4E">
+  <link rel="canonical" href="https://kothalipi.tashanto.com/docs/index.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta property="og:title" content="Getting started · Kothalipi docs">
+  <meta property="og:description" content="Install Kothalipi and dictate your first sentence in Bangla or English.">
+  <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <meta property="og:url" content="https://kothalipi.tashanto.com/docs/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html" aria-label="Kothalipi home">
+        <img src="../assets/kothalipi-mark.svg" alt="" width="30" height="31">
+        <span>Kothalipi</span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="../download.html" data-i18n="nav.download">Download</a>
+        <a href="../docs/index.html" aria-current="page" data-i18n="nav.docs">Docs</a>
+        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        
+        <a class="btn btn-small" href="../download.html">Download</a>
+      </div>
+    </div>
+  </header>
+  <main class="docs">
+    <nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="index.html" aria-current="page">Getting started</a><a href="shortcuts.html">Keys & shortcuts</a><a href="cloud.html">Cloud & API keys</a><h4>Install</h4><a href="macos.html">macOS</a><a href="windows.html">Windows</a><a href="linux.html">Linux</a><h4>Help</h4><a href="troubleshooting.html">Troubleshooting</a><a href="../privacy.html">Privacy</a></nav>
+    <article class="doc">
+      
+      <h1>Getting started</h1>
+      <p class="lead">From download to your first Bangla sentence in about two minutes.</p>
+      <h2>1. Install</h2>
+      <p>Download from the <a href="../download.html">download page</a>, or use the terminal:</p>
+      <div class="code-label">macOS and Linux</div><div class="code"><pre>curl -fsSL https://kothalipi.tashanto.com/install.sh | sh</pre></div>
+      <div class="code-label">Windows (PowerShell)</div><div class="code"><pre>irm https://kothalipi.tashanto.com/install.ps1 | iex</pre></div>
+      <p>Platform details: <a href="macos.html">macOS</a> · <a href="windows.html">Windows</a> · <a href="linux.html">Linux</a>.</p>
+      <h2>2. Follow the setup</h2>
+      <ol>
+        <li><b>Permissions.</b> Allow the microphone. On a Mac, also allow Accessibility so Kothalipi can type into other apps.</li>
+        <li><b>Choose how it listens.</b> <em>Offline</em> is free and private. <em>Cloud</em> uses your own Gemini or ChatGPT key and is the most accurate. See <a href="cloud.html">Cloud &amp; API keys</a>.</li>
+        <li><b>Download the voice models.</b> Bangla (about 810 MB) and, recommended, English. In Cloud mode they're your offline backup.</li>
+        <li><b>Check your keys.</b> On a Mac, Kothalipi spots macOS settings that steal the keys and opens the right page to fix them.</li>
+        <li><b>Try it.</b> Hold the Bangla key, speak, let go.</li>
+      </ol>
+      <h2>3. Use it anywhere</h2>
+      <table class="table">
+        <tr><th></th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+        <tr><td>বাংলা</td><td><kbd>Right ⌘ Command</kbd></td><td><kbd>Right Alt</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd></td></tr>
+        <tr><td>English</td><td><kbd>fn</kbd></td><td><kbd>Right Ctrl</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>E</kbd></td></tr>
+      </table>
+      <p><b>Hold</b> the key while you talk, or <b>tap</b> it once to start and again to stop. Change keys in Settings → General.</p>
+
+      <div class="pager"><span></span><a href="shortcuts.html">Keys & shortcuts →</a></div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="../index.html"><img src="../assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
+        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 for everyone.</p>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../docs/cloud.html">Cloud &amp; API keys</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="../docs/macos.html">macOS</a></li>
+        <li><a href="../docs/windows.html">Windows</a></li>
+        <li><a href="../docs/linux.html">Linux</a></li>
+        <li><a href="../docs/troubleshooting.html">Troubleshooting</a></li>
+      </ul></div>
+      <div><h4>Open source</h4><ul>
+        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
+        <li><a href="https://github.com/cjpais/Handy">Built on Handy</a></li>
+      </ul></div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+</html>

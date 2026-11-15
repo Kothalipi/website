@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux · Kothalipi docs</title>
+  <meta name="description" content="Install Kothalipi on Linux with .deb, .rpm or AppImage.">
+  <meta name="theme-color" content="#006A4E">
+  <link rel="canonical" href="https://kothalipi.tashanto.com/docs/linux.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta property="og:title" content="Linux · Kothalipi docs">
+  <meta property="og:description" content="Install Kothalipi on Linux with .deb, .rpm or AppImage.">
+  <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <meta property="og:url" content="https://kothalipi.tashanto.com/docs/linux.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html" aria-label="Kothalipi home">
+        <img src="../assets/kothalipi-mark.svg" alt="" width="30" height="31">
+        <span>Kothalipi</span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="../download.html" data-i18n="nav.download">Download</a>
+        <a href="../docs/index.html" aria-current="page" data-i18n="nav.docs">Docs</a>
+        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        
+        <a class="btn btn-small" href="../download.html">Download</a>
+      </div>
+    </div>
+  </header>
+  <main class="docs">
+    <nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="index.html">Getting started</a><a href="shortcuts.html">Keys & shortcuts</a><a href="cloud.html">Cloud & API keys</a><h4>Install</h4><a href="macos.html">macOS</a><a href="windows.html">Windows</a><a href="linux.html" aria-current="page">Linux</a><h4>Help</h4><a href="troubleshooting.html">Troubleshooting</a><a href="../privacy.html">Privacy</a></nav>
+    <article class="doc">
+      
+      <h1>Linux</h1>
+      <p class="lead">x86_64 and ARM64. Works best on X11; Wayland needs a typing helper.</p>
+      <h2>Install</h2>
+      <div class="code-label">Terminal (picks .deb, .rpm or AppImage for you)</div><div class="code"><pre>curl -fsSL https://kothalipi.tashanto.com/install.sh | sh</pre></div>
+      <h3>Manually</h3>
+      <div class="code-label">Debian / Ubuntu</div><div class="code"><pre>sudo apt install ./Kothalipi_*_amd64.deb</pre></div>
+      <div class="code-label">Fedora</div><div class="code"><pre>sudo dnf install ./Kothalipi-*.x86_64.rpm</pre></div>
+      <div class="code-label">AppImage</div><div class="code"><pre>chmod +x Kothalipi_*_amd64.AppImage &amp;&amp; ./Kothalipi_*_amd64.AppImage</pre></div>
+      <h2>Wayland</h2>
+      <p>Wayland has no standard way for one app to type into another. Install a helper:</p>
+      <div class="code-label">wtype</div><div class="code"><pre>sudo apt install wtype      # wlroots compositors (Sway, Hyprland…)</pre></div>
+      <p>On GNOME (Ubuntu 26.04+), use <code>ydotool</code> with its service enabled. Global keys on Wayland are set in your desktop's keyboard settings: bind a custom shortcut to <code>handy --toggle-transcription</code>.</p>
+      <h2>Missing libraries</h2>
+      <p>If it won't start with <code>libgtk-layer-shell.so.0</code> missing:</p>
+      <div class="code"><pre>sudo apt install libgtk-layer-shell0</pre></div>
+
+      <div class="pager"><a href="windows.html">← Windows</a><a href="troubleshooting.html">Troubleshooting →</a></div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="../index.html"><img src="../assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
+        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 for everyone.</p>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../docs/cloud.html">Cloud &amp; API keys</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+      </ul></div>
+      <div><h4>Guides</h4><ul>
+        <li><a href="../docs/macos.html">macOS</a></li>
+        <li><a href="../docs/windows.html">Windows</a></li>
+        <li><a href="../docs/linux.html">Linux</a></li>
+        <li><a href="../docs/troubleshooting.html">Troubleshooting</a></li>
+      </ul></div>
+      <div><h4>Open source</h4><ul>
+        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
+        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
+        <li><a href="https://github.com/cjpais/Handy">Built on Handy</a></li>
+      </ul></div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+</html>
