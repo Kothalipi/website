@@ -277,26 +277,26 @@ def download(lang):
       <article class="os-card" id="android" style="max-width:760px;margin:0 auto">
         <h3>Android <span class="tag" style="margin-left:8px">Beta</span></h3>
         <p>A voice keyboard for Bangla and English. Android 8 or later. About 8 MB.</p>
-        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.0/Kothalipi-0.1.0-beta.apk">Download the APK<span>8 MB</span></a></li></ul>
+        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.1/Kothalipi-0.1.1-beta.apk">Download the APK<span>8 MB</span></a></li></ul>
         <ol class="muted" style="margin:14px 0 0;padding-left:20px">
           <li>Open the file. If Android asks, allow installs from your browser.</li>
           <li>Open Kothalipi and follow the four setup steps.</li>
           <li>In any app, tap a text field and tap the mic.</li>
         </ol>
-        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">d02baff538945afbf67f37f10673f252a2e92af31cfaff67ed8eb3476404d148</code></p>
+        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">95941b308c61a5b9917c67ed50ededc2aa8b51006afc9f2c3b1893b09f5a3120</code></p>
       </article>
     </section>""" if en else """
     <section class="container" style="padding-bottom:20px">
       <article class="os-card" id="android" style="max-width:760px;margin:0 auto">
         <h3>Android <span class="tag" style="margin-left:8px">Beta</span></h3>
         <p>বাংলা ও ইংরেজির ভয়েস কিবোর্ড। Android 8 বা নতুন। প্রায় ৮ MB।</p>
-        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.0/Kothalipi-0.1.0-beta.apk">APK ডাউনলোড<span>8 MB</span></a></li></ul>
+        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.1/Kothalipi-0.1.1-beta.apk">APK ডাউনলোড<span>8 MB</span></a></li></ul>
         <ol class="muted" style="margin:14px 0 0;padding-left:20px">
           <li>ফাইলটি খুলুন। Android চাইলে ব্রাউজার থেকে ইনস্টলের অনুমতি দিন।</li>
           <li>কথালিপি খুলে চার ধাপের সেটআপ শেষ করুন।</li>
           <li>যেকোনো অ্যাপে লেখার ঘরে ট্যাপ করে মাইক চাপুন।</li>
         </ol>
-        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">d02baff538945afbf67f37f10673f252a2e92af31cfaff67ed8eb3476404d148</code></p>
+        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">95941b308c61a5b9917c67ed50ededc2aa8b51006afc9f2c3b1893b09f5a3120</code></p>
       </article>
     </section>"""
     cards = "".join(f'<article class="os-card"><h3>{n}</h3><p>{d}</p><ul data-files="{k}"></ul></article>' for (n, d), k in zip(os_h, ["mac", "windows", "linux"]))
