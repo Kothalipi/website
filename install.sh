@@ -66,7 +66,7 @@ install_macos() {
   dest="/Applications"
   [ -w "$dest" ] || dest="$HOME/Applications"
   mkdir -p "$dest"
-  if pgrep -x handy >/dev/null 2>&1; then
+  if pgrep -x kothalipi >/dev/null 2>&1; then
     say "Closing the running Kothalipi"
     osascript -e 'quit app "Kothalipi"' >/dev/null 2>&1 || true
     sleep 1
