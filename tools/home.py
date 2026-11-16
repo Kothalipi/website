@@ -135,9 +135,9 @@ def home(lang):
         )
 
     plat = (
-        [("macOS", "Apple Silicon & Intel", True), ("Windows", "10 & 11 · x64 & ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "Coming", False), ("iOS", "Coming", False)]
+        [("macOS", "Apple Silicon & Intel", True), ("Windows", "10 & 11 · x64 & ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "Beta APK", True), ("iOS", "Coming", False)]
         if en else
-        [("macOS", "Apple Silicon ও Intel", True), ("Windows", "10 ও 11 · x64 ও ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "আসছে", False), ("iOS", "আসছে", False)]
+        [("macOS", "Apple Silicon ও Intel", True), ("Windows", "10 ও 11 · x64 ও ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "বিটা APK", True), ("iOS", "আসছে", False)]
     )
     plat_html = "".join(f'<div class="platform{"" if ok else " soon"}"><b>{n}</b><span class="{"ok" if ok else ""}">{esc(d)}</span></div>' for n, d, ok in plat)
 
@@ -272,6 +272,33 @@ def download(lang):
         after = "ইনস্টলের পর <a href=\"/docs/\">শুরু করার গাইড</a> অনুসরণ করুন। সব ভার্সন ও ফাইল <a href=\"" + DESK + "/releases\">GitHub Releases</a>-এ আছে।"
         title = "কথালিপি ডাউনলোড: ম্যাক, উইন্ডোজ ও লিনাক্সের জন্য ফ্রি"
         desc = "ফ্রি বাংলা ও ইংরেজি ভয়েস টাইপিং কথালিপি ডাউনলোড করুন, macOS, Windows ও Linux-এ। অথবা টার্মিনালে এক লাইনে ইনস্টল করুন।"
+    android_html = """
+    <section class="container" style="padding-bottom:20px">
+      <article class="os-card" id="android" style="max-width:760px;margin:0 auto">
+        <h3>Android <span class="tag" style="margin-left:8px">Beta</span></h3>
+        <p>A voice keyboard for Bangla and English. Android 8 or later. About 8 MB.</p>
+        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.0/Kothalipi-0.1.0-beta.apk">Download the APK<span>8 MB</span></a></li></ul>
+        <ol class="muted" style="margin:14px 0 0;padding-left:20px">
+          <li>Open the file. If Android asks, allow installs from your browser.</li>
+          <li>Open Kothalipi and follow the four setup steps.</li>
+          <li>In any app, tap a text field and tap the mic.</li>
+        </ol>
+        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">d02baff538945afbf67f37f10673f252a2e92af31cfaff67ed8eb3476404d148</code></p>
+      </article>
+    </section>""" if en else """
+    <section class="container" style="padding-bottom:20px">
+      <article class="os-card" id="android" style="max-width:760px;margin:0 auto">
+        <h3>Android <span class="tag" style="margin-left:8px">Beta</span></h3>
+        <p>বাংলা ও ইংরেজির ভয়েস কিবোর্ড। Android 8 বা নতুন। প্রায় ৮ MB।</p>
+        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.0/Kothalipi-0.1.0-beta.apk">APK ডাউনলোড<span>8 MB</span></a></li></ul>
+        <ol class="muted" style="margin:14px 0 0;padding-left:20px">
+          <li>ফাইলটি খুলুন। Android চাইলে ব্রাউজার থেকে ইনস্টলের অনুমতি দিন।</li>
+          <li>কথালিপি খুলে চার ধাপের সেটআপ শেষ করুন।</li>
+          <li>যেকোনো অ্যাপে লেখার ঘরে ট্যাপ করে মাইক চাপুন।</li>
+        </ol>
+        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">d02baff538945afbf67f37f10673f252a2e92af31cfaff67ed8eb3476404d148</code></p>
+      </article>
+    </section>"""
     cards = "".join(f'<article class="os-card"><h3>{n}</h3><p>{d}</p><ul data-files="{k}"></ul></article>' for (n, d), k in zip(os_h, ["mac", "windows", "linux"]))
     req_rows = "".join(f"<tr><th>{a}</th><td>{b}</td></tr>" for a, b in req)
     body = f"""
@@ -284,6 +311,7 @@ def download(lang):
       </div>
     </section>
     <section class="container" style="padding-bottom:20px"><div class="os-cards">{cards}</div></section>
+    {android_html}
     <section class="section">
       <div class="container">
         <div class="section-head"><h2>{term_h}</h2><p>{term_p}</p></div>
