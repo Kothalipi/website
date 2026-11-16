@@ -9,7 +9,8 @@ $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'  # much faster Invoke-WebRequest
 
 $Repo = 'Kothalipi/kothalipi-desktop'
-$Api = "https://api.github.com/repos/$Repo/releases/latest"
+$Api = 'https://kothalipi.tashanto.com/latest.json'
+$ApiFallback = "https://api.github.com/repos/$Repo/releases/latest"
 
 function Say($msg) { Write-Host "==> $msg" -ForegroundColor Green }
 
@@ -17,9 +18,13 @@ $arch = if ($env:PROCESSOR_ARCHITECTURE -eq 'ARM64') { 'arm64' } else { 'x64' }
 
 Say 'Finding the latest Kothalipi release'
 try {
-    $release = Invoke-RestMethod -Uri $Api -Headers @{ Accept = 'application/vnd.github+json' }
+    $release = Invoke-RestMethod -Uri $Api
 } catch {
-    throw "Couldn't reach GitHub. Check your internet connection."
+    try {
+        $release = Invoke-RestMethod -Uri $ApiFallback -Headers @{ Accept = 'application/vnd.github+json' }
+    } catch {
+        throw "Couldn't reach GitHub. Check your internet connection."
+    }
 }
 
 $asset = $release.assets | Where-Object { $_.name -like "*_$arch-setup.exe" } | Select-Object -First 1

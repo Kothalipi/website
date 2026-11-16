@@ -136,7 +136,8 @@
         const c = JSON.parse(sessionStorage.getItem("kl-rel") || "null");
         if (c && Date.now() - c.t < 600000) return c.r;
       } catch (_) {}
-      const r = await fetch(API);
+      let r = await fetch("/latest.json", { cache: "no-cache" }).catch(() => null);
+      if (!r || !r.ok) r = await fetch(API);
       if (!r.ok) throw new Error(String(r.status));
       const j = await r.json();
       const slim = { tag: j.tag_name, assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url })) };

@@ -11,7 +11,8 @@
 set -eu
 
 REPO="Kothalipi/kothalipi-desktop"
-API="https://api.github.com/repos/$REPO/releases/latest"
+API="https://kothalipi.tashanto.com/latest.json"
+API_FALLBACK="https://api.github.com/repos/$REPO/releases/latest"
 
 say() { printf '\033[1;32m==>\033[0m %s\n' "$*"; }
 warn() { printf '\033[1;33mwarning:\033[0m %s\n' "$*" >&2; }
@@ -28,7 +29,7 @@ OS=$(uname -s)
 ARCH=$(uname -m)
 
 say "Finding the latest Kothalipi release"
-RELEASE_JSON=$(curl -fsSL -H "Accept: application/vnd.github+json" "$API") ||
+RELEASE_JSON=$(curl -fsSL "$API" 2>/dev/null || curl -fsSL -H "Accept: application/vnd.github+json" "$API_FALLBACK") ||
   die "Couldn't reach GitHub. Check your internet connection."
 
 # Print the download URL of the first asset whose name ends with $1.
