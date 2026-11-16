@@ -164,7 +164,15 @@ install_linux() {
   fi
   say "Kothalipi is installed. Find it in your app menu."
   if [ "${XDG_SESSION_TYPE:-}" = "wayland" ]; then
-    warn "Wayland: install 'wtype' (or ydotool) so Kothalipi can type into apps."
+    case "${XDG_CURRENT_DESKTOP:-}" in
+      *GNOME* | *KDE* | *Unity* | *COSMIC*)
+        # wtype needs a protocol these desktops don't offer.
+        warn "Wayland ($XDG_CURRENT_DESKTOP): install 'ydotool' and enable its service so Kothalipi can type into apps."
+        ;;
+      *)
+        warn "Wayland: install 'wtype' (or ydotool) so Kothalipi can type into apps."
+        ;;
+    esac
     echo "Guide: https://kothalipi.tashanto.com/docs/linux.html"
   fi
 }
