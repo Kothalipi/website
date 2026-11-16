@@ -1,0 +1,19 @@
+# Kothalipi
+
+> Kothalipi (কথালিপি) is free, open-source voice typing for Bangla and English on macOS, Windows and Linux. Hold a key, speak, and the text appears in any app. It works offline with Bangla-trained models, or in the cloud with the user's own Google Gemini or OpenAI key, with automatic fallback to offline. Made by TA Shanto (https://tashanto.com). MIT licensed.
+
+## Key facts
+- Languages: Bangla and English (one hotkey per language)
+- Platforms: macOS 10.15+, Windows 10/11, Linux (Android and iOS planned)
+- Offline models: Qwen3-ASR 0.6B Bangla, Bengali.AI Whisper Medium; English: Parakeet 0.6B, Whisper Small/Base
+- Cloud engines (user's own key): Google Gemini, OpenAI. Claude has no audio input.
+- Privacy: no account, no analytics, no servers; offline audio never leaves the computer
+
+## Pages
+- [Home](https://kothalipi.tashanto.com/): overview and demo
+- [Download](https://kothalipi.tashanto.com/download): installers and one-line terminal install
+- [Models and accuracy](https://kothalipi.tashanto.com/models): models, sizes, licenses, device picks
+- [Guides](https://kothalipi.tashanto.com/guides/): Bangla voice typing on Mac, Windows, Linux; free Gemini API key
+- [Docs](https://kothalipi.tashanto.com/docs/): getting started, keys, cloud, per-OS guides, troubleshooting
+- [Privacy](https://kothalipi.tashanto.com/privacy)
+- [Source code](https://github.com/Kothalipi/kothalipi-desktop)

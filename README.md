@@ -1,21 +1,38 @@
 # kothalipi.tashanto.com
 
-Website for [Kothalipi](https://github.com/Kothalipi/kothalipi), open-source voice typing
-for Bangla, English and Banglish.
+Website for [Kothalipi](https://github.com/Kothalipi/kothalipi-desktop): free, open-source Bangla and
+English voice typing. Static HTML on GitHub Pages, no frameworks, no tracking, fonts self-hosted.
 
-Plain HTML, CSS and JS. No build step. Hosted on GitHub Pages.
+## Edit and preview
+
+Pages are generated from `tools/*.py`. Edit the Python, then:
 
 ```bash
-python3 -m http.server 4321   # then open http://localhost:4321
+python3 tools/build.py     # writes the HTML, sitemap.xml, robots.txt, llms.txt
+python3 tools/check.py     # SEO and link checks (titles, descriptions, canonicals, JSON-LD, links)
+python3 tools/serve.py     # preview at http://localhost:4321 (clean URLs like /download work)
 ```
 
 | Path | What |
 |---|---|
-| `index.html` | Home (English, with a Bangla toggle via `data-i18n` keys) |
-| `download.html` | Download page: picks the right file for your OS from the latest GitHub release |
-| `docs/` | Getting started, keys, cloud keys, macOS, Windows, Linux, troubleshooting |
-| `privacy.html`, `404.html` | Privacy notice, not-found page |
-| `install.sh` | `curl -fsSL https://kothalipi.tashanto.com/install.sh \| sh` (macOS, Linux) |
-| `install.ps1` | `irm https://kothalipi.tashanto.com/install.ps1 \| iex` (Windows) |
-| `main.js` | Bangla translations (`BN`), demo, copy buttons, release lookup |
-| `style.css` | Brand colors (#006A4E, #F42A41), light/dark, responsive |
+| `tools/lib.py` | Layout, navigation, footer, SEO head, JSON-LD helpers |
+| `tools/home.py` | Home and download pages, English and Bangla (`/bn/`) |
+| `tools/content.py` | Models, changelog, about, privacy, guides, docs, 404 |
+| `tools/build.py` | Runs everything and writes sitemap, robots, manifest |
+| `style.css`, `main.js` | Design system and small enhancements (site works without JS) |
+| `install.sh`, `install.ps1` | Terminal installers, served from the site root |
+| `assets/` | Logo, icons, app screenshots (WebP), self-hosted Hind Siliguri, OG image |
+
+## SEO
+
+- One H1, unique title and description per page, canonical URLs, Open Graph and Twitter cards
+- Real Bangla pages (`/bn/`, `/bn/download`) with `hreflang` alternates, not a JavaScript toggle
+- JSON-LD: SoftwareApplication, WebSite, FAQPage, Article, BreadcrumbList
+- `sitemap.xml` with alternates, `robots.txt`, `llms.txt`, web manifest
+
+After the first deploy, add the site in Google Search Console and Bing Webmaster Tools and submit
+`https://kothalipi.tashanto.com/sitemap.xml`.
+
+## Screenshots
+
+App screenshots come from the desktop repo's browser preview (`bun run dev`, open `/?mock&onboarding&step=voices`).

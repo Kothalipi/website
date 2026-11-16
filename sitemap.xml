@@ -1,13 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kothalipi.tashanto.com/</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/download.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/privacy.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/index.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/shortcuts.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/cloud.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/macos.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/windows.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/linux.html</loc></url>
-  <url><loc>https://kothalipi.tashanto.com/docs/troubleshooting.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kothalipi.tashanto.com/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kothalipi.tashanto.com/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kothalipi.tashanto.com/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kothalipi.tashanto.com/"/>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/bn/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kothalipi.tashanto.com/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kothalipi.tashanto.com/bn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kothalipi.tashanto.com/"/>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/bn/download</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kothalipi.tashanto.com/download"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kothalipi.tashanto.com/bn/download"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kothalipi.tashanto.com/download"/>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/download</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kothalipi.tashanto.com/download"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kothalipi.tashanto.com/bn/download"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kothalipi.tashanto.com/download"/>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/models</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/cloud</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/linux</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/macos</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/shortcuts</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/troubleshooting</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/docs/windows</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/guides/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/guides/bangla-voice-typing-linux</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/guides/bangla-voice-typing-mac</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/guides/bangla-voice-typing-windows</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/guides/free-gemini-api-key</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/changelog</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/about</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://kothalipi.tashanto.com/privacy</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

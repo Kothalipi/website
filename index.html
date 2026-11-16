@@ -3,179 +3,167 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kothalipi · Voice typing in Bangla and English</title>
-  <meta name="description" content="Hold a key, speak Bangla or English, and your words appear in any app. Free, open source, works offline.">
-  <meta name="theme-color" content="#006A4E">
+  <title>Kothalipi: Free Bangla &amp; English Voice Typing for Mac, Windows, Linux</title>
+  <meta name="description" content="Free, open-source Bangla and English voice typing. Hold a key, speak, and text appears in any app. Works offline; optional Gemini or ChatGPT cloud.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#006a4e">
+  <meta name="author" content="TA Shanto">
   <link rel="canonical" href="https://kothalipi.tashanto.com/">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:title" content="Kothalipi · Voice typing in Bangla and English">
-  <meta property="og:description" content="Hold a key, speak Bangla or English, and your words appear in any app. Free, open source, works offline.">
-  <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <link rel="alternate" hreflang="en" href="https://kothalipi.tashanto.com/">
+  <link rel="alternate" hreflang="bn" href="https://kothalipi.tashanto.com/bn/">
+  <link rel="alternate" hreflang="x-default" href="https://kothalipi.tashanto.com/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kothalipi">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Kothalipi: Free Bangla &amp; English Voice Typing for Mac, Windows, Linux">
+  <meta property="og:description" content="Free, open-source Bangla and English voice typing. Hold a key, speak, and text appears in any app. Works offline; optional Gemini or ChatGPT cloud.">
   <meta property="og:url" content="https://kothalipi.tashanto.com/">
+  <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kothalipi: speak Bangla or English, and it is written in any app">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="twitter:title" content="Kothalipi: Free Bangla &amp; English Voice Typing for Mac, Windows, Linux">
+  <meta name="twitter:description" content="Free, open-source Bangla and English voice typing. Hold a key, speak, and text appears in any app. Works offline; optional Gemini or ChatGPT cloud.">
+  <meta name="twitter:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  <link rel="preload" href="/assets/fonts/hind-siliguri-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kothalipi","alternateName":"কথালিপি","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS, Windows, Linux","softwareVersion":"0.1.0","description":"Free, open-source Bangla and English voice typing. Hold a key, speak, and text appears in any app. Works offline, with optional Gemini or OpenAI cloud.","inLanguage":["bn","en"],"url":"https://kothalipi.tashanto.com/","downloadUrl":"https://kothalipi.tashanto.com/download","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"author":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"publisher":{"@type":"Organization","name":"Kothalipi","url":"https://kothalipi.tashanto.com","logo":"https://kothalipi.tashanto.com/assets/icon-512.png","founder":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"sameAs":["https://github.com/Kothalipi","https://github.com/Kothalipi/kothalipi-desktop"]},"image":"https://kothalipi.tashanto.com/assets/og.png","screenshot":["https://kothalipi.tashanto.com/assets/screens/voices.webp","https://kothalipi.tashanto.com/assets/screens/listen.webp"],"featureList":["Bangla and English dictation in any app","One hotkey per language","Offline mode with Bangla-trained models","Optional Google Gemini and OpenAI cloud with automatic fallback","Device-aware model recommendations"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Kothalipi","url":"https://kothalipi.tashanto.com/","inLanguage":["en","bn"],"publisher":{"@type":"Organization","name":"Kothalipi","url":"https://kothalipi.tashanto.com","logo":"https://kothalipi.tashanto.com/assets/icon-512.png","founder":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"sameAs":["https://github.com/Kothalipi","https://github.com/Kothalipi/kothalipi-desktop"]}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Kothalipi really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is free and open source under the MIT license, with no account, trial or card. Offline mode costs nothing to run. Cloud mode uses your own API key: Google Gemini has a free tier with daily limits, and OpenAI bills per minute of audio."}},{"@type":"Question","name":"Does Bangla voice typing work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. Offline mode runs a Bangla speech model on your computer, so it works without internet and your voice never leaves the machine. You download the model once (about 810 MB)."}},{"@type":"Question","name":"How accurate is it for Bangla?","acceptedAnswer":{"@type":"Answer","text":"It depends on the model. The recommended offline model, Qwen3-ASR 0.6B Bangla, was trained on 1,174 hours of Bangla speech and its authors report 14.74% word error rate and 5.34% character error rate on their own test set. Cloud mode with Google Gemini is usually best when you mix Bangla and English. We are building a public benchmark and will publish results."}},{"@type":"Question","name":"Can I mix Bangla and English in one sentence?","acceptedAnswer":{"@type":"Answer","text":"Yes, that is a design goal. Use the Bangla key for sentences with English words in them. Cloud mode handles mixed speech best."}},{"@type":"Question","name":"Which computers does it run on?","acceptedAnswer":{"@type":"Answer","text":"macOS 10.15 or later (Apple Silicon and Intel), Windows 10 and 11 (x64 and ARM) and Linux (.deb, .rpm and AppImage; X11 and Wayland). Android and iOS keyboards are planned."}},{"@type":"Question","name":"Where do my recordings go?","acceptedAnswer":{"@type":"Answer","text":"In offline mode, nowhere: audio is turned into text on your computer. In cloud mode, a recording is sent only to the provider whose key you added (Google or OpenAI), never to Kothalipi. Kothalipi has no servers, accounts or analytics."}},{"@type":"Question","name":"Do I need an API key?","acceptedAnswer":{"@type":"Answer","text":"Only for cloud mode. Offline mode needs no key. Get a free Gemini key in about a minute: see the free Gemini API key guide."}},{"@type":"Question","name":"What happens when my API limit runs out or I lose internet?","acceptedAnswer":{"@type":"Answer","text":"Kothalipi tries your engines in order (Gemini, then OpenAI) and then falls back to the offline model automatically, so dictation keeps working."}},{"@type":"Question","name":"Does it work in every app?","acceptedAnswer":{"@type":"Answer","text":"It types where your cursor is, so it works in chat apps, email, browsers, documents and code editors. Some apps running as administrator (Windows) or with secure input (macOS) can block typing."}},{"@type":"Question","name":"Who makes Kothalipi?","acceptedAnswer":{"@type":"Answer","text":"Kothalipi is made by TA Shanto in Bangladesh. The speech engine began from the open-source Handy project by CJ Pais (MIT); see the credits."}}]}</script>
 </head>
-<body>
+<body class="">
+  <a class="skip" href="#main">Skip to content</a>
   <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html" aria-label="Kothalipi home">
-        <img src="assets/kothalipi-mark.svg" alt="" width="30" height="31">
-        <span>Kothalipi</span>
-      </a>
-      <nav class="links" aria-label="Main">
-        <a href="download.html" data-i18n="nav.download">Download</a>
-        <a href="docs/index.html" data-i18n="nav.docs">Docs</a>
-        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
-      </nav>
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Kothalipi home"><img src="/assets/kothalipi-mark.svg" alt="" width="30" height="31">Kothalipi</a>
+      <nav class="links" aria-label="Main"><a href="/#features">Features</a><a href="/models">Models</a><a href="/guides/">Guides</a><a href="/docs/">Docs</a><a href="/download">Download</a></nav>
       <div class="nav-actions">
-        <button class="lang" id="lang" type="button" aria-label="Switch language">বাংলা</button>
-        <a class="btn btn-small" href="download.html">Download</a>
+        <a class="lang-switch" href="/bn/" hreflang="bn" lang="bn">বাংলা</a>
+        <a class="btn btn-primary btn-sm" href="/download">Download</a>
+        <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
       </div>
     </div>
   </header>
-  <main>
+  <main id="main">
+
     <section class="hero">
-      <div>
-        <span class="pill"><i></i><span data-i18n="hero.status">Free · Open source · Works offline</span></span>
-        <h1 data-i18n="hero.title">Speak.<br>It's written.</h1>
-        <p class="lead" data-i18n="hero.lead">Voice typing in Bangla and English, in any app. Hold a key, talk, let go, and your words appear. Works offline, or in the cloud when you want the best accuracy.</p>
-        <div class="cta">
-          <a class="btn btn-big" href="download.html" data-i18n="hero.download">Download free</a>
-          <a class="btn btn-ghost btn-big" href="https://github.com/Kothalipi/kothalipi-desktop" data-i18n="hero.github">View on GitHub</a>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><i></i>Free · Open source · Works offline</span>
+          <h1>Speak Bangla.<br><span class='grad'>It's written.</span></h1>
+          <p class="lead">Kothalipi is free voice typing for Bangla and English on Mac, Windows and Linux. Hold a key, speak, let go, and your words appear in any app.</p>
+          <div class="cta">
+            <a class="btn btn-primary btn-lg" id="hero-download" data-labels='{"mac": "Download for Mac", "windows": "Download for Windows", "linux": "Download for Linux"}' href="/download"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg><span id="hero-download-label">Download for free</span></a>
+            <a class="btn btn-secondary btn-lg" href="#how">See how it works</a>
+          </div>
+          <ul class="trust"><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>MIT open source</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>No account</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>Works offline</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>Gemini or ChatGPT optional</li></ul>
         </div>
-      </div>
-      <div class="demo" aria-label="Interactive preview">
-        <div class="demo-tabs" role="tablist">
-          <button role="tab" data-mode="bn" class="on">বাংলা</button>
-          <button role="tab" data-mode="en">English</button>
+        <div class="stage" aria-label="Interactive preview">
+          <div class="demo-tabs" role="tablist"><button role="tab" aria-selected="true" data-mode="bn" class="on">বাংলা</button><button role="tab" aria-selected="false" data-mode="en">English</button></div>
+          <div class="demo-win">
+            <div class="window">
+              <div class="window-bar"><i></i><i></i><i></i><span>Messages</span></div>
+              <div class="window-body"><p class="meta">To: Rafi</p><p class="typed" id="typed"><span class="cursor"></span></p></div>
+            </div>
+            <div class="pill-rec" id="pill" aria-hidden="true"><span class="dot"></span><span class="bars"><b></b><b></b><b></b><b></b><b></b><b></b></span><span id="pill-lang">BN</span></div>
+          </div>
+          <button class="holdbtn" id="hold" type="button">Hold to speak <kbd id="hold-key">Right ⌘</kbd></button>
+          <p class="demo-note">Preview only. In the app you hold a key and your real words appear.</p>
         </div>
-        <div class="window">
-          <div class="window-bar"><span></span><span></span><span></span><em data-i18n="demo.app">Messages</em></div>
-          <div class="window-body"><p class="typed" id="typed"><span class="cursor"></span></p></div>
-        </div>
-        <button class="hold" id="hold" type="button"><span class="mic" aria-hidden="true"></span><span data-i18n="demo.hold">Hold to speak</span> <kbd id="hold-key">Right ⌘</kbd></button>
-        <p class="demo-note" data-i18n="demo.note">Preview. In the app you hold a key and your real words appear.</p>
       </div>
     </section>
 
-    <section class="section" id="keys">
-      <div class="section-head">
-        <h2 data-i18n="keys.title">One key for each language</h2>
-        <p data-i18n="keys.sub">Hold a key, speak, let go. Mixing Bangla and English in one sentence works too.</p>
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head"><h2>Hold. Speak. Let go.</h2><p>That is the whole app.</p></div>
+        <div class="steps"><div class="step"><div class="n">1</div><h3>Hold a key</h3><p>Hold Right ⌘ for Bangla or fn for English. On Windows: Right Alt and Right Ctrl.</p></div><div class="step"><div class="n">2</div><h3>Speak naturally</h3><p>Talk the way you talk. Mixing Bangla and English in one sentence is normal.</p></div><div class="step"><div class="n">3</div><h3>Let go</h3><p>Your words appear where your cursor is: chat, email, documents, code editors.</p></div></div>
       </div>
-      <div class="grid-2">
-        <article class="card accent">
-          <span class="tag">বাংলা</span>
-          <h3>আজকে মিটিং কয়টায়?</h3>
-          <p data-i18n="keys.bn">Proper Bangla script, with dari (।) and punctuation.</p>
-          <div class="keys-row"><span class="keycap">Right ⌘ Command</span></div>
-        </article>
-        <article class="card">
-          <span class="tag">English</span>
-          <h3>See you at five.</h3>
-          <p data-i18n="keys.en">Clean English for emails and messages.</p>
-          <div class="keys-row"><span class="keycap">fn</span></div>
-        </article>
-      </div>
-      <p class="muted center" style="margin-top:18px" data-i18n="keys.change">On Windows: Right Alt and Right Ctrl. Change either key any time.</p>
     </section>
 
-    <section class="section" id="listen">
-      <div class="section-head">
-        <h2 data-i18n="listen.title">Free offline, or cloud</h2>
-        <p data-i18n="listen.sub">Pick one when you set up. Switch any time.</p>
+    <section class="section tint" id="features">
+      <div class="container">
+        <div class="section-head"><h2>Built for the way Bangla is really written</h2><p>Two keys, Bangla-trained models, and a setup that does the hard parts for you.</p></div>
+        
+      <div class="bento">
+        <article class="tile accent s4"><span class="tag">Offline or cloud</span><h3>Free and private, or the most accurate. You choose.</h3>
+          <p>Offline runs a Bangla model on your computer. Cloud uses your own Gemini or ChatGPT key. If a key runs out or you lose internet, Kothalipi moves to the next engine, so it never stops typing.</p>
+          <div class="flow" role="img" aria-label="Fallback order: Gemini, then ChatGPT, then offline"><span class="chip">Gemini</span><span class="arrow">→</span><span class="chip">ChatGPT</span><span class="arrow">→</span><span class="chip">Offline</span></div></article>
+        <article class="tile s2"><span class="tag">Two languages</span><h3>One key for each</h3><p>The key decides the language and the model for that recording.</p>
+          <div class="keys-row"><span class="keycap">Right ⌘ <small class="muted">বাংলা</small></span><span class="keycap fn">fn <small class="muted">English</small></span></div></article>
+        <article class="tile s2"><span class="tag">Smart setup</span><h3>Models for your computer</h3><p>Setup reads your memory and chip and picks the best fit.</p>
+          <div class="devcard"><b>Apple M2 · 16 GB</b><span class="ok">Best for this computer</span><br>Qwen3-ASR 0.6B Bangla · Parakeet 0.6B</div></article>
+        <article class="tile s2"><span class="tag">Guided</span><h3>Setup that explains itself</h3><p>Permissions, API keys with a Get a free key button, model downloads and key conflicts, in one calm flow.</p></article>
+        <article class="tile s2"><span class="tag">Private</span><h3>No account, no tracking</h3><p>Offline audio never leaves your computer. Kothalipi has no servers and no analytics.</p></article>
+        <article class="tile s2"><span class="tag">Open</span><h3>Open source, MIT</h3><p>Read the code, report a wrong word, or help add your language.</p></article>
       </div>
-      <div class="grid-2">
-        <article class="card">
-          <span class="tag">Offline</span>
-          <h3 data-i18n="listen.offTitle">Offline · Free</h3>
-          <p data-i18n="listen.off">Works without internet. Your voice never leaves your computer. Download the Bangla model once.</p>
-        </article>
-        <article class="card accent">
-          <span class="tag">Cloud</span>
-          <h3 data-i18n="listen.cloudTitle">Cloud · Most accurate</h3>
-          <p data-i18n="listen.cloud">Your own free Google Gemini key, or ChatGPT. Best when you mix Bangla and English.</p>
-        </article>
       </div>
-      <div class="section-head" style="margin-top:48px">
-        <h3 data-i18n="fallback.title">It never stops typing</h3>
-        <p data-i18n="fallback.sub">When a key hits its limit, Kothalipi tries the next one. No internet? It switches to offline.</p>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="container">
+        <div class="section-head"><h2>See it</h2><p>Real screens from the app.</p></div>
+        <div class="shots"><figure class="shot"><div class="window"><div class="window-bar"><i></i><i></i><i></i><span>Kothalipi</span></div><img src="/assets/screens/listen.webp" width="1600" height="1240" alt="Kothalipi setup screen: choose between Offline (free) and Cloud (most accurate)"></div><figcaption><b>Choose how it listens.</b> Offline for free and private, or Cloud with your own key. Low-memory computers are steered to Cloud.</figcaption></figure><figure class="shot"><div class="window"><div class="window-bar"><i></i><i></i><i></i><span>Kothalipi</span></div><img src="/assets/screens/voices.webp" width="1600" height="1240" alt="Kothalipi setup screen listing Bangla and English voice models with a Best for this computer badge" loading="lazy" decoding="async"></div><figcaption><b>Models picked for your computer.</b> Setup reads your memory and chip, then marks the best Bangla and English model.</figcaption></figure><figure class="shot"><div class="window"><div class="window-bar"><i></i><i></i><i></i><span>Kothalipi</span></div><img src="/assets/screens/keys.webp" width="1600" height="1240" alt="Kothalipi shortcut screen showing the Bangla and English keys and a macOS conflict warning" loading="lazy" decoding="async"></div><figcaption><b>Your keys, checked for conflicts.</b> On a Mac, Kothalipi spots settings that steal the keys and opens the right page to fix them.</figcaption></figure><figure class="shot"><div class="window"><div class="window-bar"><i></i><i></i><i></i><span>Kothalipi</span></div><img src="/assets/screens/settings.webp" width="1600" height="1240" alt="Kothalipi settings window showing the Bangla key, English key and listening mode" loading="lazy" decoding="async"></div><figcaption><b>Everything in one calm place.</b> Change keys, listening mode, API keys and models any time.</figcaption></figure></div>
       </div>
-      <div class="flow" aria-label="Fallback order">
-        <div class="step"><b>Gemini</b><span>your free key</span></div><div class="arrow">→</div>
-        <div class="step"><b>ChatGPT</b><span>optional key</span></div><div class="arrow">→</div>
-        <div class="step"><b>Offline</b><span>on your computer</span></div>
+    </section>
+
+    <section class="section tint" id="install">
+      <div class="container">
+        <div class="section-head"><h2>Install in one line</h2><p>Or download the installer. Setup takes about two minutes.</p></div>
+        <div class="tabs doc" style="margin:0 auto">
+          <div role="tablist" aria-label="Operating system"><button role="tab" data-tab="mac" aria-selected="true">macOS</button><button role="tab" data-tab="linux" aria-selected="false">Linux</button><button role="tab" data-tab="windows" aria-selected="false">Windows</button></div>
+          <div role="tabpanel" data-panel="mac"><div class="code"><pre>curl -fsSL https://kothalipi.tashanto.com/install.sh | sh</pre></div></div>
+          <div role="tabpanel" data-panel="linux"><div class="code"><pre>curl -fsSL https://kothalipi.tashanto.com/install.sh | sh</pre></div></div>
+          <div role="tabpanel" data-panel="windows"><div class="code"><pre>irm https://kothalipi.tashanto.com/install.ps1 | iex</pre></div></div>
+          <p class="muted" style="margin-top:14px"><a href="/download">Or download the installer</a> · <a href="/guides/">Read the setup guides</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="models">
+      <div class="container">
+        <div class="section-head"><h2>Bangla-trained models, not an afterthought</h2><p>Stock speech models struggle with Bangla. Kothalipi ships models trained on it and lets you compare them.</p>
+          <p style="margin-top:18px"><a class="btn btn-secondary" href="/models">Models and accuracy →</a></p></div>
+        <div class="section-head" style="margin-bottom:28px"><h3>On every computer you use</h3></div>
+        <div class="platforms"><div class="platform"><b>macOS</b><span class="ok">Apple Silicon &amp; Intel</span></div><div class="platform"><b>Windows</b><span class="ok">10 &amp; 11 · x64 &amp; ARM</span></div><div class="platform"><b>Linux</b><span class="ok">.deb · .rpm · AppImage</span></div><div class="platform soon"><b>Android</b><span class="">Coming</span></div><div class="platform soon"><b>iOS</b><span class="">Coming</span></div></div>
+      </div>
+    </section>
+
+    <section class="section tint" id="faq">
+      <div class="container">
+        <div class="section-head"><h2>Questions</h2></div>
+        <div class="faq"><details><summary>Is Kothalipi really free?</summary><p>Yes. It is free and open source under the MIT license, with no account, trial or card. Offline mode costs nothing to run. Cloud mode uses your own API key: Google Gemini has a free tier with daily limits, and OpenAI bills per minute of audio.</p></details><details><summary>Does Bangla voice typing work offline?</summary><p>Yes. Offline mode runs a Bangla speech model on your computer, so it works without internet and your voice never leaves the machine. You download the model once (about 810 MB).</p></details><details><summary>How accurate is it for Bangla?</summary><p>It depends on the model. The recommended offline model, Qwen3-ASR 0.6B Bangla, was trained on 1,174 hours of Bangla speech and its authors report 14.74% word error rate and 5.34% character error rate on their own test set. Cloud mode with Google Gemini is usually best when you mix Bangla and English. We are building a public benchmark and will publish results.</p></details><details><summary>Can I mix Bangla and English in one sentence?</summary><p>Yes, that is a design goal. Use the Bangla key for sentences with English words in them. Cloud mode handles mixed speech best.</p></details><details><summary>Which computers does it run on?</summary><p>macOS 10.15 or later (Apple Silicon and Intel), Windows 10 and 11 (x64 and ARM) and Linux (.deb, .rpm and AppImage; X11 and Wayland). Android and iOS keyboards are planned.</p></details><details><summary>Where do my recordings go?</summary><p>In offline mode, nowhere: audio is turned into text on your computer. In cloud mode, a recording is sent only to the provider whose key you added (Google or OpenAI), never to Kothalipi. Kothalipi has no servers, accounts or analytics.</p></details><details><summary>Do I need an API key?</summary><p>Only for cloud mode. Offline mode needs no key. Get a free Gemini key in about a minute: see the free Gemini API key guide.</p></details><details><summary>What happens when my API limit runs out or I lose internet?</summary><p>Kothalipi tries your engines in order (Gemini, then OpenAI) and then falls back to the offline model automatically, so dictation keeps working.</p></details><details><summary>Does it work in every app?</summary><p>It types where your cursor is, so it works in chat apps, email, browsers, documents and code editors. Some apps running as administrator (Windows) or with secure input (macOS) can block typing.</p></details><details><summary>Who makes Kothalipi?</summary><p>Kothalipi is made by TA Shanto in Bangladesh. The speech engine began from the open-source Handy project by CJ Pais (MIT); see the credits.</p></details></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head"><h2 data-i18n="why.title">Why Kothalipi</h2></div>
-      <div class="grid-4">
-        <article class="card"><h3 data-i18n="why.f1">Built for Bangla</h3><p data-i18n="why.f1p">Models trained on Bangla speech make far fewer mistakes than general voice typing.</p></article>
-        <article class="card"><h3 data-i18n="why.f2">Private</h3><p data-i18n="why.f2p">Offline mode never sends audio anywhere. No account needed.</p></article>
-        <article class="card"><h3 data-i18n="why.f3">Light and fast</h3><p data-i18n="why.f3p">Written in Rust. Low memory, quiet in the background.</p></article>
-        <article class="card"><h3 data-i18n="why.f4">Fully open source</h3><p data-i18n="why.f4p">MIT licensed. Every line is on GitHub.</p></article>
+      <div class="container">
+        <div class="band">
+          <h2>Start writing Bangla with your voice</h2><p>Free, open source and ready in two minutes.</p>
+          <div class="cta" style="justify-content:center"><a class="btn btn-primary btn-lg" href="/download"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>Download for free</a><a class="btn btn-secondary btn-lg" href="/docs/">Read the docs</a></div>
+        </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2 data-i18n="plat.title">On every computer</h2></div>
-      <div class="platforms">
-        <div><span>macOS</span><em class="ok">Apple Silicon &amp; Intel</em></div>
-        <div><span>Windows</span><em class="ok">10 &amp; 11</em></div>
-        <div><span>Linux</span><em class="ok">.deb, .rpm, AppImage</em></div>
-        <div><span>Android</span><em>Coming</em></div>
-        <div><span>iOS</span><em>Coming</em></div>
-      </div>
-    </section>
-
-    <section class="band">
-      <h2 data-i18n="band.title">Start writing with your voice</h2>
-      <p data-i18n="band.sub">Set up in two minutes. Completely free.</p>
-      <div class="cta" style="justify-content:center">
-        <a class="btn btn-big" href="download.html" data-i18n="band.download">Download</a>
-        <a class="btn btn-ghost btn-big" href="docs/index.html" data-i18n="band.guide">Setup guide</a>
-      </div>
-    </section>
-
-    <section class="section faq" id="faq">
-      <h2 class="center" data-i18n="faq.title">Questions</h2>
-      <details><summary data-i18n="faq.q1">Is it really free?</summary><p data-i18n="faq.a1">Yes. No account, no trial, no card. Offline mode costs nothing to run. Cloud mode uses your own key; Google Gemini has a free tier with daily limits, billed by Google to you if you go over.</p></details>
-      <details><summary data-i18n="faq.q2">Where do my recordings go?</summary><p data-i18n="faq.a2">Offline: nowhere. Cloud: only to the provider you chose (Google or OpenAI), never to us.</p></details>
-      <details><summary data-i18n="faq.q3">Which computers does it run on?</summary><p data-i18n="faq.a3">macOS (Apple Silicon and Intel), Windows 10 and 11, and Linux. Android and iOS are coming.</p></details>
-      <details><summary data-i18n="faq.q4">Does it work in every app?</summary><p data-i18n="faq.a4">Anywhere you can type: chat, email, browsers, documents, code editors.</p></details>
-      <details><summary data-i18n="faq.q5">Can I change the keys?</summary><p data-i18n="faq.a5">Yes, in the app's Settings → General.</p></details>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <a class="brand" href="index.html"><img src="assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
-        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 by <a href="https://tashanto.com">TA Shanto</a>.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/"><img src="/assets/kothalipi-mark.svg" alt="" width="26" height="27">Kothalipi</a>
+          <p>Free, open-source Bangla and English voice typing for Mac, Windows and Linux.</p>
+        </div>
+        <div><h4>Product</h4><ul><li><a href="/download">Download</a></li><li><a href="/models">Models &amp; accuracy</a></li><li><a href="/docs/cloud">Cloud &amp; API keys</a></li><li><a href="/changelog">Changelog</a></li></ul></div>
+        <div><h4>Guides</h4><ul><li><a href="/guides/bangla-voice-typing-mac">Bangla voice typing on Mac</a></li><li><a href="/guides/bangla-voice-typing-windows">On Windows</a></li><li><a href="/guides/bangla-voice-typing-linux">On Linux</a></li><li><a href="/guides/free-gemini-api-key">Free Gemini API key</a></li></ul></div>
+        <div><h4>Project</h4><ul><li><a href="/about">About</a></li><li><a href="/privacy">Privacy</a></li><li><a href="https://github.com/Kothalipi/kothalipi-desktop">Source code</a></li><li><a href="https://github.com/Kothalipi/kothalipi-desktop/blob/main/NOTICE.md">Credits</a></li></ul></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="docs/cloud.html">Cloud &amp; API keys</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul></div>
-      <div><h4>Guides</h4><ul>
-        <li><a href="docs/macos.html">macOS</a></li>
-        <li><a href="docs/windows.html">Windows</a></li>
-        <li><a href="docs/linux.html">Linux</a></li>
-        <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
-      </ul></div>
-      <div><h4>Open source</h4><ul>
-        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
-        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
-        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
-        <li><a href="https://github.com/Kothalipi/kothalipi-desktop/blob/main/NOTICE.md">Credits</a></li>
-      </ul></div>
+      <div class="footer-bottom"><span>Made in Bangladesh 🇧🇩 by <a href="https://tashanto.com">TA Shanto</a></span><span>MIT licensed · © 2026 TA Shanto</span></div>
     </div>
   </footer>
-  <script src="main.js"></script>
+  <script src="/main.js" defer></script>
 </body>
 </html>

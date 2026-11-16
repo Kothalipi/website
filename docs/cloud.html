@@ -3,99 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cloud & API keys · Kothalipi docs</title>
-  <meta name="description" content="Use your own Gemini or ChatGPT key, with automatic fallback to offline.">
-  <meta name="theme-color" content="#006A4E">
-  <link rel="canonical" href="https://kothalipi.tashanto.com/docs/cloud.html">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <meta property="og:title" content="Cloud & API keys · Kothalipi docs">
-  <meta property="og:description" content="Use your own Gemini or ChatGPT key, with automatic fallback to offline.">
+  <title>Cloud Mode &amp; API Keys | Kothalipi Docs</title>
+  <meta name="description" content="Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#006a4e">
+  <meta name="author" content="TA Shanto">
+  <link rel="canonical" href="https://kothalipi.tashanto.com/docs/cloud">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kothalipi">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Cloud Mode &amp; API Keys | Kothalipi Docs">
+  <meta property="og:description" content="Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.">
+  <meta property="og:url" content="https://kothalipi.tashanto.com/docs/cloud">
   <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
-  <meta property="og:url" content="https://kothalipi.tashanto.com/docs/cloud.html">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kothalipi: speak Bangla or English, and it is written in any app">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <meta name="twitter:title" content="Cloud Mode &amp; API Keys | Kothalipi Docs">
+  <meta name="twitter:description" content="Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.">
+  <meta name="twitter:image" content="https://kothalipi.tashanto.com/assets/og.png">
+  
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kothalipi.tashanto.com/"},{"@type":"ListItem","position":2,"name":"Docs","item":"https://kothalipi.tashanto.com/docs/"},{"@type":"ListItem","position":3,"name":"Cloud & API keys","item":"https://kothalipi.tashanto.com/docs/cloud"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloud Mode & API Keys | Kothalipi Docs","description":"Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.","mainEntityOfPage":"https://kothalipi.tashanto.com/docs/cloud","image":"https://kothalipi.tashanto.com/assets/og.png","datePublished":"2026-11-16","dateModified":"2026-11-16","author":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"publisher":{"@type":"Organization","name":"Kothalipi","url":"https://kothalipi.tashanto.com","logo":"https://kothalipi.tashanto.com/assets/icon-512.png","founder":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"sameAs":["https://github.com/Kothalipi","https://github.com/Kothalipi/kothalipi-desktop"]},"inLanguage":"en"}</script>
 </head>
-<body>
+<body class="">
+  <a class="skip" href="#main">Skip to content</a>
   <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="../index.html" aria-label="Kothalipi home">
-        <img src="../assets/kothalipi-mark.svg" alt="" width="30" height="31">
-        <span>Kothalipi</span>
-      </a>
-      <nav class="links" aria-label="Main">
-        <a href="../download.html" data-i18n="nav.download">Download</a>
-        <a href="../docs/index.html" aria-current="page" data-i18n="nav.docs">Docs</a>
-        <a href="https://github.com/Kothalipi/kothalipi-desktop">GitHub</a>
-      </nav>
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Kothalipi home"><img src="/assets/kothalipi-mark.svg" alt="" width="30" height="31">Kothalipi</a>
+      <nav class="links" aria-label="Main"><a href="/#features">Features</a><a href="/models">Models</a><a href="/guides/">Guides</a><a href="/docs/" aria-current="page">Docs</a><a href="/download">Download</a></nav>
       <div class="nav-actions">
-        
-        <a class="btn btn-small" href="../download.html">Download</a>
+        <a class="lang-switch" href="/bn/" hreflang="bn" lang="bn">বাংলা</a>
+        <a class="btn btn-primary btn-sm" href="/download">Download</a>
+        <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
       </div>
     </div>
   </header>
-  <main class="docs">
-    <nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="index.html">Getting started</a><a href="shortcuts.html">Keys & shortcuts</a><a href="cloud.html" aria-current="page">Cloud & API keys</a><h4>Install</h4><a href="macos.html">macOS</a><a href="windows.html">Windows</a><a href="linux.html">Linux</a><h4>Help</h4><a href="troubleshooting.html">Troubleshooting</a><a href="../privacy.html">Privacy</a></nav>
-    <article class="doc">
-      
+  <main id="main">
+<div class="container docs"><nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="/docs/">Getting started</a><a href="/docs/shortcuts">Keys &amp; shortcuts</a><a href="/docs/cloud" aria-current="page">Cloud &amp; API keys</a><h4>Install</h4><a href="/docs/macos">macOS</a><a href="/docs/windows">Windows</a><a href="/docs/linux">Linux</a><h4>Help</h4><a href="/docs/troubleshooting">Troubleshooting</a></nav><article class="doc"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/docs/">Docs</a> / Cloud &amp; API keys</nav>
       <h1>Cloud &amp; API keys</h1>
-      <p class="lead">Cloud mode sends your recording to the provider you choose, using your own key. It is the most accurate option, especially when you mix Bangla and English.</p>
+      <p class="lead">Cloud mode sends your recording to the provider you choose, using your own key. It is the most accurate option, especially for Bangla mixed with English.</p>
       <h2>How fallback works</h2>
-      <div class="flow" style="justify-content:flex-start"><div class="step"><b>Gemini</b><span>first</span></div><div class="arrow">→</div><div class="step"><b>ChatGPT</b><span>if Gemini fails</span></div><div class="arrow">→</div><div class="step"><b>Offline</b><span>always there</span></div></div>
-      <p>If a key is over its limit, rejected, the provider is down, or you have no internet, Kothalipi moves to the next one. When every cloud key fails it uses your offline model. With no offline model either, it asks you to download one, so <b>keep the Bangla model downloaded</b> as a backup.</p>
+      <p>Kothalipi tries your engines in order: <b>Gemini</b>, then <b>OpenAI</b>. If a key is over its limit, rejected, the provider is down or you have no internet, it moves to the next. When every cloud engine fails it uses your <b>offline model</b>, so keep the Bangla model downloaded. With no offline model either, it asks you to download one.</p>
       <h2 id="gemini">Get a free Gemini key</h2>
       <ol>
-        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in with a Google account.</li>
+        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in.</li>
         <li>Click <b>Create API key</b> and copy it.</li>
-        <li>In Kothalipi: <b>Settings → General → Listening</b>, choose <b>Cloud</b>, paste the key under Google Gemini and click <b>Check &amp; Save</b>.</li>
+        <li>In Kothalipi: <b>Settings → General → Listening</b>, choose <b>Cloud</b>, paste it under Google Gemini and click <b>Check &amp; Save</b>.</li>
       </ol>
-      <p>Gemini has a free tier with daily limits. Usage above it is billed by Google to your account. Kothalipi uses the <code>gemini-3.5-transcribe</code> model by default; you can change it in Settings.</p>
-      <h2 id="openai">Add a ChatGPT (OpenAI) key</h2>
-      <ol>
-        <li>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a>. OpenAI's API is paid per minute of audio.</li>
-        <li>Paste it under <b>OpenAI (ChatGPT)</b> and click <b>Check &amp; Save</b>.</li>
-      </ol>
-      <p>Default model: <code>gpt-transcribe</code>. Use the arrows in Settings to try OpenAI before Gemini.</p>
+      <p>Gemini has a free tier with daily limits; usage above it is billed by Google to you. Default model: <code>gemini-3.5-transcribe</code>. Full walkthrough: <a href="/guides/free-gemini-api-key">free Gemini API key guide</a>.</p>
+      <h2 id="openai">Add an OpenAI (ChatGPT) key</h2>
+      <p>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a> (paid per minute of audio) and paste it under <b>OpenAI (ChatGPT)</b>. Default model: <code>gpt-transcribe</code>. Use the arrows to try OpenAI before Gemini.</p>
       <h2 id="claude">What about Claude?</h2>
-      <p>Claude doesn't take audio input, so it can't turn speech into text. It can <b>polish</b> the text afterwards (fix spelling, punctuation, tone): set it up in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
+      <p>Claude does not take audio input, so it cannot turn speech into text. It can polish your text afterwards: set it up in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
       <h2>Where your keys and audio go</h2>
-      <ul>
-        <li>Keys are stored in Kothalipi's settings on your computer and sent only to their provider.</li>
-        <li>Audio goes straight from your computer to that provider. It never passes through Kothalipi's servers; there are none.</li>
-        <li>Offline mode sends nothing anywhere.</li>
-      </ul>
-
-      <div class="pager"><a href="shortcuts.html">← Keys & shortcuts</a><a href="macos.html">macOS →</a></div>
-    </article>
+      <ul><li>Keys are stored on your computer and sent only to their provider.</li><li>Audio goes straight from your computer to that provider. Kothalipi has no servers.</li><li>Offline mode sends nothing anywhere.</li></ul>
+    <div class="pager"><a href="/docs/shortcuts">← Keys & shortcuts</a><a href="/docs/macos">macOS →</a></div></article></div>
   </main>
   <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <a class="brand" href="../index.html"><img src="../assets/kothalipi-mark.svg" alt="" width="24" height="25"><span>Kothalipi</span></a>
-        <p data-i18n="foot.made">Open source, made in Bangladesh 🇧🇩 by <a href="https://tashanto.com">TA Shanto</a>.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/"><img src="/assets/kothalipi-mark.svg" alt="" width="26" height="27">Kothalipi</a>
+          <p>Free, open-source Bangla and English voice typing for Mac, Windows and Linux.</p>
+        </div>
+        <div><h4>Product</h4><ul><li><a href="/download">Download</a></li><li><a href="/models">Models &amp; accuracy</a></li><li><a href="/docs/cloud">Cloud &amp; API keys</a></li><li><a href="/changelog">Changelog</a></li></ul></div>
+        <div><h4>Guides</h4><ul><li><a href="/guides/bangla-voice-typing-mac">Bangla voice typing on Mac</a></li><li><a href="/guides/bangla-voice-typing-windows">On Windows</a></li><li><a href="/guides/bangla-voice-typing-linux">On Linux</a></li><li><a href="/guides/free-gemini-api-key">Free Gemini API key</a></li></ul></div>
+        <div><h4>Project</h4><ul><li><a href="/about">About</a></li><li><a href="/privacy">Privacy</a></li><li><a href="https://github.com/Kothalipi/kothalipi-desktop">Source code</a></li><li><a href="https://github.com/Kothalipi/kothalipi-desktop/blob/main/NOTICE.md">Credits</a></li></ul></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="../download.html">Download</a></li>
-        <li><a href="../docs/cloud.html">Cloud &amp; API keys</a></li>
-        <li><a href="../privacy.html">Privacy</a></li>
-      </ul></div>
-      <div><h4>Guides</h4><ul>
-        <li><a href="../docs/macos.html">macOS</a></li>
-        <li><a href="../docs/windows.html">Windows</a></li>
-        <li><a href="../docs/linux.html">Linux</a></li>
-        <li><a href="../docs/troubleshooting.html">Troubleshooting</a></li>
-      </ul></div>
-      <div><h4>Open source</h4><ul>
-        <li><a href="https://github.com/Kothalipi/kothalipi-desktop">Desktop app</a></li>
-        <li><a href="https://github.com/Kothalipi/kothalipi">Core &amp; roadmap</a></li>
-        <li><a href="https://github.com/Kothalipi/kothalipi/blob/main/CONTRIBUTING.md">Contribute</a></li>
-        <li><a href="https://github.com/Kothalipi/kothalipi-desktop/blob/main/NOTICE.md">Credits</a></li>
-      </ul></div>
+      <div class="footer-bottom"><span>Made in Bangladesh 🇧🇩 by <a href="https://tashanto.com">TA Shanto</a></span><span>MIT licensed · © 2026 TA Shanto</span></div>
     </div>
   </footer>
-  <script src="../main.js"></script>
+  <script src="/main.js" defer></script>
 </body>
 </html>

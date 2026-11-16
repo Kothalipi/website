@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
+
 Sitemap: https://kothalipi.tashanto.com/sitemap.xml
