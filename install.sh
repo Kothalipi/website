@@ -40,11 +40,33 @@ asset_url() {
     grep -E "$1\$" | head -n 1
 }
 
+sha256_of() {
+  if command -v shasum >/dev/null 2>&1; then shasum -a 256 "$1" | cut -d' ' -f1
+  elif command -v sha256sum >/dev/null 2>&1; then sha256sum "$1" | cut -d' ' -f1
+  else echo ""; fi
+}
+
 download() {
   url=$1
   out=$2
-  say "Downloading $(basename "$url")"
+  name=$(basename "$url")
+  say "Downloading $name"
   curl -fL --progress-bar -o "$out" "$url" || die "Download failed: $url"
+  # Check the file against the published SHA-256 before anything runs it.
+  expected=$(printf '%s' "$RELEASE_JSON" | grep -o "\"$name\": *\"[0-9a-f]\{64\}\"" | grep -o '[0-9a-f]\{64\}' | head -n 1 || true)
+  if [ -n "$expected" ]; then
+    actual=$(sha256_of "$out")
+    if [ -z "$actual" ]; then
+      warn "Can't verify the download (no shasum or sha256sum on this system)."
+    elif [ "$actual" != "$expected" ]; then
+      rm -f "$out"
+      die "Checksum mismatch for $name. The download was not installed."
+    else
+      say "Checksum verified"
+    fi
+  else
+    warn "No published checksum for $name; installing without verifying it."
+  fi
 }
 
 install_macos() {

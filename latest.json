@@ -1,6 +1,22 @@
 {
  "tag_name": "v0.1.2",
  "published_at": "2026-11-16T06:49:04Z",
+ "sha256": {
+  "Kothalipi-0.1.2-1.aarch64.rpm": "c3b2ada0e5354d49add9017aa1917faf2f7b542c450f525193ecfeb1f45ec64a",
+  "Kothalipi-0.1.2-1.x86_64.rpm": "b37b9555d4c064b9f854895772051940442a4f37c8672d3f0cb3a970d1c6f7e6",
+  "Kothalipi_0.1.2_aarch64.AppImage": "ad3f1773717bd247045f36fda7822a47c68217fdf0ee07cd2dfc2deb5941d977",
+  "Kothalipi_0.1.2_aarch64.dmg": "21ba2c4cd1ad0de98e47d719952279fcbbc6d83a609b590f30966d3140274edc",
+  "Kothalipi_0.1.2_amd64.AppImage": "15af07c72ff6fb47b09a44ceecd45efca57b2c2f476e2f17740ebee86b85bbf4",
+  "Kothalipi_0.1.2_amd64.deb": "8686084d8461a09d54934f38c40c1d5e90cc607efa032eafbc584149152a346a",
+  "Kothalipi_0.1.2_arm64-setup.exe": "8077489f1f7e8f8c22d12e8f56d4aa3f9822f00f2bcb5bc80f3f16754868c84f",
+  "Kothalipi_0.1.2_arm64.deb": "52a02381fb3ea289a1ef9b38669da99d9b8a316033adad667e0372e2ba0ec2aa",
+  "Kothalipi_0.1.2_arm64_en-US.msi": "9db0eef6491c059ed5a533cdd829e7512d61a9a1a31ead6b0dcadb39d15a70e3",
+  "Kothalipi_0.1.2_x64-setup.exe": "a9546a8201520f82611f117c559e036b00eb92c2e13fc9d162a053f3041f9f65",
+  "Kothalipi_0.1.2_x64.dmg": "41497308d455db36af31f2a60052ceb1030d4d3029841165324b01e6dc9c7577",
+  "Kothalipi_0.1.2_x64_en-US.msi": "51f2654bb90af36b513741edc7553ac71d4aeab2d118d595be073c41ace34caa",
+  "Kothalipi_aarch64.app.tar.gz": "874e68ffb412c9639b961b5c3edcae46980e3aa7118196744b4fd8f75d8aeeff",
+  "Kothalipi_x64.app.tar.gz": "9947afd68d25e70f989d97a020f2f64899b98732b3e90881ee35f4bd56e7631d"
+ },
  "assets": [
   {
    "name": "Kothalipi-0.1.2-1.aarch64.rpm",

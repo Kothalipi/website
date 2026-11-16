@@ -34,6 +34,20 @@ $installer = Join-Path $env:TEMP $asset.name
 Say "Downloading $($asset.name)"
 Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $installer
 
+# Check the file against the published SHA-256 before running it.
+$expected = $null
+if ($release.sha256) { $expected = $release.sha256.($asset.name) }
+if ($expected) {
+    $actual = (Get-FileHash -Path $installer -Algorithm SHA256).Hash.ToLower()
+    if ($actual -ne $expected.ToLower()) {
+        Remove-Item $installer -ErrorAction SilentlyContinue
+        throw "Checksum mismatch for $($asset.name). The download was not installed."
+    }
+    Say 'Checksum verified'
+} else {
+    Write-Host "warning: no published checksum for $($asset.name); installing without verifying it." -ForegroundColor Yellow
+}
+
 Say 'Installing Kothalipi'
 # /S = silent NSIS install for the current user.
 $p = Start-Process -FilePath $installer -ArgumentList '/S' -Wait -PassThru
