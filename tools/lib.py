@@ -5,6 +5,7 @@ import os
 
 SITE = "https://kothalipi.tashanto.com"
 GH = "https://github.com/Kothalipi"
+SUPPORT = "https://www.supportkori.com/iamtashanto"
 DESK = f"{GH}/kothalipi-desktop"
 MAKER = "https://tashanto.com"
 UPDATED = "2026-11-16"
@@ -61,7 +62,7 @@ FOOT = {
         "links": {
             "product": [("/download", "Download"), ("/models", "Models & accuracy"), ("/docs/cloud", "Cloud & API keys"), ("/changelog", "Changelog")],
             "guides": [("/guides/bangla-voice-typing-mac", "Bangla voice typing on Mac"), ("/guides/bangla-voice-typing-windows", "On Windows"), ("/guides/bangla-voice-typing-linux", "On Linux"), ("/guides/free-gemini-api-key", "Free Gemini API key")],
-            "project": [("/about", "About"), ("/privacy", "Privacy"), (DESK, "Source code"), (DESK + "/blob/main/NOTICE.md", "Credits")],
+            "project": [("/about", "About"), ("/privacy", "Privacy"), (DESK, "Source code"), (DESK + "/blob/main/NOTICE.md", "Credits"), (SUPPORT, "Support the project")],
         },
         "made": f'Made in Bangladesh 🇧🇩 by <a href="{MAKER}">TA Shanto</a>',
         "lic": "MIT licensed",
@@ -72,7 +73,7 @@ FOOT = {
         "links": {
             "product": [("/bn/download", "ডাউনলোড"), ("/models", "মডেল ও নির্ভুলতা"), ("/docs/cloud", "ক্লাউড ও API কি"), ("/changelog", "পরিবর্তনের তালিকা")],
             "guides": [("/guides/bangla-voice-typing-mac", "ম্যাকে বাংলা ভয়েস টাইপিং"), ("/guides/bangla-voice-typing-windows", "উইন্ডোজে"), ("/guides/bangla-voice-typing-linux", "লিনাক্সে"), ("/guides/free-gemini-api-key", "ফ্রি Gemini API কি")],
-            "project": [("/about", "পরিচিতি"), ("/privacy", "প্রাইভেসি"), (DESK, "সোর্স কোড"), (DESK + "/blob/main/NOTICE.md", "কৃতজ্ঞতা")],
+            "project": [("/about", "পরিচিতি"), ("/privacy", "প্রাইভেসি"), (DESK, "সোর্স কোড"), (DESK + "/blob/main/NOTICE.md", "কৃতজ্ঞতা"), (SUPPORT, "প্রজেক্টকে সাপোর্ট করুন")],
         },
         "made": f'বাংলাদেশে <a href="{MAKER}">TA Shanto</a>-র তৈরি 🇧🇩',
         "lic": "MIT লাইসেন্স",

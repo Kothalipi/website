@@ -247,6 +247,8 @@ def about():
       <p><b>TA Shanto</b>, a developer from Bangladesh. <a href="{MAKER}">tashanto.com</a> · <a href="https://github.com/iamtashanto">GitHub</a></p>
       <h2>Built on open work</h2>
       <p>Kothalipi's speech engine, hotkey handling and text insertion began from the open-source <a href="https://github.com/cjpais/Handy">Handy</a> project by CJ Pais (MIT). On-device recognition uses transcribe.cpp and ggml, and the Bangla models are open models from the community. Everything else is Kothalipi's own. See the full <a href="{DESK}/blob/main/NOTICE.md">credits</a>.</p>
+      <h2>Support the project</h2>
+      <p>Kothalipi is free and has no ads, accounts or tracking. If it saves you time and you would like to help keep it going, you can <a href="{SUPPORT}" rel="noopener">support its development</a>. Telling a friend, reporting a wrong word or sharing a recording helps just as much.</p>
       <h2>Get involved</h2>
       <ul>
         <li><a href="{GH}/kothalipi/discussions">Discussions</a>: ask questions, share ideas.</li>
@@ -269,6 +271,7 @@ def privacy():
         <li><b>No account, no analytics, no servers.</b> Kothalipi has no backend that receives your data.</li>
         <li><b>Offline mode</b> turns speech into text on your computer. Audio never leaves it.</li>
         <li><b>Cloud mode</b> sends a recording only to the provider whose key you added (Google or OpenAI), under that provider's terms. It is off until you turn it on.</li>
+        <li><b>Smart Polish</b> is off until you turn it on. When on, the <i>text</i> of what you said (never the audio) is sent to Google Gemini with your own key to fix spelling and punctuation.</li>
         <li><b>API keys</b> are stored in the app's settings on your computer and sent only to their provider.</li>
         <li><b>History</b> of transcripts and recordings is kept on your computer so you can review it. You can turn it off or delete it in Settings.</li>
         <li><b>Model downloads</b> come from Hugging Face, and update checks and installers from GitHub, like any download.</li>
