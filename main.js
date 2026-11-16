@@ -86,7 +86,7 @@ const BN = {
   "faq.a4": "যেখানে টাইপ করা যায় সেখানেই: চ্যাট, ইমেইল, ব্রাউজার, ডক, কোড এডিটর।",
   "faq.q5": "কি বদলানো যায়?",
   "faq.a5": "হ্যাঁ, অ্যাপের Settings → General থেকে।",
-  "foot.made": "ওপেন সোর্স, বাংলাদেশে বানানো 🇧🇩",
+  "foot.made": "ওপেন সোর্স, বাংলাদেশে <a href=\"https://tashanto.com\">TA Shanto</a>-র বানানো 🇧🇩",
 };
 
 const nodes = document.querySelectorAll("[data-i18n]");
