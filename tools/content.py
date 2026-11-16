@@ -451,3 +451,15 @@ def docs():
 def not_found():
     body = '<section class="container notfound"><h1>Page not found</h1><p class="lead center">That page does not exist.</p><p style="margin-top:28px"><a class="btn btn-primary" href="/">Go home</a></p></section>'
     page("/404", "Page not found | Kothalipi", "This page does not exist.", body, noindex=True)
+
+
+def get_pages():
+    """/get/mac, /get/windows, /get/linux: shareable shortcuts that start the right download."""
+    names = {"mac": "macOS", "windows": "Windows", "linux": "Linux"}
+    for k, n in names.items():
+        body = (f'<section class="container get-page" data-get="{k}"><div class="spinner" aria-hidden="true"></div>'
+                f'<h1 id="get-msg" style="font-size:34px">Getting Kothalipi for {n}…</h1>'
+                f'<p class="lead center" id="get-sub">Your download starts in a moment.</p>'
+                f'<p style="margin-top:22px"><a class="btn btn-primary" id="get-link" hidden href="/download">Download again</a></p>'
+                f'<noscript><p><a href="/download">Go to the download page</a></p></noscript></section>')
+        page(f"/get/{k}", f"Download Kothalipi for {n}", f"Start the free Kothalipi download for {n}. Bangla and English voice typing, set up in about two minutes.", body, noindex=True)

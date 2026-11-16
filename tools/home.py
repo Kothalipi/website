@@ -149,9 +149,11 @@ def home(lang):
           <h1>{t["h1"]}</h1>
           <p class="lead">{esc(t["lead"])}</p>
           <div class="cta">
-            <a class="btn btn-primary btn-lg" id="hero-download" data-labels='{labels}' href="{dl}">{ICON["download"]}<span id="hero-download-label">{esc(t["cta1"])}</span></a>
+            <a class="btn btn-primary btn-lg" id="hero-download" data-dl data-labels='{labels}' href="{dl}">{ICON["download"]}<span id="hero-download-label">{esc(t["cta1"])}</span></a>
             <a class="btn btn-secondary btn-lg" href="#how">{esc(t["cta2"])}</a>
           </div>
+          <div class="after-dl" id="after-dl"></div>
+          <p class="kbd-hint">{'Shortcut: press <kbd>D</kbd> to download' if en else 'শর্টকাট: ডাউনলোডের জন্য <kbd>D</kbd> চাপুন'}</p>
           <ul class="trust">{trust}</ul>
         </div>
         <div class="stage" aria-label="{'Interactive preview' if en else 'ইন্টারঅ্যাকটিভ প্রিভিউ'}">
@@ -223,7 +225,7 @@ def home(lang):
       <div class="container">
         <div class="band">
           <h2>{esc(sec["band_h"])}</h2><p>{esc(sec["band_p"])}</p>
-          <div class="cta" style="justify-content:center"><a class="btn btn-primary btn-lg" href="{dl}">{ICON["download"]}{esc(t["cta1"])}</a><a class="btn btn-secondary btn-lg" href="/docs/">{'Read the docs' if en else 'ডকুমেন্টেশন পড়ুন'}</a></div>
+          <div class="cta" style="justify-content:center"><a class="btn btn-primary btn-lg" data-dl href="{dl}">{ICON["download"]}{esc(t["cta1"])}</a><a class="btn btn-secondary btn-lg" href="/docs/">{'Read the docs' if en else 'ডকুমেন্টেশন পড়ুন'}</a></div>
         </div>
       </div>
     </section>"""
@@ -277,7 +279,7 @@ def download(lang):
       <h1>{h1}</h1>
       <p class="lead center">{lead}</p>
       <div class="dl-main">
-        <a class="btn btn-primary btn-lg" id="dl-button" data-labels='{labels}' data-soon="{esc(soon)}" href="{DESK}/releases/latest">{ICON["download"]}<span id="dl-label">{main_label}</span></a>
+        <a class="btn btn-primary btn-lg" id="dl-button" data-dl data-labels='{labels}' data-soon="{esc(soon)}" href="{DESK}/releases/latest">{ICON["download"]}<span id="dl-label">{main_label}</span></a>
         <span class="dl-meta" id="dl-size">{loading}</span>
       </div>
     </section>

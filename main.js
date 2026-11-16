@@ -117,15 +117,119 @@
     type();
   }
 
-  /* home: OS-aware hero button label */
+  /* ---------- releases: direct downloads from our own site ---------- */
+  const BN = document.documentElement.lang === "bn";
+  const T = BN
+    ? { started: "ডাউনলোড শুরু হয়েছে", started2: "ফাইলটি খুলে ইনস্টল করুন।", soon: "প্রথম রিলিজ আসছে", next: "এরপর", steps: ["ডাউনলোড হওয়া ফাইলটি খুলুন", "মাইক্রোফোনের অনুমতি দিন (Mac-এ Accessibility-ও)", "অফলাইন বা ক্লাউড বাছুন, তারপর কি চেপে বলুন"], guide: "ধাপে ধাপে গাইড →", missing: "এই কম্পিউটারের জন্য সরাসরি ফাইল পাওয়া যায়নি।", all: "সব ডাউনলোড" }
+    : { started: "Download started", started2: "Open the file to install.", soon: "The first release is on its way", next: "Next", steps: ["Open the downloaded file", "Allow the microphone (and Accessibility on Mac)", "Pick Offline or Cloud, then hold a key and speak"], guide: "Step-by-step guide →", missing: "No direct file for this computer yet.", all: "All downloads" };
+  const API = `https://api.github.com/repos/${REPO}/releases/latest`;
+  const mb = (n) => `${Math.round(n / 1048576)} MB`;
+  const isArm = async () => {
+    try { const v = await navigator.userAgentData.getHighEntropyValues(["architecture"]); return v.architecture === "arm"; }
+    catch (_) { return true; }
+  };
+  let relP = null;
+  const getRelease = () => {
+    if (relP) return relP;
+    relP = (async () => {
+      try {
+        const c = JSON.parse(sessionStorage.getItem("kl-rel") || "null");
+        if (c && Date.now() - c.t < 600000) return c.r;
+      } catch (_) {}
+      const r = await fetch(API);
+      if (!r.ok) throw new Error(String(r.status));
+      const j = await r.json();
+      const slim = { tag: j.tag_name, assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url })) };
+      try { sessionStorage.setItem("kl-rel", JSON.stringify({ t: Date.now(), r: slim })); } catch (_) {}
+      return slim;
+    })();
+    return relP;
+  };
+  const pick = async (rel, os) => {
+    const find = (re) => rel.assets.find((a) => re.test(a.name));
+    if (os === "mac") return find((await isArm()) ? /_aarch64\.dmg$/ : /_x64\.dmg$/);
+    if (os === "windows") return find(/_x64-setup\.exe$/);
+    if (os === "linux") return find(/_amd64\.AppImage$/) || find(/_amd64\.deb$/);
+    return null;
+  };
+  const OS_NAME = { mac: "macOS", windows: "Windows", linux: "Linux" };
+
+  const toast = (title, sub) => {
+    let t = $(".dl-toast");
+    if (!t) {
+      t = document.createElement("div");
+      t.className = "dl-toast";
+      t.setAttribute("role", "status");
+      document.body.appendChild(t);
+    }
+    t.innerHTML = `<div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div><b></b><span></span></div>`;
+    $("b", t).textContent = title;
+    $("span", t).textContent = sub;
+    setTimeout(() => t.classList.add("show"), 30);
+    clearTimeout(t._h);
+    t._h = setTimeout(() => t.classList.remove("show"), 5200);
+  };
+
+  /* every [data-dl] button becomes a direct download for this visitor's OS */
+  const dlButtons = $$("[data-dl]");
+  const os = detectOs();
+  if (dlButtons.length && os) {
+    getRelease().then(async (rel) => {
+      $$("[data-version]").forEach((el) => (el.textContent = rel.tag));
+      const asset = await pick(rel, os);
+      if (!asset) return;
+      const dlLabel = $("#dl-label"), dlb = $("#dl-button");
+      if (dlLabel && dlb) { const L = JSON.parse(dlb.dataset.labels || "{}"); if (L[os]) dlLabel.textContent = L[os]; }
+      dlButtons.forEach((b) => {
+        b.href = asset.url;
+        b.dataset.direct = "1";
+        b.setAttribute("download", "");
+        const meta = $(".dl-meta", b.parentElement) || (b.id === "dl-button" ? $("#dl-size") : null);
+        if (meta) meta.textContent = `${rel.tag} · ${OS_NAME[os]} · ${mb(asset.size)}`;
+        b.addEventListener("click", () => {
+          toast(T.started, T.started2);
+          const after = $("#after-dl");
+          if (after) after.classList.add("show");
+        });
+      });
+    }).catch(() => {});
+  }
+  const afterBox = $("#after-dl");
+  if (afterBox) {
+    const g = os ? `/docs/${os === "mac" ? "macos" : os}` : "/docs/";
+    afterBox.innerHTML = `<b>${T.next}</b><ol>${T.steps.map((s) => `<li>${s}</li>`).join("")}</ol><p style="margin:10px 0 0"><a href="${g}">${T.guide}</a></p>`;
+  }
+
+  /* hero button label by OS */
   const heroBtn = $("#hero-download");
   if (heroBtn) {
-    const os = detectOs();
     const labels = JSON.parse(heroBtn.dataset.labels || "{}");
     if (os && labels[os]) $("#hero-download-label").textContent = labels[os];
   }
 
-  /* download: real file links from the latest release */
+  /* /get/<os>: shareable shortcut that starts the download */
+  const getPage = $("[data-get]");
+  if (getPage) {
+    const want = getPage.dataset.get;
+    const msg = $("#get-msg");
+    getRelease().then(async (rel) => {
+      const asset = await pick(rel, want);
+      if (!asset) throw new Error("none");
+      $(".spinner", getPage).hidden = true;
+      msg.textContent = `${T.started} · ${rel.tag} · ${mb(asset.size)}`;
+      $("#get-sub").textContent = T.started2;
+      const link = $("#get-link");
+      link.href = asset.url;
+      link.hidden = false;
+      setTimeout(() => { location.href = asset.url; }, 600);
+    }).catch(() => {
+      $(".spinner", getPage).hidden = true;
+      msg.textContent = T.soon;
+      $("#get-sub").innerHTML = `<a href="/download">${T.all}</a>`;
+    });
+  }
+
+  /* download page: per-file lists */
   const FILES = [
     { os: "mac", label: "Apple Silicon (M1 or newer)", match: /_aarch64\.dmg$/ },
     { os: "mac", label: "Intel Mac", match: /_x64\.dmg$/ },
@@ -136,53 +240,74 @@
     { os: "linux", label: "AppImage (any distro)", match: /_amd64\.AppImage$/ },
     { os: "linux", label: "ARM64 .deb", match: /_arm64\.deb$/ },
   ];
-  const mb = (n) => `${Math.round(n / 1048576)} MB`;
-  const dlButton = $("#dl-button");
-  if (dlButton) {
-    const os = detectOs();
-    const labels = JSON.parse(dlButton.dataset.labels || "{}");
-    const isArm = async () => {
-      try {
-        const v = await navigator.userAgentData.getHighEntropyValues(["architecture"]);
-        return v.architecture === "arm";
-      } catch (_) { return true; }
-    };
-    fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-      .then(async (release) => {
-        const assets = release.assets || [];
-        const find = (re) => assets.find((a) => re.test(a.name));
-        $$("[data-version]").forEach((el) => (el.textContent = release.tag_name));
-        FILES.forEach((f) => {
-          const a = find(f.match);
-          const list = $(`[data-files="${f.os}"]`);
-          if (!a || !list) return;
-          const li = document.createElement("li");
-          const link = document.createElement("a");
-          link.href = a.browser_download_url;
-          link.textContent = f.label;
-          const size = document.createElement("span");
-          size.textContent = mb(a.size);
-          link.appendChild(size);
-          li.appendChild(link);
-          list.appendChild(li);
-        });
-        let primary = null;
-        if (os === "mac") primary = find((await isArm()) ? /_aarch64\.dmg$/ : /_x64\.dmg$/);
-        if (os === "windows") primary = find(/_x64-setup\.exe$/);
-        if (os === "linux") primary = find(/_amd64\.AppImage$/) || find(/_amd64\.deb$/);
-        if (primary) {
-          dlButton.href = primary.browser_download_url;
-          if (labels[os]) $("#dl-label").textContent = labels[os];
-          $("#dl-size").textContent = `${release.tag_name} · ${mb(primary.size)}`;
-        }
-      })
-      .catch(() => {
-        $$("[data-files]").forEach((l) => {
-          l.innerHTML = `<li><a href="https://github.com/${REPO}/releases">All downloads on GitHub<span>→</span></a></li>`;
-        });
-        const size = $("#dl-size");
-        if (size) size.textContent = dlButton.dataset.soon || "The first release is on its way.";
+  if ($("[data-files]")) {
+    getRelease().then((rel) => {
+      FILES.forEach((f) => {
+        const a = rel.assets.find((x) => f.match.test(x.name));
+        const list = $(`[data-files="${f.os}"]`);
+        if (!a || !list) return;
+        list.insertAdjacentHTML("beforeend", `<li><a href="${a.url}">${f.label}<span>${mb(a.size)}</span></a></li>`);
       });
+      const size = $("#dl-size");
+      if (size && !os) size.textContent = rel.tag;
+    }).catch(() => {
+      const size = $("#dl-size");
+      if (size) size.textContent = (dlButtons[0] && dlButtons[0].dataset.soon) || T.soon;
+      $$("[data-files]").forEach((l) => { l.innerHTML = `<li><a href="https://github.com/${REPO}/releases">${T.all}<span>→</span></a></li>`; });
+    });
+  }
+
+  /* keyboard shortcuts: D download, C copy the install command */
+  document.addEventListener("keydown", (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
+    const tg = e.target;
+    if (tg && (/^(input|textarea|select)$/i.test(tg.tagName) || tg.isContentEditable || tg.id === "hold")) return;
+    if (e.key === "d" || e.key === "D") {
+      const b = $("[data-dl]");
+      if (b) b.click(); else location.href = BN ? "/bn/download" : "/download";
+    } else if (e.key === "c" || e.key === "C") {
+      const panel = $('[role="tabpanel"]:not([hidden]) .copy') || $(".code .copy");
+      if (panel) { panel.click(); panel.scrollIntoView({ block: "center", behavior: "smooth" }); }
+    }
+  });
+
+  /* ---------- motion ---------- */
+  const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const bar = document.createElement("div");
+  bar.className = "progress";
+  document.body.appendChild(bar);
+  const prog = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`;
+  };
+  addEventListener("scroll", prog, { passive: true });
+  prog();
+
+  if (!calm && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    const groups = [".section-head", ".steps > *", ".bento > *", ".shot", ".platforms > *", ".faq details", ".band", ".os-cards > *", ".doc > h2", ".models-grid > *", ".cards > *"];
+    groups.forEach((sel) => {
+      $$(sel).forEach((el, i) => {
+        el.classList.add("reveal");
+        el.style.setProperty("--d", `${(i % 4) * 90}ms`);
+        io.observe(el);
+      });
+    });
+  }
+
+  /* gentle 3D tilt on the hero demo */
+  const win = $(".stage .demo-win");
+  if (win && !calm && matchMedia("(hover: hover)").matches) {
+    const stage = $(".stage");
+    stage.addEventListener("pointermove", (e) => {
+      const r = stage.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      win.style.setProperty("--ry", `${(x * 7).toFixed(2)}deg`);
+      win.style.setProperty("--rx", `${(-y * 6).toFixed(2)}deg`);
+    });
+    stage.addEventListener("pointerleave", () => { win.style.setProperty("--ry", "0deg"); win.style.setProperty("--rx", "0deg"); });
   }
 })();

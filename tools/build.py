@@ -29,6 +29,7 @@ content.privacy()
 content.guides()
 content.docs()
 content.not_found()
+content.get_pages()
 
 # ---- sitemap, robots, manifest, llms.txt
 S = lib.SITE
