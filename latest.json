@@ -1,92 +1,92 @@
 {
- "tag_name": "v0.1.3",
- "published_at": "2026-11-16T08:52:08Z",
+ "tag_name": "v0.1.4",
+ "published_at": "2026-11-16T09:28:27Z",
  "sha256": {
-  "Kothalipi-0.1.3-1.aarch64.rpm": "453e694a098344d45ed7443791d458f80571700a3817c3e78f361072e9ba478d",
-  "Kothalipi-0.1.3-1.x86_64.rpm": "d825ae72d04b44e3d62db1e194a4dcca016243a6101fa1a1313372a7b50c9079",
-  "Kothalipi_0.1.3_aarch64.AppImage": "6f59b5db3529cdadeca1df5db1b848eec5b817f56c2e588bb5cbdfd60dc50969",
-  "Kothalipi_0.1.3_aarch64.dmg": "5dc0c81f205fc75af4d19a8988d29dcef6679e5b185190766e07bcc22d63071d",
-  "Kothalipi_0.1.3_amd64.AppImage": "5df341e2b8dc75d54033d5f0a2cb223c4ff94b53d8ad3e7a62b9db3c69f4fe23",
-  "Kothalipi_0.1.3_amd64.deb": "fc4ed72c1d70f73205eb2c5b4de69425f57178c6b60b6242be052e4e7be04dac",
-  "Kothalipi_0.1.3_arm64-setup.exe": "2fb4b760f0b68f05278b88977943d67b53a6e301d29cc285c51a54a321121c0a",
-  "Kothalipi_0.1.3_arm64.deb": "03707745b3fad01e7fe8b107b84304b7038cee0489da7c6b5fd395eedb993888",
-  "Kothalipi_0.1.3_arm64_en-US.msi": "14c827495bc792f7ce1af54250d54d87b467a3d91c1477c14116df4fe72bcc3b",
-  "Kothalipi_0.1.3_x64-setup.exe": "ed89e44e5bbc23d0a4fd6cd1f14aa566cf991834705edf76f946a836ea2fa31d",
-  "Kothalipi_0.1.3_x64.dmg": "ea12fb91e0e8c1061b53e052fffa22dec4ef939e5b69d3adeb6a9ceb7035298c",
-  "Kothalipi_0.1.3_x64_en-US.msi": "e898ac4ea5a7527a9478b016f22c391f38fcfb03b5fa8cba015ad79e0d81386a",
-  "Kothalipi_aarch64.app.tar.gz": "aaa8117c597083d7f40e1c07d058b22fab95094b4ec2da7d29289624b71804d8",
-  "Kothalipi_x64.app.tar.gz": "0585cbddf684d20ad06758e1b2754a8b056cf36864f8f532f66253e00799ac50"
+  "Kothalipi-0.1.4-1.aarch64.rpm": "bcb7bfba03401f4fcf77a09695c3a8009b87caad46bb20960c9abea0b4cb1b25",
+  "Kothalipi-0.1.4-1.x86_64.rpm": "b2e2d6a2cb1a163e5d0f875effb8cdf0ba442595ceacc0d362129ed4c2bd75be",
+  "Kothalipi_0.1.4_aarch64.AppImage": "b8db85af35477a8ff8e7f62ae2f9acdbb20bd9db0d7f83db731f06907658dd05",
+  "Kothalipi_0.1.4_aarch64.dmg": "65e67d67ed53ba00cdd82cc0d9556b14747007d30063d021291b7d381f91ea88",
+  "Kothalipi_0.1.4_amd64.AppImage": "e3eacc2322666899a6d9a6f2645832a244547dbde311c7438fed0e40e249d68e",
+  "Kothalipi_0.1.4_amd64.deb": "7e4024a860b1d7454029ddc72cf3bae6b59cb696384a9a35dffaf253a5cb8d06",
+  "Kothalipi_0.1.4_arm64-setup.exe": "a592fc73294cff97c3b0a13d7f6c307a6992d675c0223a61e69474c5df76ccba",
+  "Kothalipi_0.1.4_arm64.deb": "d35eccc3d5728e5454cae5b5c567e23a31c68d53c5e89eb46ecc70b6b64e66fd",
+  "Kothalipi_0.1.4_arm64_en-US.msi": "87812399eb8920006a6263aa2a60eb197dd32d8546c233708f07141346633c99",
+  "Kothalipi_0.1.4_x64-setup.exe": "5ecf626a48ac5390bcacb25843c1d9ff68b9d77885ac61fbe15ea011759aab48",
+  "Kothalipi_0.1.4_x64.dmg": "b0e05daf0ab5bec911fb877279e4d88111dbb4b1e45b2c1320d678cf4e8d5b38",
+  "Kothalipi_0.1.4_x64_en-US.msi": "093ab4936c96fa464d1fac7700e72500480f39c5206bac08d394e1f3aaa94db4",
+  "Kothalipi_aarch64.app.tar.gz": "65e6fbfbba943c6ffa0d00e6023a2f9641d4750337dfd52452374613b2d712d5",
+  "Kothalipi_x64.app.tar.gz": "61dbbd678bd1ea3aa5ecec61349cc802d99f063572d184aeed7f53f40a2e0451"
  },
  "assets": [
   {
-   "name": "Kothalipi-0.1.3-1.aarch64.rpm",
+   "name": "Kothalipi-0.1.4-1.aarch64.rpm",
    "size": 77206401,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi-0.1.3-1.aarch64.rpm"
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi-0.1.4-1.aarch64.rpm"
   },
   {
-   "name": "Kothalipi-0.1.3-1.x86_64.rpm",
-   "size": 90862557,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi-0.1.3-1.x86_64.rpm"
+   "name": "Kothalipi-0.1.4-1.x86_64.rpm",
+   "size": 90884829,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi-0.1.4-1.x86_64.rpm"
   },
   {
-   "name": "Kothalipi_0.1.3_aarch64.AppImage",
-   "size": 115739144,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_aarch64.AppImage"
+   "name": "Kothalipi_0.1.4_aarch64.AppImage",
+   "size": 115747336,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_aarch64.AppImage"
   },
   {
-   "name": "Kothalipi_0.1.3_aarch64.dmg",
-   "size": 14246603,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_aarch64.dmg"
+   "name": "Kothalipi_0.1.4_aarch64.dmg",
+   "size": 14251209,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_aarch64.dmg"
   },
   {
-   "name": "Kothalipi_0.1.3_amd64.AppImage",
-   "size": 123742712,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_amd64.AppImage"
+   "name": "Kothalipi_0.1.4_amd64.AppImage",
+   "size": 123738616,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_amd64.AppImage"
   },
   {
-   "name": "Kothalipi_0.1.3_amd64.deb",
-   "size": 34085950,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_amd64.deb"
+   "name": "Kothalipi_0.1.4_amd64.deb",
+   "size": 34095798,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_amd64.deb"
   },
   {
-   "name": "Kothalipi_0.1.3_arm64-setup.exe",
-   "size": 10501144,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_arm64-setup.exe"
+   "name": "Kothalipi_0.1.4_arm64-setup.exe",
+   "size": 10517755,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_arm64-setup.exe"
   },
   {
-   "name": "Kothalipi_0.1.3_arm64.deb",
-   "size": 29634726,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_arm64.deb"
+   "name": "Kothalipi_0.1.4_arm64.deb",
+   "size": 29645596,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_arm64.deb"
   },
   {
-   "name": "Kothalipi_0.1.3_arm64_en-US.msi",
-   "size": 15151104,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_arm64_en-US.msi"
+   "name": "Kothalipi_0.1.4_arm64_en-US.msi",
+   "size": 15163392,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_arm64_en-US.msi"
   },
   {
-   "name": "Kothalipi_0.1.3_x64-setup.exe",
-   "size": 16944544,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_x64-setup.exe"
+   "name": "Kothalipi_0.1.4_x64-setup.exe",
+   "size": 16956172,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_x64-setup.exe"
   },
   {
-   "name": "Kothalipi_0.1.3_x64.dmg",
-   "size": 14572997,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_x64.dmg"
+   "name": "Kothalipi_0.1.4_x64.dmg",
+   "size": 14570031,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_x64.dmg"
   },
   {
-   "name": "Kothalipi_0.1.3_x64_en-US.msi",
-   "size": 32497664,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_0.1.3_x64_en-US.msi"
+   "name": "Kothalipi_0.1.4_x64_en-US.msi",
+   "size": 32509952,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_0.1.4_x64_en-US.msi"
   },
   {
    "name": "Kothalipi_aarch64.app.tar.gz",
-   "size": 14167923,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_aarch64.app.tar.gz"
+   "size": 14176369,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_aarch64.app.tar.gz"
   },
   {
    "name": "Kothalipi_x64.app.tar.gz",
-   "size": 14508285,
-   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.3/Kothalipi_x64.app.tar.gz"
+   "size": 14517707,
+   "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.4/Kothalipi_x64.app.tar.gz"
   }
  ]
 }
