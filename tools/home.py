@@ -309,6 +309,7 @@ def download(lang):
       <div class="dl-main">
         <a class="btn btn-primary btn-lg" id="dl-button" data-dl data-labels='{labels}' data-soon="{esc(soon)}" href="{DESK}/releases/latest">{ICON["download"]}<span id="dl-label">{main_label}</span></a>
         <span class="dl-meta" id="dl-size">{loading}</span>
+        <p class="muted center" style="margin-top:14px;font-size:14px">{ICON['check']} <strong data-total-downloads>150+</strong> {'downloads across all platforms' if en else 'টি মোট ডাউনলোড'}</p>
       </div>
     </section>
     <section class="container" style="padding-bottom:20px"><div class="os-cards">{cards}</div></section>
