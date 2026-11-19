@@ -1,0 +1,79 @@
+{
+  "version": "0.1.5",
+  "notes": "",
+  "pub_date": "2026-11-19T14:58:21.299Z",
+  "platforms": {
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTHV0R3pHWHNISjhKVklHRHp0VCtqaFpaaDFNMy9Sd3hjcWRSVjd5Mnk3VHJGTHhSalR0b2xsR3BlbWlMTXRPZUtTSklrbTdJZERzL0E3RTVnV3ZSZFFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTAwMjg2CWZpbGU6S290aGFsaXBpXzAuMS41X2FtZDY0LkFwcEltYWdlCnZLS0FzaUZqcXoyc2dObDdxWjNtSkNaQnBrcURuUE83RnFkNCtqUkpVVXZvTzVPUTRXczJqc0kvdkRqS3hickJGbkRHd1M3N3M3Vk8rcVByYUM0N0NRPT0K",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_amd64.AppImage"
+    },
+    "linux-x86_64-deb": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTG0zOWFraWpkYnRlOGk5eGJrRm0zcUFwNlNrbDdHQ2VJdjZkVys5ZlpuUUJMWi9uR2xuWFpSU2dmQ1Zva0xZTkhPNXVsajJLOENDSXIxbENVWFpOSVEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk1ODMzCWZpbGU6S290aGFsaXBpXzAuMS41X2FtZDY0LmRlYgpYdjRGbkYxTHk0cVg0TU10QnMreGI2S211K3U5cExSYll3RmF6WmJCUHJoSC9mL2hHT3ZMV1h2dzZ0bDNCRFpTUmNHcXJlUUttajlNK1JOanc5TmFEQT09Cg==",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_amd64.deb"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGszMkxQZTBHWjlsKzVOZS83MnJFR2tET2tsUDBvWTdnM2tFZVM2NGVlcGRZSHI4TU14SGdQL2FSeWQ5dnpxMjJvdWpIRkpXS2piOFFRQVlqNjJrR3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk1ODUzCWZpbGU6S290aGFsaXBpLmFwcC50YXIuZ3oKcFlYdUc2N1Yxd1IvbUM5MlJoVTNZbFZjcTYyRXhSSjU4ZVlEOXpRck5OVU9YNm56MHJXMk05U043STFSajVRNWFFSGk3djZGNjlOdFJvZHJ5dG80QXc9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_x64.app.tar.gz"
+    },
+    "darwin-x86_64-app": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGszMkxQZTBHWjlsKzVOZS83MnJFR2tET2tsUDBvWTdnM2tFZVM2NGVlcGRZSHI4TU14SGdQL2FSeWQ5dnpxMjJvdWpIRkpXS2piOFFRQVlqNjJrR3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk1ODUzCWZpbGU6S290aGFsaXBpLmFwcC50YXIuZ3oKcFlYdUc2N1Yxd1IvbUM5MlJoVTNZbFZjcTYyRXhSSjU4ZVlEOXpRck5OVU9YNm56MHJXMk05U043STFSajVRNWFFSGk3djZGNjlOdFJvZHJ5dG80QXc9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_x64.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGpsRjRYSjlhVEd4ZXZSTUFwRVUzcVVnNkEzZU1XcWRxSUVvTWV1dTZPNGkvR1lPQ1RjNlpDaUZxWlQ2KzlMZzR2SDl1WGYxV21OeTNrQTdoM3p5MHdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MTAzCWZpbGU6S290aGFsaXBpLmFwcC50YXIuZ3oKRXJ1SnBBVzNad0JzNVEvR3pYOXpLSkxnamFmRkRzYmxJWm5pZ095dktSSVBVSTNsWHJBdmcreHgxTmJlTGxzM3FuUng1MERFRy90Tng5TllISFFBQlE9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_aarch64.app.tar.gz"
+    },
+    "darwin-aarch64-app": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGpsRjRYSjlhVEd4ZXZSTUFwRVUzcVVnNkEzZU1XcWRxSUVvTWV1dTZPNGkvR1lPQ1RjNlpDaUZxWlQ2KzlMZzR2SDl1WGYxV21OeTNrQTdoM3p5MHdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MTAzCWZpbGU6S290aGFsaXBpLmFwcC50YXIuZ3oKRXJ1SnBBVzNad0JzNVEvR3pYOXpLSkxnamFmRkRzYmxJWm5pZ095dktSSVBVSTNsWHJBdmcreHgxTmJlTGxzM3FuUng1MERFRy90Tng5TllISFFBQlE9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_aarch64.app.tar.gz"
+    },
+    "windows-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGtzWUVCMWlVOFhLUWJRR3F5UEFEUytvTDBYNTJDV1B5MXF5TGI3bmVUWUc3TjhpM1Q0eU5sSytRR2FiYnk0YldCenFOVGc4NzV3dU1teXNiWHdvdXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MTI1CWZpbGU6S290aGFsaXBpXzAuMS41X2FybTY0X2VuLVVTLm1zaQphOGdTWmcyNzdKWDIxd2ZITDFURzdtelk5bVMySUo0MHE3TVJPeFA2S1l0c2RvdHkrTXlKK2s4NnhYUnpzN2gyRnNHNnV2Wldab3VrQmYzeDZxY0RBZz09Cg==",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_arm64_en-US.msi"
+    },
+    "windows-aarch64-msi": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGtzWUVCMWlVOFhLUWJRR3F5UEFEUytvTDBYNTJDV1B5MXF5TGI3bmVUWUc3TjhpM1Q0eU5sSytRR2FiYnk0YldCenFOVGc4NzV3dU1teXNiWHdvdXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MTI1CWZpbGU6S290aGFsaXBpXzAuMS41X2FybTY0X2VuLVVTLm1zaQphOGdTWmcyNzdKWDIxd2ZITDFURzdtelk5bVMySUo0MHE3TVJPeFA2S1l0c2RvdHkrTXlKK2s4NnhYUnpzN2gyRnNHNnV2Wldab3VrQmYzeDZxY0RBZz09Cg==",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_arm64_en-US.msi"
+    },
+    "windows-aarch64-nsis": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGdJNTVoU2diVWpxcW85UkJPTmhvZHl3WWp2TWJVWFNjNVcxZkJuK1dDb3daU3FPNXBNWnArTmlOTk9pdFMrc2VnQU42Q1I1UlZTZ3R4bUZIOU83M0FvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MTI1CWZpbGU6S290aGFsaXBpXzAuMS41X2FybTY0LXNldHVwLmV4ZQorUnc2YUtWQ3VCa3dUcnhMM25YRGhBMG1tYVRjbjRDclFXQWd4VE9tRmw0bFRtSVFsL0RocEg5ZFBQczIrTnltdW9KK0ttWnFmWEFOenh2R3F3RWtEZz09Cg==",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_arm64-setup.exe"
+    },
+    "linux-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTG9GQURpVmNZVnNuc1IxMXcxa1BWclJlRE9TZXhaRmxFK0x6ZHZyMnREUDFucjV3V3o2a09rdG9oTDRkUStaU0lVd2s5ZnFPdVdvYmxPa0REVEFpWndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MjI5CWZpbGU6S290aGFsaXBpXzAuMS41X2FhcmNoNjQuQXBwSW1hZ2UKNUxwRkJ0YmNrZHJBWlZsTm5SaE9nZy9EbjhhdEw0MjgwMXNVUXNyYU82Y3g5WFMwMzdmcWdVSEJzYlhlVXBXdjBHSmxVSmVXREJnT1pKZWZ6eHFzQlE9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_aarch64.AppImage"
+    },
+    "linux-aarch64-appimage": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTG9GQURpVmNZVnNuc1IxMXcxa1BWclJlRE9TZXhaRmxFK0x6ZHZyMnREUDFucjV3V3o2a09rdG9oTDRkUStaU0lVd2s5ZnFPdVdvYmxPa0REVEFpWndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MjI5CWZpbGU6S290aGFsaXBpXzAuMS41X2FhcmNoNjQuQXBwSW1hZ2UKNUxwRkJ0YmNrZHJBWlZsTm5SaE9nZy9EbjhhdEw0MjgwMXNVUXNyYU82Y3g5WFMwMzdmcWdVSEJzYlhlVXBXdjBHSmxVSmVXREJnT1pKZWZ6eHFzQlE9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_aarch64.AppImage"
+    },
+    "linux-aarch64-deb": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTG5qTHk2eWNmSGt3YS9IOHl4ZFh2N1ZiWnRBSnRERFFsSTE5ZG4rb00rVHR6SmN4bGZBODBHVDNrYVU5K1ZrekQ1eGZPTmNLOXVJbGxXd05XbWhoaUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MjMwCWZpbGU6S290aGFsaXBpXzAuMS41X2FybTY0LmRlYgpyNmJXcW84bjhCVkdpYm5tS2Z5MHl5OWpSTndndFIwSFBZeml2WGRISmNxZ1BjYlNCdE1RTmh2VnJORnNqcnpUWnlDaW0xTU9VNzBxZmhhUFhVTUREdz09Cg==",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_arm64.deb"
+    },
+    "linux-aarch64-rpm": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGd1Uk9zSFBkWDRkcWJIbWVZUVJiWEpTTVhtTE16M3c0TUI5U0xKRyt1bWVMYWQrK3hWMVFTRnIwWk1kK0l2UFhiaVBXbjR6NzVERlhVUW9hMHNjbXdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2MjMwCWZpbGU6S290aGFsaXBpLTAuMS41LTEuYWFyY2g2NC5ycG0KTE9wOGJCTXVFQkpvUDBzY1RwZ0twSDhvOXZrSGhJUmhwU1h3S0xNdzVOVFJOdjM4Q0tFSXZONjVkd2NmemI3TkR0dVJmRUI4eEFQcm1ObC83eEdPQmc9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi-0.1.5-1.aarch64.rpm"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTG8vVkRFaUxLTUlOM0lhUGFORCtxdnRQMXZsaXUxak5rK3VJbXByalZZMkpRTXVuN0FzelcxZVo1ZFVsU2JaMXBFZ2R0WitSZVozeDhWODYzaU96THdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2NjIxCWZpbGU6S290aGFsaXBpXzAuMS41X3g2NF9lbi1VUy5tc2kKbUNTMWdWZDA0UEltTm4zQTVJckJyeHBobGpsZ1UrMzJ0dWk4aTJPMEltTnM5eEtUdXNndWl4K3dDTjhoSEIrTHJLaTNEaFlRTUtaRjFjWW0rUnZYQWc9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_x64_en-US.msi"
+    },
+    "windows-x86_64-msi": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTG8vVkRFaUxLTUlOM0lhUGFORCtxdnRQMXZsaXUxak5rK3VJbXByalZZMkpRTXVuN0FzelcxZVo1ZFVsU2JaMXBFZ2R0WitSZVozeDhWODYzaU96THdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2NjIxCWZpbGU6S290aGFsaXBpXzAuMS41X3g2NF9lbi1VUy5tc2kKbUNTMWdWZDA0UEltTm4zQTVJckJyeHBobGpsZ1UrMzJ0dWk4aTJPMEltTnM5eEtUdXNndWl4K3dDTjhoSEIrTHJLaTNEaFlRTUtaRjFjWW0rUnZYQWc9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_x64_en-US.msi"
+    },
+    "windows-x86_64-nsis": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTHNOeHBEZG5qYUlZamtwQjVpbjZMd0JyWUdSZkZvaHJjcE5XSHBLcmh5TDQ5ODBlZmd6eG9vT2pyeUdHb0p4MGpHNU1oOTFPSWV3bEpUUlJueE5vUUEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDk2NjIxCWZpbGU6S290aGFsaXBpXzAuMS41X3g2NC1zZXR1cC5leGUKd0g2VFcrZ1pPZURTeUFOVWxkbzVtYktzaXhVZTlNUnNhbFZxMDRDOVl6c0FqSm9DYkFWaTErN25oZ1NWWmxvcGs1K3R0V1RjMkJvUlpTU3p2TW9VQ2c9PQo=",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_x64-setup.exe"
+    },
+    "linux-x86_64-appimage": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTHV0R3pHWHNISjhKVklHRHp0VCtqaFpaaDFNMy9Sd3hjcWRSVjd5Mnk3VHJGTHhSalR0b2xsR3BlbWlMTXRPZUtTSklrbTdJZERzL0E3RTVnV3ZSZFFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTAwMjg2CWZpbGU6S290aGFsaXBpXzAuMS41X2FtZDY0LkFwcEltYWdlCnZLS0FzaUZqcXoyc2dObDdxWjNtSkNaQnBrcURuUE83RnFkNCtqUkpVVXZvTzVPUTRXczJqc0kvdkRqS3hickJGbkRHd1M3N3M3Vk8rcVByYUM0N0NRPT0K",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi_0.1.5_amd64.AppImage"
+    },
+    "linux-x86_64-rpm": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUd0QwYytydzhJTGdTc2s3T29HSGZidzZxMFkyRmtCUk1GRThZcVMzTnJtTzc3YU81NVlsdVVQZU94ZFNFbDNWN2ZKbno1akUzcDJ4TGo5Y1VwS2k2bUZXZFdoekxYaEFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTAwMjg2CWZpbGU6S290aGFsaXBpLTAuMS41LTEueDg2XzY0LnJwbQp5bGxzbTRoRitPZUVKSzNOSHUvRks3QUhiSmxsdlEySXJIeUI5MmVOdndQNm1ma0RaVEdCeXBabnBqQThsUVI0MWhyUS9mNzI5clAyNTdHYjltVmlBZz09Cg==",
+      "url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.5/Kothalipi-0.1.5-1.x86_64.rpm"
+    }
+  }
+}
