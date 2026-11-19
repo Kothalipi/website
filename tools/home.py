@@ -33,6 +33,7 @@ def shots_html(lang):
 
 EN_FAQ = [
     ("Is Kothalipi really free?", "Yes. It is free and open source under the MIT license, with no account, trial or card. Offline mode costs nothing to run. Cloud mode uses your own API key: Google Gemini has a free tier with daily limits, and OpenAI bills per minute of audio."),
+    ("Can Kothalipi translate Bangla voice to English text?", "Yes! With our AI Post-Processing feature (v0.1.5), you can speak naturally in Bangla and Kothalipi translates your speech in real time into fluent, grammatically polished English before pasting it into any app. It works seamlessly using Google Gemini (free tier) or your preferred OpenAI/Anthropic Claude key."),
     ("Does Bangla voice typing work offline?", "Yes. Offline mode runs a Bangla speech model on your computer, so it works without internet and your voice never leaves the machine. You download the model once (about 810 MB)."),
     ("How accurate is it for Bangla?", "It depends on the model. The recommended offline model, Qwen3-ASR 0.6B Bangla, was trained on 1,174 hours of Bangla speech and its authors report 14.74% word error rate and 5.34% character error rate on their own test set. Cloud mode with Google Gemini is usually best when you mix Bangla and English. We are building a public benchmark and will publish results."),
     ("Can I mix Bangla and English in one sentence?", "Yes, that is a design goal. Use the Bangla key for sentences with English words in them. Cloud mode handles mixed speech best."),
@@ -45,6 +46,7 @@ EN_FAQ = [
 ]
 BN_FAQ = [
     ("কথালিপি কি সত্যিই ফ্রি?", "হ্যাঁ। MIT লাইসেন্সে ফ্রি ও ওপেন সোর্স। অ্যাকাউন্ট, ট্রায়াল বা কার্ড লাগে না। অফলাইন মোড চালাতে কোনো খরচ নেই। ক্লাউড মোডে আপনার নিজের API কি লাগে: Google Gemini-র দৈনিক সীমাসহ ফ্রি ব্যবহার আছে, আর OpenAI অডিওর মিনিট ধরে চার্জ করে।"),
+    ("কথালিপি কি মুখে বলা বাংলা সরাসরি ইংরেজিতে অনুবাদ করতে পারে?", "হ্যাঁ! কথালিপির নতুন এআই পোস্ট-প্রসেসিং (v0.1.5) ফিচারের মাধ্যমে আপনি বাংলায় স্বাভাবিকভাবে কথা বললে কথালিপি তাৎক্ষণিকভাবে তা অত্যন্ত সাবলীল ও ব্যাকরণগতভাবে নিখুঁত ইংরেজিতে অনুবাদ করে আপনার অ্যাপে টাইপ করে দেয়। এটি Google Gemini-এর ফ্রি টায়ার বা আপনার নিজস্ব OpenAI/Claude কি দিয়ে সহজেই চলে।"),
     ("ইন্টারনেট ছাড়া কি বাংলা ভয়েস টাইপিং চলে?", "হ্যাঁ। অফলাইন মোডে বাংলা স্পিচ মডেল আপনার কম্পিউটারেই চলে, তাই ইন্টারনেট লাগে না আর আপনার কণ্ঠ কম্পিউটার ছেড়ে যায় না। মডেলটা একবার ডাউনলোড করতে হয় (প্রায় ৮১০ MB)।"),
     ("বাংলায় কতটা নির্ভুল?", "মডেলের উপর নির্ভর করে। সুপারিশ করা অফলাইন মডেল Qwen3-ASR 0.6B Bangla ১,১৭৪ ঘণ্টা বাংলা কথায় ট্রেইন করা, আর এর নির্মাতারা নিজেদের টেস্ট সেটে ১৪.৭৪% WER ও ৫.৩৪% CER জানিয়েছেন। বাংলা-ইংরেজি মিশিয়ে বললে সাধারণত Google Gemini দিয়ে ক্লাউড মোড সবচেয়ে ভালো। আমরা একটা পাবলিক বেঞ্চমার্ক বানাচ্ছি, ফল প্রকাশ করব।"),
     ("এক বাক্যে বাংলা আর ইংরেজি মেশানো যায়?", "হ্যাঁ, এটা আমাদের মূল লক্ষ্য। ইংরেজি শব্দসহ বাক্যের জন্য বাংলা কি ব্যবহার করুন। মেশানো কথায় ক্লাউড মোড সবচেয়ে ভালো কাজ করে।"),
@@ -88,9 +90,18 @@ def home(lang):
     )
     steps_html = "".join(f'<div class="step"><div class="n">{n}</div><h3>{esc(h)}</h3><p>{esc(p)}</p></div>' for n, h, p in steps)
 
+    new_badge = (
+        '<a class="new-badge" href="#features"><b>v0.1.5</b> ✨ Real-time Bangla to English Voice Translation</a><br>'
+        if en
+        else '<a class="new-badge" href="#features"><b>v0.1.5</b> ✨ সরাসরি বাংলা থেকে ইংরেজি ভয়েস অনুবাদ</a><br>'
+    )
+
     if en:
         bento = f"""
       <div class="bento">
+        <article class="tile accent s4" style="background:linear-gradient(135deg, rgba(139,92,246,0.08), rgba(0,106,78,0.05));border-color:rgba(139,92,246,0.3)"><span class="tag" style="background:#8b5cf6;color:#fff">✨ New · AI Translation</span><h3>Speak Bangla, type in fluent English</h3>
+          <p>Talk naturally in everyday Bangla, and Kothalipi translates your thoughts into polished, grammatically correct English in real time using Google Gemini AI. Perfect for official emails, international client conversations, and documents.</p>
+          <div class="flow" role="img" aria-label="Bangla speech translates to English"><span class="chip">🗣️ "আমি কালকে মিটিংয়ে জয়েন করব"</span><span class="arrow">→</span><span class="chip" style="background:#8b5cf6;color:#fff">✍️ "I will join the meeting tomorrow"</span></div></article>
         <article class="tile accent s4"><span class="tag">Offline or cloud</span><h3>Free and private, or the most accurate. You choose.</h3>
           <p>Offline runs a Bangla model on your computer. Cloud uses your own Gemini or ChatGPT key. If a key runs out or you lose internet, Kothalipi moves to the next engine, so it never stops typing.</p>
           <div class="flow" role="img" aria-label="Fallback order: Gemini, then ChatGPT, then offline"><span class="chip">Gemini</span><span class="arrow">→</span><span class="chip">ChatGPT</span><span class="arrow">→</span><span class="chip">Offline</span></div></article>
@@ -114,6 +125,9 @@ def home(lang):
     else:
         bento = f"""
       <div class="bento">
+        <article class="tile accent s4" style="background:linear-gradient(135deg, rgba(139,92,246,0.08), rgba(0,106,78,0.05));border-color:rgba(139,92,246,0.3)"><span class="tag" style="background:#8b5cf6;color:#fff">✨ নতুন · এআই ভয়েস ট্রান্সলেশন</span><h3>বাংলায় বলুন, সাথে সাথে নিখুঁত ইংরেজিতে লেখা হবে</h3>
+          <p>বাংলায় আপনার স্বাভাবিক ভাষায় কথা বলুন। কথালিপি Google Gemini এআই-এর সাহায্যে রিয়েল-টাইমে তা অত্যন্ত সাবলীল ও শুদ্ধ ইংরেজিতে রূপান্তর করে সক্রিয় অ্যাপে টাইপ করে দেয়। অফিশিয়াল ইমেইল, মেসেজ বা ক্লায়েন্ট চ্যাটের জন্য অসাধারণ সুবিধা।</p>
+          <div class="flow" role="img" aria-label="বাংলা কথা সরাসরি ইংরেজিতে অনুবাদ"><span class="chip">🗣️ "আমি কালকে মিটিংয়ে জয়েন করব"</span><span class="arrow">→</span><span class="chip" style="background:#8b5cf6;color:#fff">✍️ "I will join the meeting tomorrow"</span></div></article>
         <article class="tile accent s4"><span class="tag">অফলাইন বা ক্লাউড</span><h3>ফ্রি ও প্রাইভেট, অথবা সবচেয়ে নির্ভুল। আপনিই বেছে নিন।</h3>
           <p>অফলাইনে বাংলা মডেল আপনার কম্পিউটারেই চলে। ক্লাউডে আপনার নিজের Gemini বা ChatGPT কি ব্যবহার হয়। কোনো কি-এর সীমা শেষ হলে বা ইন্টারনেট গেলে কথালিপি পরের ইঞ্জিনে চলে যায়, তাই লেখা কখনো থামে না।</p>
           <div class="flow" role="img" aria-label="ক্রম: Gemini, তারপর ChatGPT, তারপর অফলাইন"><span class="chip">Gemini</span><span class="arrow">→</span><span class="chip">ChatGPT</span><span class="arrow">→</span><span class="chip">অফলাইন</span></div></article>
@@ -146,7 +160,8 @@ def home(lang):
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow"><i></i>{esc(t["eyebrow"])}</span>
+          <span class="eyebrow"><i></i>{esc(t["eyebrow"])}</span><br>
+          {new_badge}
           <h1>{t["h1"]}</h1>
           <p class="lead">{esc(t["lead"])}</p>
           <div class="cta">

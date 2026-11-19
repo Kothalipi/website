@@ -107,6 +107,13 @@ h3 { font-size: 22px; font-weight: 650; letter-spacing: -0.01em; line-height: 1.
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--green); background: var(--soft); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
 @media (prefers-color-scheme: dark) { .eyebrow { color: var(--green-3); } }
 .eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: pulse 1.8s infinite; }
+.new-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #7c3aed; background: rgba(124, 58, 237, 0.08); border: 1px solid rgba(124, 58, 237, 0.22); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; text-decoration: none; transition: transform 0.2s; }
+.new-badge:hover { transform: translateY(-1px); }
+.new-badge b { background: #7c3aed; color: #fff; padding: 2px 7px; border-radius: 999px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+@media (prefers-color-scheme: dark) {
+  .new-badge { color: #c4b5fd; background: rgba(139, 92, 246, 0.14); border-color: rgba(139, 92, 246, 0.3); }
+  .new-badge b { background: #8b5cf6; }
+}
 .center { text-align: center; margin-left: auto; margin-right: auto; }
 .muted { color: var(--muted); }
 body.bn h1 { letter-spacing: -0.02em; line-height: 1.2; }

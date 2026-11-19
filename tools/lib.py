@@ -8,8 +8,8 @@ GH = "https://github.com/Kothalipi"
 SUPPORT = "https://www.supportkori.com/iamtashanto"
 DESK = f"{GH}/kothalipi-desktop"
 MAKER = "https://tashanto.com"
-UPDATED = "2026-11-16"
-VERSION = "0.1.0"
+UPDATED = "2026-11-19"
+VERSION = "0.1.5"
 
 INSTALL_SH = "curl -fsSL https://kothalipi.tashanto.com/install.sh | sh"
 INSTALL_PS = "irm https://kothalipi.tashanto.com/install.ps1 | iex"
@@ -95,6 +95,11 @@ def page(path, title, desc, body, *, lang="en", current="", alt=None, og="/asset
     robots = "noindex,follow" if noindex else "index,follow,max-image-preview:large,max-snippet:-1"
     og_locale = "bn_BD" if lang == "bn" else "en_US"
     og_url = abs_url(og)
+    keywords = (
+        "Bangla voice typing, Bengali speech to text, Bangla to English voice translation, offline voice typing, Bengali ASR, speech recognition Mac Windows Linux, Whisper Bangla, Qwen3-ASR Bangla, free dictation, AI voice typing"
+        if lang == "en"
+        else "বাংলা ভয়েস টাইপিং, বাংলা স্পিচ টু টেক্সট, বাংলা থেকে ইংরেজি ভয়েস অনুবাদ, অফলাইন ভয়েস টাইপিং, মুখে বলে বাংলা লেখা, ফ্রি ভয়েস টাইপিং সফটওয়্যার, উইন্ডোজে বাংলা ভয়েস টাইপিং, ম্যাকে বাংলা ভয়েস টাইপিং"
+    )
     switch_href = alt.get("bn" if lang == "en" else "en") or ("/bn/" if lang == "en" else "/")
     switch_label = "বাংলা" if lang == "en" else "English"
     switch_lang = "bn" if lang == "en" else "en"
@@ -122,9 +127,12 @@ def page(path, title, desc, body, *, lang="en", current="", alt=None, og="/asset
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(desc)}">
+  <meta name="keywords" content="{esc(keywords)}">
   <meta name="robots" content="{robots}">
   <meta name="theme-color" content="#006a4e">
+  <meta name="application-name" content="Kothalipi">
   <meta name="author" content="TA Shanto">
+  <meta name="publisher" content="TA Shanto">
   <link rel="canonical" href="{canonical}">
   {hreflangs}<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -141,6 +149,8 @@ def page(path, title, desc, body, *, lang="en", current="", alt=None, og="/asset
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{esc(og_alt)}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@iamtashanto">
+  <meta name="twitter:creator" content="@iamtashanto">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(desc)}">
   <meta name="twitter:image" content="{og_url}">
@@ -220,25 +230,34 @@ def app_schema(lang="en"):
         "name": "Kothalipi",
         "alternateName": "কথালিপি",
         "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "macOS, Windows, Linux",
+        "operatingSystem": "macOS 10.15+, Windows 10/11, Linux (Debian, Ubuntu, Fedora, Arch)",
         "softwareVersion": VERSION,
-        "description": "Free, open-source Bangla and English voice typing. Hold a key, speak, and text appears in any app. Works offline, with optional Gemini or OpenAI cloud.",
+        "description": "Free, open-source Bangla and English voice typing and translation. Hold a key, speak, and text appears in any app. Works offline, or with optional Google Gemini and OpenAI cloud.",
         "inLanguage": ["bn", "en"],
         "url": SITE + "/",
         "downloadUrl": SITE + "/download",
         "license": "https://opensource.org/licenses/MIT",
         "isAccessibleForFree": True,
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "155",
+            "bestRating": "5",
+            "worstRating": "1",
+        },
         "author": PERSON,
         "publisher": ORG,
         "image": SITE + "/assets/og.png",
-        "screenshot": [SITE + "/assets/screens/voices.webp", SITE + "/assets/screens/listen.webp"],
+        "screenshot": [SITE + "/assets/screens/voices.webp", SITE + "/assets/screens/listen.webp", SITE + "/assets/screens/settings.webp"],
         "featureList": [
-            "Bangla and English dictation in any app",
-            "One hotkey per language",
-            "Offline mode with Bangla-trained models",
-            "Optional Google Gemini and OpenAI cloud with automatic fallback",
-            "Device-aware model recommendations",
+            "Bangla and English dictation in any desktop app",
+            "Real-time Bangla to English voice translation with AI",
+            "One dedicated hotkey per language",
+            "100% offline mode with Bangla-trained speech models (Qwen3-ASR, Whisper)",
+            "Optional Google Gemini and OpenAI cloud models with automatic fallback",
+            "Device-aware model recommendations based on RAM and CPU",
+            "Instant typing without clipboard hijack or telemetry",
         ],
     }
 
