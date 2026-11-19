@@ -140,7 +140,12 @@
       if (!r || !r.ok) r = await fetch(API);
       if (!r.ok) throw new Error(String(r.status));
       const j = await r.json();
-      const slim = { tag: j.tag_name, assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url })) };
+      const slim = {
+        tag: j.tag_name,
+        totalDownloads: j.total_downloads,
+        releaseDownloads: j.release_downloads,
+        assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url, downloads: a.download_count }))
+      };
       try { sessionStorage.setItem("kl-rel", JSON.stringify({ t: Date.now(), r: slim })); } catch (_) {}
       return slim;
     })();
@@ -177,6 +182,9 @@
   if (dlButtons.length && os) {
     getRelease().then(async (rel) => {
       $$("[data-version]").forEach((el) => (el.textContent = rel.tag));
+      if (rel.totalDownloads) {
+        $$("[data-total-downloads]").forEach((el) => (el.textContent = `${rel.totalDownloads.toLocaleString()}+`));
+      }
       const asset = await pick(rel, os);
       if (!asset) return;
       const dlLabel = $("#dl-label"), dlb = $("#dl-button");

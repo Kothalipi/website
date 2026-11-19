@@ -70,7 +70,8 @@ def home(lang):
         cta2="See how it works" if en else "কীভাবে কাজ করে দেখুন",
         trust=["MIT open source", "No account", "Works offline", "Gemini or ChatGPT optional"] if en else ["MIT ওপেন সোর্স", "অ্যাকাউন্ট লাগে না", "অফলাইনে চলে", "Gemini বা ChatGPT ঐচ্ছিক"],
     )
-    trust = "".join(f"<li>{ICON['check']}{esc(x)}</li>" for x in t["trust"])
+    dl_trust = f"<li>{ICON['check']}<strong data-total-downloads>150+</strong> {'downloads' if en else 'ডাউনলোড'}</li>"
+    trust = dl_trust + "".join(f"<li>{ICON['check']}{esc(x)}</li>" for x in t["trust"])
     hold = "Hold to speak" if en else "চেপে ধরে বলুন"
     note = "Preview only. In the app you hold a key and your real words appear." if en else "এটা শুধু প্রিভিউ। অ্যাপে কি চেপে ধরলে আপনার আসল কথা লেখা হয়।"
     win_label = "Messages" if en else "মেসেজ"
