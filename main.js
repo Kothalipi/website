@@ -167,7 +167,7 @@
       if (!r.ok) throw new Error(String(r.status));
       const j = await r.json();
       const slim = {
-        tag: j.tag_name,
+        tag: j.tag_name || (j.version ? `v${j.version}` : "v0.1.6"),
         totalDownloads: j.total_downloads,
         releaseDownloads: j.release_downloads,
         assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url, downloads: a.download_count }))
