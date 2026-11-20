@@ -26,6 +26,32 @@
     });
   }
 
+  /* theme toggle (light / dark) */
+  const getTheme = () => {
+    return document.documentElement.getAttribute("data-theme") || 
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  };
+  const setTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    try { localStorage.setItem("kothalipi_theme", theme); } catch (_) {}
+  };
+  $$(".theme-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const current = getTheme();
+      const next = current === "dark" ? "light" : "dark";
+      setTheme(next);
+    });
+  });
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+      try {
+        if (!localStorage.getItem("kothalipi_theme")) {
+          document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
+        }
+      } catch (_) {}
+    });
+  }
+
   /* copy buttons on code blocks */
   $$(".code").forEach((block) => {
     const b = document.createElement("button");

@@ -36,6 +36,18 @@
   <meta name="twitter:description" content="Free, open-source Bangla and English voice typing. Hold a key, speak, and text appears in any app. Works offline; optional Gemini or ChatGPT cloud.">
   <meta name="twitter:image" content="https://kothalipi.tashanto.com/assets/og.png">
   <link rel="preload" href="/assets/fonts/hind-siliguri-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('kothalipi_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/style.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kothalipi","alternateName":"কথালিপি","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 10.15+, Windows 10/11, Linux (Debian, Ubuntu, Fedora, Arch)","softwareVersion":"0.1.5","description":"Free, open-source Bangla and English voice typing and translation. Hold a key, speak, and text appears in any app. Works offline, or with optional Google Gemini and OpenAI cloud.","inLanguage":["bn","en"],"url":"https://kothalipi.tashanto.com/","downloadUrl":"https://kothalipi.tashanto.com/download","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"155","bestRating":"5","worstRating":"1"},"author":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"publisher":{"@type":"Organization","name":"Kothalipi","url":"https://kothalipi.tashanto.com","logo":"https://kothalipi.tashanto.com/assets/icon-512.png","founder":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"sameAs":["https://github.com/Kothalipi","https://github.com/Kothalipi/kothalipi-desktop"]},"image":"https://kothalipi.tashanto.com/assets/og.png","screenshot":["https://kothalipi.tashanto.com/assets/screens/voices.webp","https://kothalipi.tashanto.com/assets/screens/listen.webp","https://kothalipi.tashanto.com/assets/screens/settings.webp"],"featureList":["Bangla and English dictation in any desktop app","Real-time Bangla to English voice translation with AI","One dedicated hotkey per language","100% offline mode with Bangla-trained speech models (Qwen3-ASR, Whisper)","Optional Google Gemini and OpenAI cloud models with automatic fallback","Device-aware model recommendations based on RAM and CPU","Instant typing without clipboard hijack or telemetry"]}</script>
@@ -49,6 +61,10 @@
       <a class="brand" href="/" aria-label="Kothalipi home"><img src="/assets/kothalipi-mark.svg" alt="" width="30" height="31">Kothalipi</a>
       <nav class="links" aria-label="Main"><a href="/#features">Features</a><a href="/models">Models</a><a href="/guides/">Guides</a><a href="/docs/">Docs</a><a href="/download">Download</a></nav>
       <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
         <a class="lang-switch" href="/bn/" hreflang="bn" lang="bn">বাংলা</a>
         <a class="btn btn-primary btn-sm" href="/download">Download</a>
         <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
@@ -99,9 +115,9 @@
         <div class="section-head"><h2>Built for the way Bangla is really written</h2><p>Two keys, Bangla-trained models, and a setup that does the hard parts for you.</p></div>
         
       <div class="bento">
-        <article class="tile accent s4" style="background:linear-gradient(135deg, rgba(139,92,246,0.08), rgba(0,106,78,0.05));border-color:rgba(139,92,246,0.3)"><span class="tag" style="background:#8b5cf6;color:#fff">✨ New · AI Translation</span><h3>Speak Bangla, type in fluent English</h3>
+        <article class="tile translation-tile s4"><span class="tag">✨ New · AI Translation</span><h3>Speak Bangla, type in fluent English</h3>
           <p>Talk naturally in everyday Bangla, and Kothalipi translates your thoughts into polished, grammatically correct English in real time using Google Gemini AI. Perfect for official emails, international client conversations, and documents.</p>
-          <div class="flow" role="img" aria-label="Bangla speech translates to English"><span class="chip">🗣️ "আমি কালকে মিটিংয়ে জয়েন করব"</span><span class="arrow">→</span><span class="chip" style="background:#8b5cf6;color:#fff">✍️ "I will join the meeting tomorrow"</span></div></article>
+          <div class="flow" role="img" aria-label="Bangla speech translates to English"><span class="chip chip-spoken">🗣️ "আমি কালকে মিটিংয়ে জয়েন করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ "I will join the meeting tomorrow"</span></div></article>
         <article class="tile accent s4"><span class="tag">Offline or cloud</span><h3>Free and private, or the most accurate. You choose.</h3>
           <p>Offline runs a Bangla model on your computer. Cloud uses your own Gemini or ChatGPT key. If a key runs out or you lose internet, Kothalipi moves to the next engine, so it never stops typing.</p>
           <div class="flow" role="img" aria-label="Fallback order: Gemini, then ChatGPT, then offline"><span class="chip">Gemini</span><span class="arrow">→</span><span class="chip">ChatGPT</span><span class="arrow">→</span><span class="chip">Offline</span></div></article>
