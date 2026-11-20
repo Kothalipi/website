@@ -68,26 +68,43 @@
     </div>
   </header>
   <main id="main">
-<div class="container docs"><nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="/docs/" aria-current="page">Getting started</a><a href="/docs/shortcuts">Keys &amp; shortcuts</a><a href="/docs/cloud">Cloud &amp; API keys</a><h4>Install</h4><a href="/docs/macos">macOS</a><a href="/docs/windows">Windows</a><a href="/docs/linux">Linux</a><h4>Help</h4><a href="/docs/troubleshooting">Troubleshooting</a></nav><article class="doc"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Docs</nav>
+<div class="container docs"><nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="/docs/" aria-current="page">Getting started</a><a href="/docs/shortcuts">Keys &amp; shortcuts</a><a href="/docs/cloud">Cloud &amp; API keys</a><h4>Install</h4><a href="/docs/macos">macOS</a><a href="/docs/windows">Windows</a><a href="/docs/linux">Linux</a><a href="/docs/android">Android (APK)</a><a href="/docs/ios">iPhone / iOS (IPA)</a><h4>Help</h4><a href="/docs/troubleshooting">Troubleshooting</a></nav><article class="doc"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Docs</nav>
       <h1>Getting started</h1>
       <p class="lead">From download to your first Bangla sentence in about five minutes.</p>
+
+      <div class="note" style="border-left: 4px solid #8A2BE2; background: rgba(138, 43, 226, 0.05); padding: 18px 20px; border-radius: 8px; margin: 16px 0 24px;">
+        <h3 style="margin-top:0; color: #8A2BE2; display: flex; align-items: center; gap: 8px;">
+          <span>📱</span> Kothalipi Mobile (Wispr Flow Edition)
+        </h3>
+        <p>Looking for smartphone voice typing? Kothalipi is now available for Android and iPhone with <strong>Wispr Flow-style floating mic</strong>, custom voice keyboard, and real-time <strong>Bangla-to-English translation</strong>.</p>
+        <p style="margin-bottom:14px">Speak in everyday Bangla over WhatsApp, Messenger, or Notes, and have fluent English or polished Bangla typed instantly at your cursor.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary btn-sm" href="/docs/android">Android Guide &amp; APK</a>
+          <a class="btn btn-sm" style="background:#8A2BE2;color:#fff" href="/docs/ios">iOS Guide &amp; IPA</a>
+          <a class="btn btn-sm" href="/download#mobile">Download APK / IPA</a>
+        </div>
+      </div>
+
       <h2>1. Install</h2>
       <p>Download from the <a href="/download">download page</a>, or use the terminal:</p>
       <div class="code-label">macOS and Linux</div><div class="code"><pre>curl -fsSL https://kothalipi.tashanto.com/install.sh | sh</pre></div>
       <div class="code-label">Windows (PowerShell)</div><div class="code"><pre>irm https://kothalipi.tashanto.com/install.ps1 | iex</pre></div>
-      <p>Platform details: <a href="/docs/macos">macOS</a> · <a href="/docs/windows">Windows</a> · <a href="/docs/linux">Linux</a>.</p>
+      <p>Platform guides: <a href="/docs/macos">macOS</a> · <a href="/docs/windows">Windows</a> · <a href="/docs/linux">Linux</a> · <a href="/docs/android">Android</a> · <a href="/docs/ios">iOS</a>.</p>
       <h2>2. Follow the setup</h2>
       <ol>
-        <li><b>Permissions.</b> Allow the microphone. On a Mac, also allow Accessibility so Kothalipi can type into other apps.</li>
+        <li><b>Permissions.</b> Allow the microphone. On a Mac, also allow Accessibility so Kothalipi can type into other apps. On Android, allow Floating Overlay and Accessibility.</li>
         <li><b>Choose how it listens.</b> <em>Offline</em> is free and private. <em>Cloud</em> uses your own Gemini or ChatGPT key and is the most accurate. Low-memory computers are steered to Cloud. See <a href="/docs/cloud">Cloud &amp; API keys</a>.</li>
         <li><b>Download the voice models.</b> Setup recommends the best Bangla and English model for your computer. In Cloud mode they are your offline backup.</li>
         <li><b>Check your keys.</b> On a Mac, Kothalipi spots macOS settings that steal the keys and opens the right page.</li>
         <li><b>Try it.</b> Hold the Bangla key, speak, let go.</li>
       </ol>
       <h2>3. Use it anywhere</h2>
-      <table class="table"><tr><th></th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
-        <tr><td>বাংলা</td><td><kbd>Right ⌘</kbd></td><td><kbd>Right Alt</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd></td></tr>
-        <tr><td>English</td><td><kbd>fn</kbd></td><td><kbd>Right Ctrl</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>E</kbd></td></tr></table>
+      <table class="table"><tr><th>Platform</th><th>Trigger</th><th>What it does</th></tr>
+        <tr><td>macOS</td><td><kbd>Right ⌘</kbd> (Bangla) · <kbd>fn</kbd> (English)</td><td>Types text directly at your cursor in any Mac application.</td></tr>
+        <tr><td>Windows</td><td><kbd>Right Alt</kbd> (Bangla) · <kbd>Right Ctrl</kbd> (English)</td><td>Types text directly at your cursor in any Windows app.</td></tr>
+        <tr><td>Linux</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> · <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>E</kbd></td><td>Types through X11 or Wayland helper (wtype / ydotool).</td></tr>
+        <tr><td>Android</td><td>Floating mic bubble or Voice keyboard</td><td>Dictates over WhatsApp, Messenger, Notes without switching keyboards.</td></tr>
+        <tr><td>iPhone / iOS</td><td>Kothalipi Keyboard or Action Button</td><td>1-tap voice dictation with real-time translation and haptics.</td></tr></table>
       <p><b>Hold</b> the key while you talk, or <b>tap</b> once to start and again to stop. Change keys in <b>Settings → General</b>.</p>
     <div class="pager"><span></span><a href="/docs/shortcuts">Keys & shortcuts →</a></div></article></div>
   </main>

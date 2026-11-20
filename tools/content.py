@@ -299,7 +299,13 @@ def privacy():
 # ---------------------------------------------------------------------- docs
 DOCS_NAV = [
     ("Start", [("/docs/", "Getting started"), ("/docs/shortcuts", "Keys & shortcuts"), ("/docs/cloud", "Cloud & API keys")]),
-    ("Install", [("/docs/macos", "macOS"), ("/docs/windows", "Windows"), ("/docs/linux", "Linux")]),
+    ("Install", [
+        ("/docs/macos", "macOS"),
+        ("/docs/windows", "Windows"),
+        ("/docs/linux", "Linux"),
+        ("/docs/android", "Android (APK)"),
+        ("/docs/ios", "iPhone / iOS (IPA)"),
+    ]),
     ("Help", [("/docs/troubleshooting", "Troubleshooting")]),
 ]
 DOC_ORDER = [p for _, items in DOCS_NAV for p, _ in items]
@@ -326,23 +332,40 @@ def docs():
     doc("/docs/", "Getting Started with Kothalipi | Docs", "Install Kothalipi and dictate your first sentence in Bangla or English in about two minutes.", f"""
       <h1>Getting started</h1>
       <p class="lead">From download to your first Bangla sentence in about five minutes.</p>
+
+      <div class="note" style="border-left: 4px solid #8A2BE2; background: rgba(138, 43, 226, 0.05); padding: 18px 20px; border-radius: 8px; margin: 16px 0 24px;">
+        <h3 style="margin-top:0; color: #8A2BE2; display: flex; align-items: center; gap: 8px;">
+          <span>📱</span> Kothalipi Mobile (Wispr Flow Edition)
+        </h3>
+        <p>Looking for smartphone voice typing? Kothalipi is now available for Android and iPhone with <strong>Wispr Flow-style floating mic</strong>, custom voice keyboard, and real-time <strong>Bangla-to-English translation</strong>.</p>
+        <p style="margin-bottom:14px">Speak in everyday Bangla over WhatsApp, Messenger, or Notes, and have fluent English or polished Bangla typed instantly at your cursor.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary btn-sm" href="/docs/android">Android Guide &amp; APK</a>
+          <a class="btn btn-sm" style="background:#8A2BE2;color:#fff" href="/docs/ios">iOS Guide &amp; IPA</a>
+          <a class="btn btn-sm" href="/download#mobile">Download APK / IPA</a>
+        </div>
+      </div>
+
       <h2>1. Install</h2>
       <p>Download from the <a href="/download">download page</a>, or use the terminal:</p>
       {code(INSTALL_SH, "macOS and Linux")}
       {code(INSTALL_PS, "Windows (PowerShell)")}
-      <p>Platform details: <a href="/docs/macos">macOS</a> · <a href="/docs/windows">Windows</a> · <a href="/docs/linux">Linux</a>.</p>
+      <p>Platform guides: <a href="/docs/macos">macOS</a> · <a href="/docs/windows">Windows</a> · <a href="/docs/linux">Linux</a> · <a href="/docs/android">Android</a> · <a href="/docs/ios">iOS</a>.</p>
       <h2>2. Follow the setup</h2>
       <ol>
-        <li><b>Permissions.</b> Allow the microphone. On a Mac, also allow Accessibility so Kothalipi can type into other apps.</li>
+        <li><b>Permissions.</b> Allow the microphone. On a Mac, also allow Accessibility so Kothalipi can type into other apps. On Android, allow Floating Overlay and Accessibility.</li>
         <li><b>Choose how it listens.</b> <em>Offline</em> is free and private. <em>Cloud</em> uses your own Gemini or ChatGPT key and is the most accurate. Low-memory computers are steered to Cloud. See <a href="/docs/cloud">Cloud &amp; API keys</a>.</li>
         <li><b>Download the voice models.</b> Setup recommends the best Bangla and English model for your computer. In Cloud mode they are your offline backup.</li>
         <li><b>Check your keys.</b> On a Mac, Kothalipi spots macOS settings that steal the keys and opens the right page.</li>
         <li><b>Try it.</b> Hold the Bangla key, speak, let go.</li>
       </ol>
       <h2>3. Use it anywhere</h2>
-      <table class="table"><tr><th></th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
-        <tr><td>বাংলা</td><td><kbd>Right ⌘</kbd></td><td><kbd>Right Alt</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd></td></tr>
-        <tr><td>English</td><td><kbd>fn</kbd></td><td><kbd>Right Ctrl</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>E</kbd></td></tr></table>
+      <table class="table"><tr><th>Platform</th><th>Trigger</th><th>What it does</th></tr>
+        <tr><td>macOS</td><td><kbd>Right ⌘</kbd> (Bangla) · <kbd>fn</kbd> (English)</td><td>Types text directly at your cursor in any Mac application.</td></tr>
+        <tr><td>Windows</td><td><kbd>Right Alt</kbd> (Bangla) · <kbd>Right Ctrl</kbd> (English)</td><td>Types text directly at your cursor in any Windows app.</td></tr>
+        <tr><td>Linux</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> · <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>E</kbd></td><td>Types through X11 or Wayland helper (wtype / ydotool).</td></tr>
+        <tr><td>Android</td><td>Floating mic bubble or Voice keyboard</td><td>Dictates over WhatsApp, Messenger, Notes without switching keyboards.</td></tr>
+        <tr><td>iPhone / iOS</td><td>Kothalipi Keyboard or Action Button</td><td>1-tap voice dictation with real-time translation and haptics.</td></tr></table>
       <p><b>Hold</b> the key while you talk, or <b>tap</b> once to start and again to stop. Change keys in <b>Settings → General</b>.</p>
     """, "Getting started")
 
@@ -444,6 +467,88 @@ def docs():
       <p>If it will not start and <code>libgtk-layer-shell.so.0</code> is missing:</p>
       {code("sudo apt install libgtk-layer-shell0")}
     """, "Linux")
+
+    doc("/docs/android", "Kothalipi on Android: Wispr Flow Floating Mic & Setup | Docs", "Install Kothalipi APK on Android, enable the Wispr Flow-style floating mic bubble over any app, and set up live Bangla to English voice translation.", f"""
+      <h1>Android</h1>
+      <p class="lead">Hands-free Bangla voice typing with a Wispr Flow-style floating mic bubble and voice keyboard. Works on Android 8.0 and newer.</p>
+      <h2>1. Download and Install the APK</h2>
+      <ol>
+        <li>Download the latest release: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.apk">Download Kothalipi-v0.1.0.apk (18 MB)</a></li>
+        <li>Open your browser's Downloads or Files app and tap <code>Kothalipi-v0.1.0.apk</code>.</li>
+        <li>If prompted with <b>“For your security, your phone is not allowed to install unknown apps from this source”</b>, tap <b>Settings</b> and toggle on <b>Allow from this source</b>, then tap <b>Install</b>.</li>
+      </ol>
+      <div class="note"><p>You can also download the APK directly from our <a href="{DESK}/releases/tag/v0.1.6">Desktop Release page</a> or the <a href="/download#mobile">Download section</a>.</p></div>
+
+      <h2>2. Enable the Wispr Flow Floating Bubble</h2>
+      <p>The floating mic button is the most seamless way to dictate. You don't need to switch away from your favorite keyboard (like Ridmik or Gboard):</p>
+      <ol>
+        <li>Open the <b>Kothalipi</b> app.</li>
+        <li>Tap <b>Enable Floating Bubble</b>. Android will take you to <b>Display over other apps</b>. Find Kothalipi and turn it <b>ON</b>.</li>
+        <li>Tap <b>Enable Accessibility Service</b> and turn on <b>Kothalipi Accessibility Service</b>.</li>
+      </ol>
+      <div class="note"><p><b>Why Accessibility is needed:</b> Accessibility allows Kothalipi to automatically type your transcribed text right where your cursor is inside WhatsApp, Gmail, Facebook Messenger, Notes, or any browser.</p></div>
+
+      <h2>3. (Optional) Enable Kothalipi Voice Keyboard</h2>
+      <p>If you prefer an on-screen keyboard dictation experience:</p>
+      <ol>
+        <li>Go to <b>Settings → System → Languages &amp; input → On-screen keyboard → Manage on-screen keyboards</b>.</li>
+        <li>Toggle on <b>Kothalipi Voice Keyboard</b>.</li>
+        <li>Whenever typing in an app, tap the keyboard switcher icon at the bottom right to switch to Kothalipi.</li>
+      </ol>
+
+      <h2>4. Setup Free Gemini Key (Live Translation &amp; Polish)</h2>
+      <p>Kothalipi comes with 3 killer mobile features powered by your personal Google Gemini API key:</p>
+      <ul>
+        <li><b>Bangla ➔ English Live Conversion:</b> Speak naturally in conversational Bangla (e.g., <i>“ভাই প্রজেক্টের কাজ শেষ, একটু দেখে ফিডব্যাক দিন”</i>) and it types fluent English (<i>“Brother, the project is completed. I would appreciate your feedback.”</i>).</li>
+        <li><b>AI Smart Polish:</b> Strips filler words (<i>“উমম”</i>, <i>“মানে”</i>) and applies proper punctuation.</li>
+        <li><b>100% Free &amp; Private:</b> Enter your free Gemini API key in app settings. Your voice and data never hit third-party tracking servers. Follow our <a href="/guides/free-gemini-api-key">free Gemini key guide</a> to grab one in 30 seconds.</li>
+      </ul>
+
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li><b>Bubble disappears after restart:</b> Some Android brands (Xiaomi MIUI/HyperOS, Samsung OneUI, Realme) aggressively kill background services. In <b>App Info → Battery</b>, select <b>Unrestricted</b> / <b>Don't optimize</b>, and enable <b>Autostart</b>.</li>
+        <li><b>Cursor doesn't receive text:</b> Make sure the Accessibility Service is active in Android Accessibility settings.</li>
+      </ul>
+    """, "Android (APK)")
+
+    doc("/docs/ios", "Kothalipi on iPhone / iOS: Setup, Keyboard & Action Button | Docs", "Install Kothalipi IPA on iOS, enable the Voice Keyboard extension, and map the Action Button or Siri shortcuts for instant Bangla voice dictation.", f"""
+      <h1>iPhone / iOS</h1>
+      <p class="lead">Minimalist voice dictation for iPhone with a custom SwiftUI Voice Hub, system keyboard extension, and Action Button integration. Requires iOS 16.0 or newer.</p>
+
+      <h2>1. Download the IPA</h2>
+      <p>Download the iOS package: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">Download Kothalipi-v0.1.0.ipa</a></p>
+      <p>The IPA is also mirrored on <a href="{DESK}/releases/tag/v0.1.6">GitHub Releases (v0.1.6)</a> and the <a href="/download#mobile">Download page</a>.</p>
+
+      <h2>2. Sideloading onto iPhone</h2>
+      <p>Until Kothalipi is published on the Apple App Store, you can sideload the IPA using standard tools:</p>
+      <ul>
+        <li><b>AltStore / SideStore (Recommended):</b> Free on-device signing using your personal Apple ID. Install AltStore, tap the <b>+</b> button in My Apps, and select <code>Kothalipi-v0.1.0.ipa</code>.</li>
+        <li><b>TrollStore:</b> For supported iOS versions (iOS 14.0–16.6.1), install directly with permanent signing and no 7-day expiration.</li>
+        <li><b>Sideloadly:</b> Drag and drop the IPA from your Mac or PC to install onto your connected iPhone.</li>
+      </ul>
+
+      <h2>3. Enable the Voice Keyboard Extension</h2>
+      <p>iOS doesn't permit floating overlays over other apps, so Kothalipi provides an ultra-slick Voice Keyboard:</p>
+      <ol>
+        <li>Open iPhone <b>Settings → General → Keyboard → Keyboards</b>.</li>
+        <li>Tap <b>Add New Keyboard…</b> and select <b>Kothalipi</b> under Third-Party Keyboards.</li>
+        <li>Tap <b>Kothalipi</b> in the keyboard list and turn on <b>Allow Full Access</b>.</li>
+      </ol>
+      <div class="note"><p><b>Why Allow Full Access is required:</b> iOS restricts microphone access and network requests in keyboard extensions unless “Full Access” is granted. Kothalipi never collects, stores, or transmits keystrokes.</p></div>
+
+      <h2>4. Action Button &amp; Back Tap (1-Click Trigger)</h2>
+      <p>If you have an iPhone 15 Pro, 15 Pro Max, 16, or 16 Pro, you can turn the side <b>Action Button</b> into an instant voice dictation trigger:</p>
+      <ol>
+        <li>Open the <b>Shortcuts</b> app on iOS.</li>
+        <li>Create a shortcut: tap <b>+</b>, add action <b>“Open Kothalipi”</b> or <b>“Dictate with Kothalipi”</b>.</li>
+        <li>Go to <b>Settings → Action Button</b>, swipe to <b>Shortcut</b>, and pick your Kothalipi shortcut.</li>
+        <li>Now, just press and hold the Action Button anywhere to speak and copy text!</li>
+      </ol>
+      <div class="note"><p><b>For older iPhones:</b> Go to <b>Settings → Accessibility → Touch → Back Tap</b> and set Double Tap to the Kothalipi shortcut.</p></div>
+
+      <h2>5. Live Translation &amp; Gemini AI</h2>
+      <p>In the Kothalipi app, open Settings and paste your free Google Gemini API key (<a href="/guides/free-gemini-api-key">get one free</a>). Enjoy instant Bangla-to-English translation and polished punctuation in real time.</p>
+    """, "iPhone / iOS (IPA)")
 
     doc("/docs/troubleshooting", "Troubleshooting Kothalipi | Docs", "Fix common problems: keys not working, nothing typed, wrong Bangla words, or cloud mode stopping.", f"""
       <h1>Troubleshooting</h1>
