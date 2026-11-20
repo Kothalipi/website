@@ -33,7 +33,7 @@ def shots_html(lang):
 
 EN_FAQ = [
     ("Is Kothalipi really free?", "Yes. It is free and open source under the MIT license, with no account, trial or card. Offline mode costs nothing to run. Cloud mode uses your own API key: Google Gemini has a free tier with daily limits, and OpenAI bills per minute of audio."),
-    ("Can Kothalipi translate Bangla voice to English text?", "Yes! With our AI Post-Processing feature (v0.1.5), you can speak naturally in Bangla and Kothalipi translates your speech in real time into fluent, grammatically polished English before pasting it into any app. It works seamlessly using Google Gemini (free tier) or your preferred OpenAI/Anthropic Claude key."),
+    ("Can Kothalipi translate Bangla voice to English text?", "Yes! With our AI Post-Processing feature (v0.1.6), you can speak naturally in Bangla and Kothalipi translates your speech in real time into fluent, grammatically polished English before pasting it into any app. It works seamlessly using Google Gemini (free tier) or your preferred OpenAI/Anthropic Claude key."),
     ("Does Bangla voice typing work offline?", "Yes. Offline mode runs a Bangla speech model on your computer, so it works without internet and your voice never leaves the machine. You download the model once (about 810 MB)."),
     ("How accurate is it for Bangla?", "It depends on the model. The recommended offline model, Qwen3-ASR 0.6B Bangla, was trained on 1,174 hours of Bangla speech and its authors report 14.74% word error rate and 5.34% character error rate on their own test set. Cloud mode with Google Gemini is usually best when you mix Bangla and English. We are building a public benchmark and will publish results."),
     ("Can I mix Bangla and English in one sentence?", "Yes, that is a design goal. Use the Bangla key for sentences with English words in them. Cloud mode handles mixed speech best."),
@@ -46,7 +46,7 @@ EN_FAQ = [
 ]
 BN_FAQ = [
     ("কথালিপি কি সত্যিই ফ্রি?", "হ্যাঁ। MIT লাইসেন্সে ফ্রি ও ওপেন সোর্স। অ্যাকাউন্ট, ট্রায়াল বা কার্ড লাগে না। অফলাইন মোড চালাতে কোনো খরচ নেই। ক্লাউড মোডে আপনার নিজের API কি লাগে: Google Gemini-র দৈনিক সীমাসহ ফ্রি ব্যবহার আছে, আর OpenAI অডিওর মিনিট ধরে চার্জ করে।"),
-    ("কথালিপি কি মুখে বলা বাংলা সরাসরি ইংরেজিতে অনুবাদ করতে পারে?", "হ্যাঁ! কথালিপির নতুন এআই পোস্ট-প্রসেসিং (v0.1.5) ফিচারের মাধ্যমে আপনি বাংলায় স্বাভাবিকভাবে কথা বললে কথালিপি তাৎক্ষণিকভাবে তা অত্যন্ত সাবলীল ও ব্যাকরণগতভাবে নিখুঁত ইংরেজিতে অনুবাদ করে আপনার অ্যাপে টাইপ করে দেয়। এটি Google Gemini-এর ফ্রি টায়ার বা আপনার নিজস্ব OpenAI/Claude কি দিয়ে সহজেই চলে।"),
+    ("কথালিপি কি মুখে বলা বাংলা সরাসরি ইংরেজিতে অনুবাদ করতে পারে?", "হ্যাঁ! কথালিপির নতুন এআই পোস্ট-প্রসেসিং (v0.1.6) ফিচারের মাধ্যমে আপনি বাংলায় স্বাভাবিকভাবে কথা বললে কথালিপি তাৎক্ষণিকভাবে তা অত্যন্ত সাবলীল ও ব্যাকরণগতভাবে নিখুঁত ইংরেজিতে অনুবাদ করে আপনার অ্যাপে টাইপ করে দেয়। এটি Google Gemini-এর ফ্রি টায়ার বা আপনার নিজস্ব OpenAI/Claude কি দিয়ে সহজেই চলে।"),
     ("ইন্টারনেট ছাড়া কি বাংলা ভয়েস টাইপিং চলে?", "হ্যাঁ। অফলাইন মোডে বাংলা স্পিচ মডেল আপনার কম্পিউটারেই চলে, তাই ইন্টারনেট লাগে না আর আপনার কণ্ঠ কম্পিউটার ছেড়ে যায় না। মডেলটা একবার ডাউনলোড করতে হয় (প্রায় ৮১০ MB)।"),
     ("বাংলায় কতটা নির্ভুল?", "মডেলের উপর নির্ভর করে। সুপারিশ করা অফলাইন মডেল Qwen3-ASR 0.6B Bangla ১,১৭৪ ঘণ্টা বাংলা কথায় ট্রেইন করা, আর এর নির্মাতারা নিজেদের টেস্ট সেটে ১৪.৭৪% WER ও ৫.৩৪% CER জানিয়েছেন। বাংলা-ইংরেজি মিশিয়ে বললে সাধারণত Google Gemini দিয়ে ক্লাউড মোড সবচেয়ে ভালো। আমরা একটা পাবলিক বেঞ্চমার্ক বানাচ্ছি, ফল প্রকাশ করব।"),
     ("এক বাক্যে বাংলা আর ইংরেজি মেশানো যায়?", "হ্যাঁ, এটা আমাদের মূল লক্ষ্য। ইংরেজি শব্দসহ বাক্যের জন্য বাংলা কি ব্যবহার করুন। মেশানো কথায় ক্লাউড মোড সবচেয়ে ভালো কাজ করে।"),
@@ -91,9 +91,9 @@ def home(lang):
     steps_html = "".join(f'<div class="step"><div class="n">{n}</div><h3>{esc(h)}</h3><p>{esc(p)}</p></div>' for n, h, p in steps)
 
     new_badge = (
-        '<a class="new-badge" href="#features"><b>v0.1.5</b> ✨ Real-time Bangla to English Voice Translation</a><br>'
+        '<a class="new-badge" href="#features"><b>v0.1.6</b> ✨ Real-time Bangla to English Voice Translation</a><br>'
         if en
-        else '<a class="new-badge" href="#features"><b>v0.1.5</b> ✨ সরাসরি বাংলা থেকে ইংরেজি ভয়েস অনুবাদ</a><br>'
+        else '<a class="new-badge" href="#features"><b>v0.1.6</b> ✨ সরাসরি বাংলা থেকে ইংরেজি ভয়েস অনুবাদ</a><br>'
     )
 
     if en:

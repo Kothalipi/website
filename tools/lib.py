@@ -9,7 +9,7 @@ SUPPORT = "https://www.supportkori.com/iamtashanto"
 DESK = f"{GH}/kothalipi-desktop"
 MAKER = "https://tashanto.com"
 UPDATED = "2026-11-19"
-VERSION = "0.1.5"
+VERSION = "0.1.6"
 
 INSTALL_SH = "curl -fsSL https://kothalipi.tashanto.com/install.sh | sh"
 INSTALL_PS = "irm https://kothalipi.tashanto.com/install.ps1 | iex"
