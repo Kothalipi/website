@@ -263,7 +263,7 @@ def download(lang):
     path = "/download" if en else "/bn/download"
     labels = json.dumps({"mac": "Download for Mac", "windows": "Download for Windows", "linux": "Download for Linux"} if en else {"mac": "ম্যাকের জন্য ডাউনলোড", "windows": "উইন্ডোজের জন্য ডাউনলোড", "linux": "লিনাক্সের জন্য ডাউনলোড"}, ensure_ascii=False)
     if en:
-        h1, lead = "Download Kothalipi", "Free for macOS, Windows and Linux. Version <span data-version>v0.1.0</span>."
+        h1, lead = "Download Kothalipi", f"Free for macOS, Windows and Linux. Version <span data-version>v{VERSION}</span>."
         loading, soon = "Finding the latest version…", "The first release is on its way. Watch the project on GitHub to get it."
         main_label = "Download"
         os_h = [("macOS", "macOS 10.15 or later."), ("Windows", "Windows 10 or 11."), ("Linux", "X11 and Wayland.")]
@@ -276,7 +276,7 @@ def download(lang):
         title = "Download Kothalipi for Mac, Windows & Linux (Free)"
         desc = "Download Kothalipi, free Bangla and English voice typing, for macOS, Windows and Linux. Or install with one line in the terminal."
     else:
-        h1, lead = "কথালিপি ডাউনলোড", "macOS, Windows ও Linux-এর জন্য ফ্রি। ভার্সন <span data-version>v0.1.0</span>।"
+        h1, lead = "কথালিপি ডাউনলোড", f"macOS, Windows ও Linux-এর জন্য ফ্রি। ভার্সন <span data-version>v{VERSION}</span>।"
         loading, soon = "সর্বশেষ ভার্সন খোঁজা হচ্ছে…", "প্রথম রিলিজ আসছে। পেতে GitHub-এ প্রজেক্টটা ফলো করুন।"
         main_label = "ডাউনলোড"
         os_h = [("macOS", "macOS 10.15 বা নতুন।"), ("Windows", "Windows 10 বা 11।"), ("Linux", "X11 ও Wayland।")]

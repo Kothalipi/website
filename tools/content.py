@@ -218,8 +218,17 @@ def changelog():
     body = f"""
       <h1>Changelog</h1>
       <p class="lead">What changed in each version of Kothalipi.</p>
-      <h2 id="v0-1-0">v0.1.0 · {UPDATED}</h2>
-      <p>The first release.</p>
+      <h2 id="v0-1-6">v0.1.6 · {UPDATED}</h2>
+      <p>Live Bangla to English Voice Translation, mobile apps, and theme switcher.</p>
+      <ul>
+        <li><b>Real-time Bangla to English Voice Translation:</b> Speak naturally in everyday Bangla, and Kothalipi automatically writes out fluent, grammatically polished English using Google Gemini AI.</li>
+        <li><b>Kothalipi Mobile (Android & iOS):</b> Released Wispr Flow-style floating bubble and voice keyboard extension for instant dictation in any app.</li>
+        <li><b>Light / Dark Mode:</b> One-click toggle button on navbar with zero-flicker instant theme loading.</li>
+        <li><b>Direct Voice Typing from Tray:</b> Trigger voice typing directly from system tray menu.</li>
+        <li><b>Enhanced Contrast:</b> Optimized readability and colors for AI translation cards and button UI.</li>
+      </ul>
+      <h2 id="v0-1-0">v0.1.0</h2>
+      <p>The first desktop release.</p>
       <ul>
         <li><b>Two keys, two languages.</b> Hold Right ⌘ (Windows: Right Alt) for Bangla and fn (Windows: Right Ctrl) for English. Each key picks its own language and model.</li>
         <li><b>Offline or cloud.</b> Offline runs Bangla models on your computer. Cloud uses your Gemini or OpenAI key, with automatic fallback to the offline model.</li>
