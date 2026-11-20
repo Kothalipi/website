@@ -511,43 +511,72 @@ def docs():
       </ul>
     """, "Android (APK)")
 
-    doc("/docs/ios", "Kothalipi on iPhone / iOS: Setup, Keyboard & Action Button | Docs", "Install Kothalipi IPA on iOS, enable the Voice Keyboard extension, and map the Action Button or Siri shortcuts for instant Bangla voice dictation.", f"""
+    doc("/docs/ios", "Kothalipi on iPhone / iOS: Install & Setup | Docs", "Install Kothalipi on your physical iPhone using Xcode, AltStore or TrollStore, enable the Voice Keyboard extension, and map the Action Button.", f"""
       <h1>iPhone / iOS</h1>
-      <p class="lead">Minimalist voice dictation for iPhone with a custom SwiftUI Voice Hub, system keyboard extension, and Action Button integration. Requires iOS 16.0 or newer.</p>
+      <p class="lead">Minimalist voice dictation for iPhone with a custom SwiftUI Voice Hub, system keyboard extension, 3 dictation modes (Bangla, English, and Bangla-to-English translation), and Action Button integration. Requires iOS 16.0 or newer.</p>
 
-      <h2>1. Download the IPA</h2>
+      <h2>1. Download the IPA &amp; Source Code</h2>
       <p>Download the iOS package: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">Download Kothalipi-v0.1.0.ipa</a></p>
       <p>The IPA is also mirrored on <a href="{DESK}/releases/tag/v0.1.6">GitHub Releases (v0.1.6)</a> and the <a href="/download#mobile">Download page</a>.</p>
 
-      <h2>2. Sideloading onto iPhone</h2>
-      <p>Until Kothalipi is published on the Apple App Store, you can sideload the IPA using standard tools:</p>
+      <h2>2. How to Install on your Physical iPhone (আপনার আসল আইফোনে ইনস্টল)</h2>
+      <p>হ্যাঁ, ১০০% আপনার নিজের আইফোনে ইনস্টল করা যাবে! অ্যাপল কোনো পেইড ডেভেলপার অ্যাকাউন্ট ছাড়াই ব্যক্তিগত ব্যবহারের জন্য নিজের ফোনে অ্যাপ ইনস্টল করার সম্পূর্ণ সুযোগ দেয়। নিচে সবচেয়ে সহজ ৩টি উপায় দেওয়া হলো:</p>
+
+      <h3>উপায় ১: সরাসরি আপনার Mac ও Xcode দিয়ে (সবচেয়ে সহজ ও ফ্রি ⭐️)</h3>
+      <ol>
+        <li>USB ক্যাবল দিয়ে আপনার আসল iPhone-টি Mac-এর সাথে কানেক্ট করুন।</li>
+        <li>আইফোনের <b>Settings → Privacy &amp; Security → Developer Mode</b> অন করুন এবং ফোনটি একবার রিস্টার্ট দিন।</li>
+        <li>আপনার Mac-এর টার্মিনালে এই কমান্ড দিয়ে Xcode ওপেন করুন:</li>
+      </ol>
+      {code("cd kothalipi-mobile/ios && xed .")}
+      <ol start="4">
+        <li>Xcode উইন্ডোর উপরে ডিভাইস ড্রপডাউনে "My Mac" বা সিমুলেটরের জায়গায় আপনার <b>কানেক্টেড iPhone</b> সিলেক্ট করুন।</li>
+        <li><b>Signing &amp; Capabilities</b> ট্যাবে গিয়ে আপনার ব্যক্তিগত Apple ID (Personal Team) সিলেক্ট করুন (এটি সম্পূর্ণ ফ্রি)।</li>
+        <li>উপরে <b>▶️ (Run)</b> বাটনে চাপুন বা কিবোর্ডে <kbd>Cmd</kbd>+<kbd>R</kbd> চাপুন।</li>
+        <li>অ্যাপটি সরাসরি আপনার আইফোনে ইনস্টল হয়ে ওপেন হয়ে যাবে!</li>
+      </ol>
+      <div class="note"><p><b>প্রথমবার রান করার পর:</b> আইফোনের <b>Settings → General → VPN &amp; Device Management</b>-এ গিয়ে আপনার Apple ID-তে ট্যাপ করে <b>Trust</b> চাপুন।</p></div>
+
+      <h3>উপায় ২: AltStore বা SideStore দিয়ে (ক্যাবল ছাড়া)</h3>
+      <p>যদি কম্পিউটারের সাথে না লাগিয়ে নিজের ফোনেই সবসময় অ্যাপ ইনস্টল ও সাইডলোড রাখতে চান:</p>
+      <ol>
+        <li>আইফোনে <a href="https://altstore.io">AltStore</a> অথবা <a href="https://sidestore.io">SideStore</a> সেটআপ করে নিন।</li>
+        <li>আমাদের রিলিজ পেইজ থেকে <code>Kothalipi-v0.1.0.ipa</code> ফাইলটি Safari দিয়ে ডাউনলোড করুন।</li>
+        <li>AltStore অ্যাপে গিয়ে <b>My Apps → “+” বাটনে</b> চাপ দিয়ে ডাউনলোড করা IPA ফাইলটি সিলেক্ট করুন। আপনার নিজস্ব Apple ID দিয়ে অ্যাপটি সাইন হয়ে ফোনে ইনস্টল হয়ে যাবে।</li>
+      </ol>
+
+      <h3>উপায় ৩: TrollStore (iOS 14.0 – 16.6.1)</h3>
+      <p>যদি আপনার আইফোনে iOS 14.0 থেকে 16.6.1 এর মধ্যে থাকে এবং TrollStore ইনস্টল থাকে, তবে কোনো ৭ দিনের রিনিউয়াল ঝামেলা ছাড়াই পার্মানেন্টলি Kothalipi IPA এক ক্লিকে ইনস্টল করে আজীবন ব্যবহার করতে পারবেন।</p>
+
+      <h2>3. ৩টি ডিকটেশন মোড (Dictation Modes)</h2>
+      <p>কথালিপি মোবাইলে রয়েছে এক ক্লিকে মোড পরিবর্তনের সুবিধা:</p>
       <ul>
-        <li><b>AltStore / SideStore (Recommended):</b> Free on-device signing using your personal Apple ID. Install AltStore, tap the <b>+</b> button in My Apps, and select <code>Kothalipi-v0.1.0.ipa</code>.</li>
-        <li><b>TrollStore:</b> For supported iOS versions (iOS 14.0–16.6.1), install directly with permanent signing and no 7-day expiration.</li>
-        <li><b>Sideloadly:</b> Drag and drop the IPA from your Mac or PC to install onto your connected iPhone.</li>
+        <li><b>🇧🇩 বাংলা:</b> আপনি মুখে যা বলবেন, তা খাঁটি বাংলা হরফে নিখুঁতভাবে টাইপ হবে।</li>
+        <li><b>🇬🇧 English:</b> শুধুমাত্র ইংরেজিতে মুখে কথা বলে সরাসরি ইংলিশ টেক্সট টাইপ হবে।</li>
+        <li><b>বাংলা ➔ 🇬🇧 English (Live Translation):</b> কথ্য বাংলায় স্বাভাবিকভাবে কথা বলবেন (যেমন: <i>“আজকের মিটিংটা কালকে নিলে ভালো হতো”</i>), আর ব্যাকরণগতভাবে শতভাগ নির্ভুল প্রফেশনাল ইংরেজিতে টাইপ হয়ে যাবে (<i>“It would be better if we could reschedule today's meeting to tomorrow.”</i>)।</li>
       </ul>
 
-      <h2>3. Enable the Voice Keyboard Extension</h2>
-      <p>iOS doesn't permit floating overlays over other apps, so Kothalipi provides an ultra-slick Voice Keyboard:</p>
+      <h2>4. Enable the Voice Keyboard Extension</h2>
+      <p>iOS অন্যান্য অ্যাপের ওপর ফ্লোটিং বাবল অনুমতি দেয় না, তাই কথালিপিতে রয়েছে আল্ট্রা-স্লিক ভয়েস কিবোর্ড এক্সটেনশন:</p>
       <ol>
-        <li>Open iPhone <b>Settings → General → Keyboard → Keyboards</b>.</li>
-        <li>Tap <b>Add New Keyboard…</b> and select <b>Kothalipi</b> under Third-Party Keyboards.</li>
-        <li>Tap <b>Kothalipi</b> in the keyboard list and turn on <b>Allow Full Access</b>.</li>
+        <li>iPhone <b>Settings → General → Keyboard → Keyboards</b> এ যান।</li>
+        <li><b>Add New Keyboard…</b> এ ট্যাপ করে <b>Kothalipi</b> সিলেক্ট করুন।</li>
+        <li>কিবোর্ড লিস্টে <b>Kothalipi</b> তে ট্যাপ করে <b>Allow Full Access</b> অন করে দিন।</li>
       </ol>
-      <div class="note"><p><b>Why Allow Full Access is required:</b> iOS restricts microphone access and network requests in keyboard extensions unless “Full Access” is granted. Kothalipi never collects, stores, or transmits keystrokes.</p></div>
+      <div class="note"><p><b>কেন Full Access প্রয়োজন:</b> iOS পলিসির কারণে কিবোর্ড এক্সটেনশন থেকে মাইক্রোফোন ও নেটওয়ার্ক রিকোয়েস্ট এক্সেস করতে "Full Access" লাগে। কথালিপি সম্পূর্ণ প্রাইভেট এবং কোনো কি-স্ট্রোক রেকর্ড বা সেন্ড করে না।</p></div>
 
-      <h2>4. Action Button &amp; Back Tap (1-Click Trigger)</h2>
-      <p>If you have an iPhone 15 Pro, 15 Pro Max, 16, or 16 Pro, you can turn the side <b>Action Button</b> into an instant voice dictation trigger:</p>
+      <h2>5. Action Button &amp; Back Tap (১-ক্লিক ট্রিগার)</h2>
+      <p>যদি আপনার iPhone 15 Pro, 15 Pro Max, 16 বা 16 Pro থাকে, তবে পাশের <b>Action Button</b> টিকেই ভয়েস টাইপিং বাটনে রূপান্তর করতে পারবেন:</p>
       <ol>
-        <li>Open the <b>Shortcuts</b> app on iOS.</li>
-        <li>Create a shortcut: tap <b>+</b>, add action <b>“Open Kothalipi”</b> or <b>“Dictate with Kothalipi”</b>.</li>
-        <li>Go to <b>Settings → Action Button</b>, swipe to <b>Shortcut</b>, and pick your Kothalipi shortcut.</li>
-        <li>Now, just press and hold the Action Button anywhere to speak and copy text!</li>
+        <li>iPhone-এর <b>Shortcuts</b> অ্যাপ ওপেন করুন।</li>
+        <li><b>+</b> চাপুন, <b>“Open Kothalipi”</b> শর্টকাট যুক্ত করুন।</li>
+        <li><b>Settings → Action Button</b>-এ গিয়ে <b>Shortcut</b> সিলেক্ট করে কথালিপি বেছে নিন।</li>
+        <li>যেকোনো সময় অ্যাকশন বাটন এক চাপেই কথা বলা শুরু করতে পারবেন!</li>
       </ol>
-      <div class="note"><p><b>For older iPhones:</b> Go to <b>Settings → Accessibility → Touch → Back Tap</b> and set Double Tap to the Kothalipi shortcut.</p></div>
+      <div class="note"><p><b>অন্যান্য আইফোনের জন্য:</b> <b>Settings → Accessibility → Touch → Back Tap</b>-এ গিয়ে Double Tap-এ কথালিপি শর্টকাট সিলেক্ট করে রাখতে পারেন।</p></div>
 
-      <h2>5. Live Translation &amp; Gemini AI</h2>
-      <p>In the Kothalipi app, open Settings and paste your free Google Gemini API key (<a href="/guides/free-gemini-api-key">get one free</a>). Enjoy instant Bangla-to-English translation and polished punctuation in real time.</p>
+      <h2>6. Google Gemini API Key সেটআপ (সম্পূর্ণ ফ্রি)</h2>
+      <p>কথালিপি অ্যাপের সেটিংস আইকনে ট্যাপ করে আপনার ফ্রি Google Gemini API Key বসিয়ে দিন (<a href="/guides/free-gemini-api-key">ফ্রি কি পাওয়ার গাইড</a>)। আপনার ভয়েস অডিও সরাসরি গুগল এআই স্টুডিওর ফ্রি এন্ডপয়েন্টে প্রসেস হবে—কোনো থার্ড-পার্টি বা মিডলম্যান সার্ভার নেই।</p>
     """, "iPhone / iOS (IPA)")
 
     doc("/docs/troubleshooting", "Troubleshooting Kothalipi | Docs", "Fix common problems: keys not working, nothing typed, wrong Bangla words, or cloud mode stopping.", f"""
