@@ -150,9 +150,9 @@ def home(lang):
         )
 
     plat = (
-        [("macOS", "Apple Silicon & Intel", True), ("Windows", "10 & 11 · x64 & ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "Beta APK", True), ("iOS", "Coming", False)]
+        [("macOS", "Apple Silicon & Intel", True), ("Windows", "10 & 11 · x64 & ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "Wispr Flow APK", True), ("iOS", "SwiftUI IPA", True)]
         if en else
-        [("macOS", "Apple Silicon ও Intel", True), ("Windows", "10 ও 11 · x64 ও ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "বিটা APK", True), ("iOS", "আসছে", False)]
+        [("macOS", "Apple Silicon ও Intel", True), ("Windows", "10 ও 11 · x64 ও ARM", True), ("Linux", ".deb · .rpm · AppImage", True), ("Android", "ফ্লোটিং APK", True), ("iOS", "সুইফট IPA", True)]
     )
     plat_html = "".join(f'<div class="platform{"" if ok else " soon"}"><b>{n}</b><span class="{"ok" if ok else ""}">{esc(d)}</span></div>' for n, d, ok in plat)
 
@@ -289,31 +289,71 @@ def download(lang):
         title = "কথালিপি ডাউনলোড: ম্যাক, উইন্ডোজ ও লিনাক্সের জন্য ফ্রি"
         desc = "ফ্রি বাংলা ও ইংরেজি ভয়েস টাইপিং কথালিপি ডাউনলোড করুন, macOS, Windows ও Linux-এ। অথবা টার্মিনালে এক লাইনে ইনস্টল করুন।"
     android_html = """
-    <section class="container" style="padding-bottom:20px">
-      <article class="os-card" id="android" style="max-width:760px;margin:0 auto">
-        <h3>Android <span class="tag" style="margin-left:8px">Beta</span></h3>
-        <p>A voice keyboard for Bangla and English. Android 8 or later. About 8 MB.</p>
-        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.2/Kothalipi-0.1.2-beta.apk">Download the APK<span>8 MB</span></a></li></ul>
-        <ol class="muted" style="margin:14px 0 0;padding-left:20px">
-          <li>Open the file. If Android asks, allow installs from your browser.</li>
-          <li>Open Kothalipi and follow the four setup steps.</li>
-          <li>In any app, tap a text field and tap the mic.</li>
-        </ol>
-        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">1ffdc1d9424a04065570a058305b51b7b73cd94d73c152955801741559a5e111</code></p>
-      </article>
+    <section class="container" id="mobile" style="padding-bottom:30px">
+      <div class="section-head" style="margin-bottom:24px">
+        <h2>Kothalipi Mobile (Android & iOS)</h2>
+        <p>AI voice dictation, Wispr Flow-style floating bubble, and live Bangla-to-English translation.</p>
+      </div>
+      <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <article class="os-card" id="android">
+          <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
+          <p>Wispr Flow floating bubble + Voice keyboard for Bangla & English. Android 8 or later.</p>
+          <ul>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;margin:6px 0;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.apk">Download Android APK (v0.1.0)</a></li>
+          </ul>
+          <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
+            <li><strong>Floating Bubble:</strong> Speak over WhatsApp, Facebook, or Notes without switching keyboards.</li>
+            <li><strong>Bangla ➔ English:</strong> Speak in Bangla, automatically types fluent English.</li>
+            <li><strong>AI Smart Polish:</strong> Strips stutters and fixes punctuation with Google Gemini.</li>
+          </ul>
+        </article>
+
+        <article class="os-card" id="ios">
+          <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
+          <p>SwiftUI Voice Hub + iOS Keyboard Extension. iOS 16.0 or later.</p>
+          <ul>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;margin:6px 0;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">Download iOS IPA (v0.1.0)</a></li>
+          </ul>
+          <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
+            <li><strong>iOS Voice Keyboard:</strong> Hands-free voice typing directly in any iOS text field.</li>
+            <li><strong>Action Button & Siri:</strong> Trigger instant voice dictation with 1 press.</li>
+            <li><strong>Haptic Waves:</strong> Real-time audio waveform and fluent translations.</li>
+          </ul>
+        </article>
+      </div>
     </section>""" if en else """
-    <section class="container" style="padding-bottom:20px">
-      <article class="os-card" id="android" style="max-width:760px;margin:0 auto">
-        <h3>Android <span class="tag" style="margin-left:8px">Beta</span></h3>
-        <p>বাংলা ও ইংরেজির ভয়েস কিবোর্ড। Android 8 বা নতুন। প্রায় ৮ MB।</p>
-        <ul><li><a href="https://github.com/Kothalipi/kothalipi/releases/download/android-v0.1.2/Kothalipi-0.1.2-beta.apk">APK ডাউনলোড<span>8 MB</span></a></li></ul>
-        <ol class="muted" style="margin:14px 0 0;padding-left:20px">
-          <li>ফাইলটি খুলুন। Android চাইলে ব্রাউজার থেকে ইনস্টলের অনুমতি দিন।</li>
-          <li>কথালিপি খুলে চার ধাপের সেটআপ শেষ করুন।</li>
-          <li>যেকোনো অ্যাপে লেখার ঘরে ট্যাপ করে মাইক চাপুন।</li>
-        </ol>
-        <p style="margin-top:12px;font-size:13px">SHA-256: <code style="word-break:break-all">1ffdc1d9424a04065570a058305b51b7b73cd94d73c152955801741559a5e111</code></p>
-      </article>
+    <section class="container" id="mobile" style="padding-bottom:30px">
+      <div class="section-head" style="margin-bottom:24px">
+        <h2>কথালিপি মোবাইল (Android ও iOS)</h2>
+        <p>এআই ভয়েস ডিকটেশন, Wispr Flow স্টাইল ফ্লোটিং বাবল এবং সরাসরি বাংলা থেকে ইংরেজি লাইভ অনুবাদ।</p>
+      </div>
+      <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <article class="os-card" id="android">
+          <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
+          <p>Wispr Flow ফ্লোটিং বাবল + বাংলা ও ইংরেজির ভয়েস কিবোর্ড। Android 8 বা নতুন।</p>
+          <ul>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;margin:6px 0;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.apk">Android APK ডাউনলোড (v0.1.0)</a></li>
+          </ul>
+          <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
+            <li><strong>ফ্লোটিং বাবল:</strong> কীবোর্ড না বদলেই WhatsApp, Facebook বা Notes-এর ওপর ডিকটেশন করুন।</li>
+            <li><strong>বাংলা ➔ ইংরেজি:</strong> মুখে বাংলায় বললেই সরাসরি প্রফেশনাল ইংরেজিতে টাইপ হবে।</li>
+            <li><strong>স্মার্ট পলিশ:</strong> তোতলানো ফিল্টার ও বিরামচিহ্ন ঠিক করে প্রফেশনাল টেক্সট দেয়।</li>
+          </ul>
+        </article>
+
+        <article class="os-card" id="ios">
+          <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
+          <p>SwiftUI ডিকটেশন হাব + iOS কীবোর্ড এক্সটেনশন। iOS 16.0 বা নতুন।</p>
+          <ul>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;margin:6px 0;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">iOS IPA ডাউনলোড (v0.1.0)</a></li>
+          </ul>
+          <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
+            <li><strong>iOS ভয়েস কীবোর্ড:</strong> আইফোনের যেকোনো ইনপুট ফিল্ডে সরাসরি ভয়েস টাইপিং।</li>
+            <li><strong>অ্যাকশন বাটন ও সিরি:</strong> এক ক্লিকেই ভয়েস টাইপিং চালু করুন।</li>
+            <li><strong>হ্যাপটিক ওয়েভস:</strong> রিয়েল-টাইম অডিও সাউন্ডওয়েভ ও ফ্লুয়েন্ট অনুবাদ।</li>
+          </ul>
+        </article>
+      </div>
     </section>"""
     cards = "".join(f'<article class="os-card"><h3>{n}</h3><p>{d}</p><ul data-files="{k}"></ul></article>' for (n, d), k in zip(os_h, ["mac", "windows", "linux"]))
     req_rows = "".join(f"<tr><th>{a}</th><td>{b}</td></tr>" for a, b in req)
