@@ -91,17 +91,17 @@ def home(lang):
     steps_html = "".join(f'<div class="step"><div class="n">{n}</div><h3>{esc(h)}</h3><p>{esc(p)}</p></div>' for n, h, p in steps)
 
     new_badge = (
-        '<a class="new-badge" href="#features"><b>v0.1.6</b> ✨ Real-time Bangla to English Voice Translation</a><br>'
+        '<a class="new-badge" href="/changelog"><b>v0.1.7</b> ✨ Banglish Code-Switching, Vibe Coding, Voice Snippets &amp; Meeting Notes</a><br>'
         if en
-        else '<a class="new-badge" href="#features"><b>v0.1.6</b> ✨ সরাসরি বাংলা থেকে ইংরেজি ভয়েস অনুবাদ</a><br>'
+        else '<a class="new-badge" href="/changelog"><b>v0.1.7</b> ✨ বাংলিশ কোড-সুইচিং, Vibe Coding, ভয়েস স্নিপেট ও মিটিং নোট</a><br>'
     )
 
     if en:
         bento = f"""
       <div class="bento">
-        <article class="tile translation-tile s4"><span class="tag">✨ New · AI Translation</span><h3>Speak Bangla, type in fluent English</h3>
-          <p>Talk naturally in everyday Bangla, and Kothalipi translates your thoughts into polished, grammatically correct English in real time using Google Gemini AI. Perfect for official emails, international client conversations, and documents.</p>
-          <div class="flow" role="img" aria-label="Bangla speech translates to English"><span class="chip chip-spoken">🗣️ "আমি কালকে মিটিংয়ে জয়েন করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ "I will join the meeting tomorrow"</span></div></article>
+        <article class="tile translation-tile s4"><span class="tag">✨ New in v0.1.7 · Banglish &amp; AI Translation</span><h3>Natural Banglish, App-Aware Tone &amp; Live English Translation</h3>
+          <p>Speak Bangla with English words mixed in — Kothalipi keeps English terms in proper English automatically. Plus real-time Bangla→English translation, App-Aware Tone (casual in WhatsApp, formal in Mail, Vibe Coding prompts in Cursor/VS Code), Voice Snippets, Personal Dictionary, and Bot-free Meeting Notes.</p>
+          <div class="flow" role="img" aria-label="Bangla speech with English words and live translation"><span class="chip chip-spoken">🗣️ "কালকে meeting-এ project review করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ Proper Banglish / Fluent English</span></div></article>
         <article class="tile accent s4"><span class="tag">Offline or cloud</span><h3>Free and private, or the most accurate. You choose.</h3>
           <p>Offline runs a Bangla model on your computer. Cloud uses your own Gemini or ChatGPT key. If a key runs out or you lose internet, Kothalipi moves to the next engine, so it never stops typing.</p>
           <div class="flow" role="img" aria-label="Fallback order: Gemini, then ChatGPT, then offline"><span class="chip">Gemini</span><span class="arrow">→</span><span class="chip">ChatGPT</span><span class="arrow">→</span><span class="chip">Offline</span></div></article>
@@ -125,9 +125,9 @@ def home(lang):
     else:
         bento = f"""
       <div class="bento">
-        <article class="tile translation-tile s4"><span class="tag">✨ নতুন · এআই ভয়েস ট্রান্সলেশন</span><h3>বাংলায় বলুন, সাথে সাথে নিখুঁত ইংরেজিতে লেখা হবে</h3>
-          <p>বাংলায় আপনার স্বাভাবিক ভাষায় কথা বলুন। কথালিপি Google Gemini এআই-এর সাহায্যে রিয়েল-টাইমে তা অত্যন্ত সাবলীল ও শুদ্ধ ইংরেজিতে রূপান্তর করে সক্রিয় অ্যাপে টাইপ করে দেয়। অফিশিয়াল ইমেইল, মেসেজ বা ক্লায়েন্ট চ্যাটের জন্য অসাধারণ সুবিধা।</p>
-          <div class="flow" role="img" aria-label="বাংলা কথা সরাসরি ইংরেজিতে অনুবাদ"><span class="chip chip-spoken">🗣️ "আমি কালকে মিটিংয়ে জয়েন করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ "I will join the meeting tomorrow"</span></div></article>
+        <article class="tile translation-tile s4"><span class="tag">✨ নতুন v0.1.7 · বাংলিশ ও এআই অনুবাদ</span><h3>বাংলার মাঝে প্রপার ইংরেজি, অ্যাপ অনুযায়ী টোন ও মিটিং নোট</h3>
+          <p>বাংলায় কথা বলার সময় মাঝে যে ইংরেজি শব্দ বলবেন, তা স্বয়ংক্রিয়ভাবে সঠিক ইংরেজি অক্ষরে বসবে। সাথে আছে রিয়েল-টাইম বাংলা→ইংরেজি অনুবাদ, অ্যাপ বুঝে টোন বদলানো (WhatsApp-এ ক্যাজুয়াল, Mail-এ ফর্মাল, Cursor/VS Code-এ Vibe Coding প্রম্পট), ভয়েস স্নিপেট, ব্যক্তিগত ডিকশনারি ও বট-মুক্ত মিটিং নোট।</p>
+          <div class="flow" role="img" aria-label="বাংলা ও ইংরেজি একসাথে এবং লাইভ অনুবাদ"><span class="chip chip-spoken">🗣️ "কালকে meeting-এ project review করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ নিখুঁত বাংলিশ / সাবলীল ইংরেজি</span></div></article>
         <article class="tile accent s4"><span class="tag">অফলাইন বা ক্লাউড</span><h3>ফ্রি ও প্রাইভেট, অথবা সবচেয়ে নির্ভুল। আপনিই বেছে নিন।</h3>
           <p>অফলাইনে বাংলা মডেল আপনার কম্পিউটারেই চলে। ক্লাউডে আপনার নিজের Gemini বা ChatGPT কি ব্যবহার হয়। কোনো কি-এর সীমা শেষ হলে বা ইন্টারনেট গেলে কথালিপি পরের ইঞ্জিনে চলে যায়, তাই লেখা কখনো থামে না।</p>
           <div class="flow" role="img" aria-label="ক্রম: Gemini, তারপর ChatGPT, তারপর অফলাইন"><span class="chip">Gemini</span><span class="arrow">→</span><span class="chip">ChatGPT</span><span class="arrow">→</span><span class="chip">অফলাইন</span></div></article>
