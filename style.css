@@ -215,9 +215,9 @@ h3 { font-size: 22px; font-weight: 650; letter-spacing: -0.01em; line-height: 1.
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--green); background: var(--soft); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
 @media (prefers-color-scheme: dark) { .eyebrow { color: var(--green-3); } }
 .eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: pulse 1.8s infinite; }
-.new-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #7c3aed; background: rgba(124, 58, 237, 0.08); border: 1px solid rgba(124, 58, 237, 0.22); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; text-decoration: none; transition: transform 0.2s; }
+.new-badge { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px; max-width: 100%; font-size: 13px; font-weight: 600; line-height: 1.35; color: #7c3aed; background: rgba(124, 58, 237, 0.08); border: 1px solid rgba(124, 58, 237, 0.22); padding: 5px 12px 5px 6px; border-radius: 999px; margin-bottom: 16px; text-decoration: none; transition: transform 0.2s; }
 .new-badge:hover { transform: translateY(-1px); }
-.new-badge b { background: #7c3aed; color: #fff; padding: 2px 7px; border-radius: 999px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+.new-badge b { background: #7c3aed; color: #fff; padding: 3px 9px; border-radius: 999px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
 @media (prefers-color-scheme: dark) {
   .new-badge { color: #c4b5fd; background: rgba(139, 92, 246, 0.14); border-color: rgba(139, 92, 246, 0.3); }
   .new-badge b { background: #8b5cf6; }
@@ -289,7 +289,8 @@ body.bn h2 { line-height: 1.22; letter-spacing: -0.01em; }
 .tile p { margin: 0; color: var(--ink-2); }
 .tile .tag { font-size: 12.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
 .tile.accent { background: linear-gradient(160deg, var(--green) 0%, var(--green-2) 100%); color: #fff; border-color: transparent; box-shadow: var(--shadow-l); }
-.tile.accent p, .tile.accent .tag { color: rgba(255, 255, 255, 0.84); }
+.tile.accent p, .tile.accent .tag { color: rgba(255, 255, 255, 0.88); }
+.tile.accent code { background: rgba(255, 255, 255, 0.16); color: #fff; border: 1px solid rgba(255, 255, 255, 0.24); padding: 2px 7px; border-radius: 6px; font-size: 0.88em; }
 .s2 { grid-column: span 2; } .s3 { grid-column: span 3; } .s4 { grid-column: span 4; } .s6 { grid-column: span 6; }
 .flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 .chip { background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.24); padding: 8px 14px; border-radius: 12px; font-weight: 600; font-size: 15px; }
@@ -434,10 +435,10 @@ body.bn h2 { line-height: 1.22; letter-spacing: -0.01em; }
 .tabs [role="tab"] { font: inherit; font-weight: 600; font-size: 15px; border: 0; cursor: pointer; background: transparent; color: var(--muted); padding: 8px 20px; border-radius: 999px; }
 .tabs [role="tab"][aria-selected="true"] { background: var(--green); color: #fff; }
 .js .tabs [role="tabpanel"][hidden] { display: none; }
-.code { position: relative; background: var(--code-bg); color: var(--code-ink); border-radius: 16px; padding: 18px 20px; margin: 12px 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06); }
-.code pre { margin: 0; padding-right: 76px; font-size: 14.5px; line-height: 1.6; white-space: pre; overflow-x: auto; scrollbar-width: thin; }
-.code .copy { position: absolute; top: 12px; right: 12px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--code-ink); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 9px; padding: 5px 11px; }
-.code .copy:hover { background: rgba(255, 255, 255, 0.16); }
+.code { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; position: relative; background: var(--code-bg); color: var(--code-ink); border-radius: 16px; padding: 16px 18px; margin: 12px 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06); }
+.code pre { flex: 1; min-width: 0; margin: 0; padding: 2px 0; font-size: 14.5px; line-height: 1.6; white-space: pre; overflow-x: auto; scrollbar-width: thin; }
+.code .copy { flex-shrink: 0; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--code-ink); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 9px; padding: 5px 12px; }
+.code .copy:hover { background: rgba(255, 255, 255, 0.18); }
 .code-label { font-size: 14px; font-weight: 600; color: var(--muted); margin-top: 20px; }
 
 /* ---------- band, faq ---------- */
@@ -568,9 +569,10 @@ body.bn h2 { line-height: 1.22; letter-spacing: -0.01em; }
   .tile, .step { padding: 24px; }
   .btn-lg { padding: 16px 24px; font-size: 17px; }
   .cta .btn { width: 100%; }
-  .code { padding: 46px 16px 16px; }
-  .code pre { padding-right: 0; }
-  .code .copy { top: 8px; right: 8px; }
+  .code { flex-direction: column; gap: 10px; padding: 14px 16px; }
+  .code pre { width: 100%; padding: 0; }
+  .code .copy { align-self: flex-end; }
+  .new-badge { border-radius: 14px; padding: 7px 12px; font-size: 12.5px; }
 }
 
 /* ---- motion & direct download ---- */

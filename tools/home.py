@@ -95,9 +95,9 @@ def home(lang):
     steps_html = "".join(f'<div class="step"><div class="n">{n}</div><h3>{esc(h)}</h3><p>{esc(p)}</p></div>' for n, h, p in steps)
 
     new_badge = (
-        '<a class="new-badge" href="/changelog"><b>Desktop v0.1.8 &amp; Mobile v0.2.0</b> ✨ Free Groq Whisper, Voice Snippets, Voice Edit &amp; Offline Mobile</a><br>'
+        '<a class="new-badge" href="/changelog"><b>v0.1.8 · Mobile v0.2.0</b> <span>✨ Free Groq Whisper, Voice Edit &amp; Offline</span></a><br>'
         if en
-        else '<a class="new-badge" href="/changelog"><b>Desktop v0.1.8 ও Mobile v0.2.0</b> ✨ ফ্রি Groq Whisper, ভয়েস স্নিপেট, Voice Edit ও অফলাইন মোবাইল</a><br>'
+        else '<a class="new-badge" href="/changelog"><b>v0.1.8 · মোবাইল v0.2.0</b> <span>✨ ফ্রি Groq Whisper, Voice Edit ও অফলাইন</span></a><br>'
     )
 
     if en:
@@ -106,10 +106,10 @@ def home(lang):
         <article class="tile translation-tile s4"><span class="tag">✨ Desktop v0.1.8 &amp; Mobile v0.2.0</span><h3>Bangla, Natural Banglish, Live Translation &amp; AI Voice Edit</h3>
           <p>Speak Bangla with English words mixed in — Kothalipi keeps English terms in proper English automatically. Plus real-time Bangla→English translation, <b>Voice Edit Commands</b> ("make this a formal email"), App-Aware Tone, Vibe Coding prompts, Voice Snippets, and Bot-free Meeting Notes.</p>
           <div class="flow" role="img" aria-label="Bangla speech with English words and live translation"><span class="chip chip-spoken">🗣️ "কালকে meeting-এ project review করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ Proper Banglish / Fluent English</span></div></article>
+        <article class="tile s2"><span class="tag">📱 Mobile v0.2.0 · Android &amp; iOS</span><h3>Floating Bubble &amp; iOS Keyboard</h3><p>Dictate over WhatsApp, Messenger &amp; Notes with Hold-to-Talk, 2s Auto-Stop (VAD), Voice Edit, and 0-MB Free Offline Mode. <a href="/download#mobile">Get Mobile →</a></p></article>
         <article class="tile accent s4"><span class="tag">Multi-AI + Free Offline Fallback</span><h3>Free Gemini + Free Groq Whisper + Offline. Never hits a wall.</h3>
           <p>Bring your own free <b>Gemini</b> and <b>Groq Whisper</b> (<code>whisper-large-v3-turbo</code>) keys, or optional OpenAI. If a free quota runs out or internet drops, Kothalipi automatically falls back to the next engine or 100% free Offline mode.</p>
-          <div class="flow" role="img" aria-label="Fallback order: Gemini, Groq Whisper, OpenAI, then Offline"><span class="chip">Gemini (Free)</span><span class="arrow">→</span><span class="chip">Groq Whisper (Free)</span><span class="arrow">→</span><span class="chip">Offline</span></div></article>
-        <article class="tile s2"><span class="tag">📱 Mobile v0.2.0 · Android &amp; iOS</span><h3>Floating Bubble &amp; iOS Keyboard</h3><p>Dictate over WhatsApp, Messenger &amp; Notes with Hold-to-Talk, 2s Auto-Stop (VAD), Voice Edit, and 0-MB Free Offline Mode. <a href="/download#mobile">Get Mobile →</a></p></article>
+          <div class="flow" role="img" aria-label="Fallback order: Gemini, Groq Whisper, then Offline"><span class="chip">Gemini (Free)</span><span class="arrow">→</span><span class="chip">Groq Whisper (Free)</span><span class="arrow">→</span><span class="chip">Offline</span></div></article>
         <article class="tile s2"><span class="tag">⚡ Voice Snippets &amp; Shortcuts</span><h3>Say a trigger, paste full text</h3><p>Say "আমার ঠিকানা বলো" or "বিকাশ নম্বর" to instantly paste saved addresses, links, or templates on Desktop &amp; Mobile.</p></article>
         <article class="tile s2"><span class="tag">🎯 App-Aware &amp; Vibe Coding</span><h3>Adapts to every app</h3><p>Casual Banglish in WhatsApp, formal in Mail, and clean English developer prompts in Cursor, VS Code &amp; Terminal.</p></article>
         <article class="tile s2"><span class="tag">📝 Meeting Notes</span><h3>Bot-free Bangla-English notes</h3><p>Record Zoom or Google Meet without any bot joining. Get AI summary, key points, and action items in Markdown.</p></article>
@@ -135,10 +135,10 @@ def home(lang):
         <article class="tile translation-tile s4"><span class="tag">✨ Desktop v0.1.8 ও Mobile v0.2.0</span><h3>বাংলার মাঝে প্রপার ইংরেজি, লাইভ অনুবাদ ও Voice Edit</h3>
           <p>বাংলায় কথা বলার সময় মাঝে যে ইংরেজি শব্দ বলবেন, তা স্বয়ংক্রিয়ভাবে সঠিক ইংরেজি অক্ষরে বসবে। সাথে আছে রিয়েল-টাইম বাংলা→ইংরেজি অনুবাদ, <b>Voice Edit কমান্ড</b> ("এটাকে ফর্মাল ইমেইল বানাও"), অ্যাপ অনুযায়ী টোন, Vibe Coding, ভয়েস স্নিপেট ও বট-মুক্ত মিটিং নোট।</p>
           <div class="flow" role="img" aria-label="বাংলা ও ইংরেজি একসাথে এবং লাইভ অনুবাদ"><span class="chip chip-spoken">🗣️ "কালকে meeting-এ project review করব"</span><span class="arrow">→</span><span class="chip chip-translated">✍️ নিখুঁত বাংলিশ / সাবলীল ইংরেজি</span></div></article>
+        <article class="tile s2"><span class="tag">📱 Mobile v0.2.0 · Android ও iOS</span><h3>ফ্লোটিং বাবল ও iOS কীবোর্ড</h3><p>WhatsApp, Messenger ও Notes-এ Hold-to-Talk, ২ সেকেন্ড Auto-Stop (VAD), Voice Edit ও ফ্রি অফলাইন মোড। <a href="/bn/download#mobile">মোবাইল ডাউনলোড →</a></p></article>
         <article class="tile accent s4"><span class="tag">Multi-AI + ফ্রি অফলাইন ফলব্যাক</span><h3>ফ্রি Gemini + ফ্রি Groq Whisper + অফলাইন। লেখা কখনো থামবে না।</h3>
           <p>আপনার নিজের ফ্রি <b>Gemini</b> এবং সুপার-ফাস্ট <b>Groq Whisper</b> (<code>whisper-large-v3-turbo</code>) কি ব্যবহার করুন। একটার কোটা শেষ হলে বা নেট না থাকলে অটোমেটিক পরের ইঞ্জিন বা ১০০% ফ্রি অফলাইন মোডে চলবে।</p>
           <div class="flow" role="img" aria-label="ক্রম: Gemini, Groq Whisper, তারপর অফলাইন"><span class="chip">Gemini (ফ্রি)</span><span class="arrow">→</span><span class="chip">Groq Whisper (ফ্রি)</span><span class="arrow">→</span><span class="chip">অফলাইন</span></div></article>
-        <article class="tile s2"><span class="tag">📱 Mobile v0.2.0 · Android ও iOS</span><h3>ফ্লোটিং বাবল ও iOS কীবোর্ড</h3><p>WhatsApp, Messenger ও Notes-এ Hold-to-Talk, ২ সেকেন্ড Auto-Stop (VAD), Voice Edit ও ফ্রি অফলাইন মোড। <a href="/bn/download#mobile">মোবাইল ডাউনলোড →</a></p></article>
         <article class="tile s2"><span class="tag">⚡ ভয়েস স্নিপেট ও শর্টকাট</span><h3>ট্রিগার বললেই পুরো টেক্সট পেস্ট</h3><p>"আমার ঠিকানা বলো" বা "বিকাশ নম্বর" বললেই সেভ করা পুরো লেখা অটো পেস্ট হবে ডেস্কটপ ও মোবাইলে।</p></article>
         <article class="tile s2"><span class="tag">🎯 অ্যাপ টোন ও Vibe Coding</span><h3>প্রতিটি অ্যাপে মানানসই স্টাইল</h3><p>WhatsApp-এ স্বাভাবিক বাংলিশ, Mail-এ ফর্মাল, আর Cursor/VS Code-এ বাংলায় বললে ক্লিন ইংরেজি ডেভেলপার প্রম্পট।</p></article>
         <article class="tile s2"><span class="tag">📝 মিটিং নোট</span><h3>বট-মুক্ত বাংলা-ইংরেজি নোট</h3><p>কোনো বট ছাড়াই Zoom বা Google Meet রেকর্ড করে বাংলা-ইংরেজি সামারি, মূল পয়েন্ট ও Action Items পান।</p></article>
