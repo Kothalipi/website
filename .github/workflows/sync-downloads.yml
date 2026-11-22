@@ -2,7 +2,7 @@ name: Sync Downloads & Updater
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 */6 * * *"
   repository_dispatch:
     types: [release-published]
   workflow_dispatch:
