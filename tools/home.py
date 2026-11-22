@@ -303,6 +303,7 @@ def download(lang):
       <div class="section-head" style="margin-bottom:24px">
         <h2>Kothalipi Mobile (Android & iOS)</h2>
         <p>AI voice dictation, Wispr Flow-style floating bubble, and live Bangla-to-English translation.</p>
+        <p class="muted" style="margin-top:8px;font-size:14px"><strong data-mobile-downloads>17+</strong> mobile downloads</p>
       </div>
       <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <article class="os-card" id="android">
@@ -338,6 +339,7 @@ def download(lang):
       <div class="section-head" style="margin-bottom:24px">
         <h2>কথালিপি মোবাইল (Android ও iOS)</h2>
         <p>এআই ভয়েস ডিকটেশন, Wispr Flow স্টাইল ফ্লোটিং বাবল এবং সরাসরি বাংলা থেকে ইংরেজি লাইভ অনুবাদ।</p>
+        <p class="muted" style="margin-top:8px;font-size:14px"><strong data-mobile-downloads>17+</strong> টি মোবাইল ডাউনলোড</p>
       </div>
       <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <article class="os-card" id="android">
@@ -378,7 +380,7 @@ def download(lang):
       <div class="dl-main">
         <a class="btn btn-primary btn-lg" id="dl-button" data-dl data-labels='{labels}' data-soon="{esc(soon)}" href="{DESK}/releases/latest">{ICON["download"]}<span id="dl-label">{main_label}</span></a>
         <span class="dl-meta" id="dl-size">{loading}</span>
-        <p class="muted center" style="margin-top:14px;font-size:14px">{ICON['check']} <strong data-total-downloads>280+</strong> {'downloads across all platforms' if en else 'টি মোট ডাউনলোড'}</p>
+        <p class="muted center" style="margin-top:14px;font-size:14px">{ICON['check']} <strong data-desktop-downloads>265+</strong> {'desktop downloads' if en else 'টি ডেস্কটপ ডাউনলোড'}</p>
       </div>
     </section>
     <section class="container" style="padding-bottom:20px"><div class="os-cards">{cards}</div></section>

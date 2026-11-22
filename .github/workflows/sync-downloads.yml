@@ -30,17 +30,15 @@ jobs:
           mob_rels = fetch("https://api.github.com/repos/Kothalipi/kothalipi-mobile/releases?per_page=100")
           is_app = lambda n: not n.endswith((".sig", ".json"))
 
-          total = sum(
-              a.get("download_count", 0)
-              for rels in (desk_rels, mob_rels)
-              for r in rels
-              for a in r.get("assets", [])
-              if is_app(a.get("name", ""))
-          )
+          desktop = sum(a.get("download_count", 0) for r in desk_rels for a in r.get("assets", []) if is_app(a.get("name", "")))
+          mobile = sum(a.get("download_count", 0) for r in mob_rels for a in r.get("assets", []) if is_app(a.get("name", "")))
+          total = desktop + mobile
 
           latest = fetch("https://api.github.com/repos/Kothalipi/kothalipi-desktop/releases/latest")
           rel_dl = sum(a.get("download_count", 0) for a in latest.get("assets", []) if is_app(a.get("name", "")))
           latest["total_downloads"] = total
+          latest["desktop_downloads"] = desktop
+          latest["mobile_downloads"] = mobile
           latest["release_downloads"] = rel_dl
 
           with open("latest.json", "w", encoding="utf-8") as f:

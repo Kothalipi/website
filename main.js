@@ -169,6 +169,8 @@
       const slim = {
         tag: j.tag_name || (j.version ? `v${j.version}` : "v0.1.7"),
         totalDownloads: j.total_downloads,
+        desktopDownloads: j.desktop_downloads,
+        mobileDownloads: j.mobile_downloads,
         releaseDownloads: j.release_downloads,
         assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url, downloads: a.download_count }))
       };
@@ -178,47 +180,55 @@
     return relP;
   };
 
-  /* ---------- live total download counter (Desktop + Mobile, excludes .sig/.json) ---------- */
-  const dlCounters = $$("[data-total-downloads]");
-  if (dlCounters.length) {
-    const renderCount = (n) => {
-      if (!n || n <= 0) return;
-      dlCounters.forEach((el) => (el.textContent = `${n.toLocaleString()}+`));
+  /* ---------- live download counters: Total (landing), Desktop, and Mobile ---------- */
+  const totalEls = $$("[data-total-downloads]");
+  const desktopEls = $$("[data-desktop-downloads]");
+  const mobileEls = $$("[data-mobile-downloads]");
+  if (totalEls.length || desktopEls.length || mobileEls.length) {
+    const renderCounts = ({ total, desktop, mobile }) => {
+      if (total > 0) totalEls.forEach((el) => (el.textContent = `${total.toLocaleString()}+`));
+      if (desktop > 0) desktopEls.forEach((el) => (el.textContent = `${desktop.toLocaleString()}+`));
+      if (mobile > 0) mobileEls.forEach((el) => (el.textContent = `${mobile.toLocaleString()}+`));
+    };
+    const sumInstallers = (rels) => {
+      if (!Array.isArray(rels)) return 0;
+      let n = 0;
+      for (const rel of rels) {
+        for (const a of rel.assets || []) {
+          if (a.name && !/\.(sig|json)$/i.test(a.name)) n += Number(a.download_count || 0);
+        }
+      }
+      return n;
     };
     (async () => {
       try {
-        const cached = JSON.parse(sessionStorage.getItem("kl-dl-total") || "null");
-        if (cached && Date.now() - cached.t < 600000 && cached.n > 0) {
-          renderCount(cached.n);
+        const cached = JSON.parse(sessionStorage.getItem("kl-dl-counts") || "null");
+        if (cached && Date.now() - cached.t < 600000 && cached.total > 0) {
+          renderCounts(cached);
           return;
         }
       } catch (_) {}
       // 1. Show fast fallback from /latest.json first
-      getRelease().then((rel) => { if (rel.totalDownloads) renderCount(rel.totalDownloads); }).catch(() => {});
-      // 2. Fetch live count across all Desktop + Mobile releases from GitHub API
+      getRelease().then((rel) => {
+        renderCounts({
+          total: rel.totalDownloads || 0,
+          desktop: rel.desktopDownloads || 0,
+          mobile: rel.mobileDownloads || 0,
+        });
+      }).catch(() => {});
+      // 2. Fetch live counts from GitHub API (Desktop + Mobile)
       try {
-        const repos = ["Kothalipi/kothalipi-desktop", "Kothalipi/kothalipi-mobile"];
-        const lists = await Promise.all(
-          repos.map((rp) =>
-            fetch(`https://api.github.com/repos/${rp}/releases?per_page=100`)
-              .then((res) => (res.ok ? res.json() : []))
-              .catch(() => [])
-          )
-        );
-        let total = 0;
-        for (const rels of lists) {
-          if (!Array.isArray(rels)) continue;
-          for (const rel of rels) {
-            for (const a of rel.assets || []) {
-              if (a.name && !/\.(sig|json)$/i.test(a.name)) {
-                total += Number(a.download_count || 0);
-              }
-            }
-          }
-        }
+        const [deskRels, mobRels] = await Promise.all([
+          fetch("https://api.github.com/repos/Kothalipi/kothalipi-desktop/releases?per_page=100").then((r) => (r.ok ? r.json() : [])).catch(() => []),
+          fetch("https://api.github.com/repos/Kothalipi/kothalipi-mobile/releases?per_page=100").then((r) => (r.ok ? r.json() : [])).catch(() => []),
+        ]);
+        const desktop = sumInstallers(deskRels);
+        const mobile = sumInstallers(mobRels);
+        const total = desktop + mobile;
         if (total > 0) {
-          renderCount(total);
-          try { sessionStorage.setItem("kl-dl-total", JSON.stringify({ t: Date.now(), n: total })); } catch (_) {}
+          const counts = { t: Date.now(), total, desktop, mobile };
+          renderCounts(counts);
+          try { sessionStorage.setItem("kl-dl-counts", JSON.stringify(counts)); } catch (_) {}
         }
       } catch (_) {}
     })();
