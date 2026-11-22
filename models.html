@@ -84,12 +84,19 @@
         <tr><td><b>Whisper Small (English)</b></td><td>257 MB</td><td>Older or lighter computers.</td></tr>
         <tr><td><b>Whisper Base (English)</b></td><td>80 MB</td><td>Very low memory.</td></tr>
       </tbody></table>
-      <h2>Cloud (your own key)</h2>
-      <table class="table"><thead><tr><th>Engine</th><th>Default model</th><th>Notes</th></tr></thead><tbody>
-        <tr><td><b>Google Gemini</b></td><td><code>gemini-3.5-transcribe</code></td><td>Free tier with daily limits. Usually best for Bangla mixed with English.</td></tr>
-        <tr><td><b>OpenAI</b></td><td><code>gpt-transcribe</code></td><td>Paid per minute of audio. A good backup.</td></tr>
+      <h2>Cloud (your own free or paid key)</h2>
+      <table class="table"><thead><tr><th>Engine</th><th>Default model</th><th>Cost</th><th>Notes</th></tr></thead><tbody>
+        <tr><td><b>Google Gemini</b> <span class="badge">Recommended</span></td><td><code>gemini-2.5-flash</code> (Mobile)<br><code>gemini-3.5-transcribe</code> (Desktop)</td><td>Free tier</td><td>Best accuracy for Bangla, natural Banglish code-switching, Smart Polish, and Live Bangla→English translation. <a href="/guides/free-gemini-api-key">Get free key →</a></td></tr>
+        <tr><td><b>Groq Whisper</b> <span class="badge">New · Free</span></td><td><code>whisper-large-v3-turbo</code></td><td>Free tier</td><td>Sub-second ultra-fast transcription on Groq LPU hardware. Perfect free backup when Gemini reaches daily limits. <a href="/guides/free-groq-api-key">Get free key →</a></td></tr>
+        <tr><td><b>OpenAI</b></td><td><code>gpt-transcribe</code> / <code>whisper-1</code></td><td>Paid</td><td>Pay-per-minute backup option for heavy cloud users.</td></tr>
       </tbody></table>
-      <p>If every cloud engine fails or you are offline, Kothalipi falls back to your offline model.</p>
+      <p>Kothalipi supports automatic multi-provider fallback: <b>Gemini → Groq Whisper → OpenAI → Offline</b>. See <a href="/docs/cloud">Cloud &amp; API keys</a> for step-by-step setup.</p>
+
+      <h2>Mobile on-device offline (Android &amp; iOS)</h2>
+      <table class="table"><thead><tr><th>Platform</th><th>Engine</th><th>Extra Size</th><th>Notes</th></tr></thead><tbody>
+        <tr><td><b>Android</b></td><td>OS Native <code>SpeechRecognizer</code> (<code>bn-BD</code> / <code>en-US</code>)</td><td>0 MB</td><td>100% free, zero API keys, works offline when Android's Bangla language pack is downloaded.</td></tr>
+        <tr><td><b>iPhone / iOS</b></td><td>Apple <code>SFSpeechRecognizer</code> (On-Device)</td><td>0 MB</td><td>100% free on-device speech recognition with live partial text streaming.</td></tr>
+      </tbody></table>
       <h2>Which one fits your computer?</h2>
       <table class="table"><thead><tr><th>Memory</th><th>Recommendation</th></tr></thead><tbody>
         <tr><td>Under 8 GB</td><td>Cloud mode (Gemini) for the best accuracy. Offline still works with the Bangla model; use Whisper Small for English.</td></tr>

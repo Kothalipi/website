@@ -86,17 +86,17 @@
       </ol>
       <p>Kothalipi uses the <code>gemini-3.5-transcribe</code> model by default. You can change the model name in the same settings.</p>
       <h2>What if the limit runs out?</h2>
-      <p>The free tier has daily limits. When Gemini refuses a request, Kothalipi tries the next engine you enabled (for example OpenAI), and when every cloud engine fails, or you are offline, it falls back to your <b>offline model</b>. Keep the Bangla model downloaded so dictation never stops. You can reorder or turn off engines with the arrows in the same settings.</p>
-      <h2>Optional: a second provider</h2>
-      <p>Add an OpenAI key under <b>OpenAI (ChatGPT)</b> as a backup. OpenAI's API is paid per minute of audio. Kothalipi uses <code>gpt-transcribe</code> by default.</p>
+      <p>The free tier has daily limits. When Gemini refuses a request, Kothalipi automatically tries the next engine you enabled — such as <b>Groq Whisper (Free)</b> (<a href="/guides/free-groq-api-key">get a free Groq key</a>) or OpenAI — and when every cloud engine fails or you are offline, it falls back to your <b>offline model</b>. Keep the Bangla model downloaded (or Offline Mode ready on Mobile) so dictation never stops.</p>
+      <h2>Optional: a second free provider (Groq Whisper)</h2>
+      <p>Add a free <b>Groq Whisper</b> key (<a href="https://console.groq.com/keys">console.groq.com/keys</a>) for ultra-fast <code>whisper-large-v3-turbo</code> transcription, or an OpenAI key as a paid backup.</p>
       <h2>Privacy</h2>
       <ul>
-        <li>Your key is stored on your computer and sent only to its provider.</li>
-        <li>Audio goes straight from your computer to Google. It never passes through Kothalipi, which has no servers.</li>
+        <li>Your key is stored on your computer or phone and sent only to its provider.</li>
+        <li>Audio goes straight from your device to Google/Groq/OpenAI. It never passes through Kothalipi, which has no servers.</li>
         <li>Read Google's Gemini API terms: on unpaid tiers they can allow submitted content to be used to improve Google products. For anything sensitive, use <b>Offline</b> mode.</li>
       </ul>
       <p>Claude cannot transcribe audio, so it is not a speech engine here. It can polish your text afterwards in <b>Settings → Post-Processing</b>.</p>
-      <h2>Keep reading</h2><div class="cards"><a class="card" href="/guides/bangla-voice-typing-mac"><h3>Bangla voice typing on a Mac</h3></a><a class="card" href="/guides/bangla-voice-typing-windows"><h3>Bangla voice typing on Windows</h3></a><a class="card" href="/guides/bangla-voice-typing-linux"><h3>Bangla voice typing on Linux</h3></a></div>
+      <h2>Keep reading</h2><div class="cards"><a class="card" href="/guides/bangla-voice-typing-mac"><h3>Bangla voice typing on a Mac</h3></a><a class="card" href="/guides/bangla-voice-typing-windows"><h3>Bangla voice typing on Windows</h3></a><a class="card" href="/guides/bangla-voice-typing-linux"><h3>Bangla voice typing on Linux</h3></a><a class="card" href="/guides/free-groq-api-key"><h3>Get a free Groq Whisper API key (Ultra-Fast)</h3></a></div>
     </article>
   </main>
   <footer class="footer">

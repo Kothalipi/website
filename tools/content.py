@@ -20,6 +20,7 @@ RELATED = [
     ("/guides/bangla-voice-typing-windows", "Bangla voice typing on Windows"),
     ("/guides/bangla-voice-typing-linux", "Bangla voice typing on Linux"),
     ("/guides/free-gemini-api-key", "Get a free Gemini API key for Bangla"),
+    ("/guides/free-groq-api-key", "Get a free Groq Whisper API key (Ultra-Fast)"),
 ]
 
 
@@ -146,18 +147,50 @@ def guides():
       </ol>
       <p>Kothalipi uses the <code>gemini-3.5-transcribe</code> model by default. You can change the model name in the same settings.</p>
       <h2>What if the limit runs out?</h2>
-      <p>The free tier has daily limits. When Gemini refuses a request, Kothalipi tries the next engine you enabled (for example OpenAI), and when every cloud engine fails, or you are offline, it falls back to your <b>offline model</b>. Keep the Bangla model downloaded so dictation never stops. You can reorder or turn off engines with the arrows in the same settings.</p>
-      <h2>Optional: a second provider</h2>
-      <p>Add an OpenAI key under <b>OpenAI (ChatGPT)</b> as a backup. OpenAI's API is paid per minute of audio. Kothalipi uses <code>gpt-transcribe</code> by default.</p>
+      <p>The free tier has daily limits. When Gemini refuses a request, Kothalipi automatically tries the next engine you enabled — such as <b>Groq Whisper (Free)</b> (<a href="/guides/free-groq-api-key">get a free Groq key</a>) or OpenAI — and when every cloud engine fails or you are offline, it falls back to your <b>offline model</b>. Keep the Bangla model downloaded (or Offline Mode ready on Mobile) so dictation never stops.</p>
+      <h2>Optional: a second free provider (Groq Whisper)</h2>
+      <p>Add a free <b>Groq Whisper</b> key (<a href="https://console.groq.com/keys">console.groq.com/keys</a>) for ultra-fast <code>whisper-large-v3-turbo</code> transcription, or an OpenAI key as a paid backup.</p>
       <h2>Privacy</h2>
       <ul>
-        <li>Your key is stored on your computer and sent only to its provider.</li>
-        <li>Audio goes straight from your computer to Google. It never passes through Kothalipi, which has no servers.</li>
+        <li>Your key is stored on your computer or phone and sent only to its provider.</li>
+        <li>Audio goes straight from your device to Google/Groq/OpenAI. It never passes through Kothalipi, which has no servers.</li>
         <li>Read Google's Gemini API terms: on unpaid tiers they can allow submitted content to be used to improve Google products. For anything sensitive, use <b>Offline</b> mode.</li>
       </ul>
       <p>Claude cannot transcribe audio, so it is not a speech engine here. It can polish your text afterwards in <b>Settings → Post-Processing</b>.</p>
       {related(p)}
     """, current="guides", crumb_items=[("/", "Home"), ("/guides/", "Guides"), (p, "Free Gemini API key")], article=True, meta=f"Updated {UPDATED} · 3 min read")
+
+    # ---------------------------------------------------------------- Groq key
+    p = "/guides/free-groq-api-key"
+    t = "Get a Free Groq Whisper API Key (Ultra-Fast Bangla & English)"
+    d = "Step-by-step guide to creating a free Groq API key for whisper-large-v3-turbo in Kothalipi Desktop and Mobile (Android & iOS)."
+    wide_page(p, t, d, f"""
+      <h1>Get a free Groq Whisper API key</h1>
+      <p class="lead">Groq runs OpenAI's <code>whisper-large-v3-turbo</code> on custom LPU hardware with a generous free tier. It transcribes Bangla and English in under a second and makes the perfect free backup alongside Google Gemini.</p>
+      <!--META-->
+      <h2>Step 1: Create your free Groq API key</h2>
+      <ol>
+        <li>Open <a href="https://console.groq.com/keys">console.groq.com/keys</a> and sign in with Google or GitHub (no credit card required).</li>
+        <li>Click <b>Create API Key</b>, give it a name like <code>Kothalipi</code>, and copy the key (starts with <code>gsk_...</code>).</li>
+      </ol>
+      <div class="note"><p><b>Tip:</b> In both Kothalipi Desktop and Kothalipi Mobile, you can tap the <b>Get a free key / Groq Key ↗</b> button in Settings to open this page directly.</p></div>
+      <h2>Step 2: Add it to Kothalipi Desktop (v0.1.8+)</h2>
+      <ol>
+        <li>Open Kothalipi → <b>Settings → General → Listening</b> and select <b>Cloud (your keys)</b>.</li>
+        <li>Paste your <code>gsk_...</code> key under <b>Groq Whisper (Free, Ultra-Fast)</b>.</li>
+        <li>Click <b>Save</b>. Kothalipi verifies the key automatically.</li>
+        <li>Use the up/down arrows to choose whether <b>Gemini</b> or <b>Groq Whisper</b> runs first — if one hits its free quota, Kothalipi automatically falls back to the other!</li>
+      </ol>
+      <h2>Step 3: Add it to Kothalipi Mobile (Android &amp; iOS v0.2.0+)</h2>
+      <ol>
+        <li>Open the <b>Kothalipi</b> mobile app and tap <b>⚙️ Settings</b>.</li>
+        <li>Paste your key into the <b>Groq Whisper Key</b> field and tap <b>Test</b> to confirm connection.</li>
+        <li>Set <b>Primary Provider</b> to <b>Auto</b> (automatic fallback between Gemini &amp; Groq) or <b>Groq</b>, then tap <b>Save</b>.</li>
+      </ol>
+      <h2>Free tier limits &amp; usage</h2>
+      <p>Groq offers a generous free tier for <code>whisper-large-v3-turbo</code>. You can check your live usage anytime at <a href="https://console.groq.com/settings/limits">console.groq.com/settings/limits</a>.</p>
+      {related(p)}
+    """, current="guides", crumb_items=[("/", "Home"), ("/guides/", "Guides"), (p, "Free Groq Whisper API key")], article=True, meta=f"Updated {UPDATED} · 2 min read")
 
     # ---------------------------------------------------------------- index
     cards = "".join(
@@ -166,7 +199,8 @@ def guides():
             ("/guides/bangla-voice-typing-mac", "Bangla voice typing on a Mac", "Install, permissions, the Bangla model and key conflicts."),
             ("/guides/bangla-voice-typing-windows", "Bangla voice typing on Windows", "Install, SmartScreen, microphone and the Bangla key."),
             ("/guides/bangla-voice-typing-linux", "Bangla voice typing on Linux", ".deb, .rpm, AppImage, X11 and Wayland."),
-            ("/guides/free-gemini-api-key", "Free Gemini API key", "Cloud mode, fallback and privacy."),
+            ("/guides/free-gemini-api-key", "Free Gemini API key", "Step-by-step Google AI Studio key setup, fallback and privacy."),
+            ("/guides/free-groq-api-key", "Free Groq Whisper API key", "Ultra-fast whisper-large-v3-turbo setup for Desktop & Mobile."),
         ]
     )
     wide_page("/guides/", "Guides: Bangla Voice Typing Step by Step | Kothalipi", "Step-by-step guides for Bangla voice typing on Mac, Windows and Linux, and how to use a free Gemini API key with Kothalipi.",
@@ -194,12 +228,19 @@ def models():
         <tr><td><b>Whisper Small (English)</b></td><td>257 MB</td><td>Older or lighter computers.</td></tr>
         <tr><td><b>Whisper Base (English)</b></td><td>80 MB</td><td>Very low memory.</td></tr>
       </tbody></table>
-      <h2>Cloud (your own key)</h2>
-      <table class="table"><thead><tr><th>Engine</th><th>Default model</th><th>Notes</th></tr></thead><tbody>
-        <tr><td><b>Google Gemini</b></td><td><code>gemini-3.5-transcribe</code></td><td>Free tier with daily limits. Usually best for Bangla mixed with English.</td></tr>
-        <tr><td><b>OpenAI</b></td><td><code>gpt-transcribe</code></td><td>Paid per minute of audio. A good backup.</td></tr>
+      <h2>Cloud (your own free or paid key)</h2>
+      <table class="table"><thead><tr><th>Engine</th><th>Default model</th><th>Cost</th><th>Notes</th></tr></thead><tbody>
+        <tr><td><b>Google Gemini</b> <span class="badge">Recommended</span></td><td><code>gemini-2.5-flash</code> (Mobile)<br><code>gemini-3.5-transcribe</code> (Desktop)</td><td>Free tier</td><td>Best accuracy for Bangla, natural Banglish code-switching, Smart Polish, and Live Bangla→English translation. <a href="/guides/free-gemini-api-key">Get free key →</a></td></tr>
+        <tr><td><b>Groq Whisper</b> <span class="badge">New · Free</span></td><td><code>whisper-large-v3-turbo</code></td><td>Free tier</td><td>Sub-second ultra-fast transcription on Groq LPU hardware. Perfect free backup when Gemini reaches daily limits. <a href="/guides/free-groq-api-key">Get free key →</a></td></tr>
+        <tr><td><b>OpenAI</b></td><td><code>gpt-transcribe</code> / <code>whisper-1</code></td><td>Paid</td><td>Pay-per-minute backup option for heavy cloud users.</td></tr>
       </tbody></table>
-      <p>If every cloud engine fails or you are offline, Kothalipi falls back to your offline model.</p>
+      <p>Kothalipi supports automatic multi-provider fallback: <b>Gemini → Groq Whisper → OpenAI → Offline</b>. See <a href="/docs/cloud">Cloud &amp; API keys</a> for step-by-step setup.</p>
+
+      <h2>Mobile on-device offline (Android &amp; iOS)</h2>
+      <table class="table"><thead><tr><th>Platform</th><th>Engine</th><th>Extra Size</th><th>Notes</th></tr></thead><tbody>
+        <tr><td><b>Android</b></td><td>OS Native <code>SpeechRecognizer</code> (<code>bn-BD</code> / <code>en-US</code>)</td><td>0 MB</td><td>100% free, zero API keys, works offline when Android's Bangla language pack is downloaded.</td></tr>
+        <tr><td><b>iPhone / iOS</b></td><td>Apple <code>SFSpeechRecognizer</code> (On-Device)</td><td>0 MB</td><td>100% free on-device speech recognition with live partial text streaming.</td></tr>
+      </tbody></table>
       <h2>Which one fits your computer?</h2>
       <table class="table"><thead><tr><th>Memory</th><th>Recommendation</th></tr></thead><tbody>
         <tr><td>Under 8 GB</td><td>Cloud mode (Gemini) for the best accuracy. Offline still works with the Bangla model; use Whisper Small for English.</td></tr>
@@ -218,6 +259,12 @@ def changelog():
     body = f"""
       <h1>Changelog</h1>
       <p class="lead">What changed in each version of Kothalipi.</p>
+      <h2 id="v0-1-8">v0.1.8 (Desktop) &amp; v0.2.0 (Mobile) · {UPDATED}</h2>
+      <p>Free Groq Whisper integration on Desktop &amp; Mobile, plus a major Mobile v0.2.0 overhaul with Voice Snippets, Voice Edit, Hold-to-Talk, Auto-Stop (VAD), and Free Offline Mode.</p>
+      <ul>
+        <li><b>Groq Whisper (Free, Ultra-Fast):</b> Built-in <code>whisper-large-v3-turbo</code> provider on Desktop and Mobile with one-click Get Free Key links and automatic Gemini → Groq → OpenAI → Offline fallback.</li>
+        <li><b>Mobile v0.2.0 Complete Overhaul (Android &amp; iOS):</b> Fixed Gemini 2.5 Flash audio pipeline, Android 14+ Floating Bubble foreground service, real iOS Voice Keyboard dictation, Voice Snippets, Voice Edit Commands, Hold-to-Talk, 2-second Auto-Silence Stop (VAD), and 0-MB Free Offline Mode.</li>
+      </ul>
       <h2 id="v0-1-7">v0.1.7 · {UPDATED}</h2>
       <p>Natural Bangla+English code-switching, App-Aware Tone, Vibe Coding, Voice Snippets, Personal Dictionary, Bot-free Meeting Notes, and smarter onboarding.</p>
       <ul>
@@ -397,24 +444,46 @@ def docs():
       <div class="warn"><p><b>Mac:</b> macOS can use <kbd>fn</kbd> (🌐) and <kbd>Right ⌘</kbd> for its own features. See <a href="/docs/macos#keys">fixing key conflicts</a>.</p></div>
     """, "Keys & shortcuts")
 
-    doc("/docs/cloud", "Cloud Mode & API Keys | Kothalipi Docs", "Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.", f"""
+    doc("/docs/cloud", "Cloud Mode & API Keys | Kothalipi Docs", "Step-by-step guide to getting free Google Gemini and Groq Whisper API keys for Kothalipi Desktop and Mobile, with automatic fallback to offline.", f"""
       <h1>Cloud &amp; API keys</h1>
-      <p class="lead">Cloud mode sends your recording to the provider you choose, using your own key. It is the most accurate option, especially for Bangla mixed with English.</p>
-      <h2>How fallback works</h2>
-      <p>Kothalipi tries your engines in order: <b>Gemini</b>, then <b>OpenAI</b>. If a key is over its limit, rejected, the provider is down or you have no internet, it moves to the next. When every cloud engine fails it uses your <b>offline model</b>, so keep the Bangla model downloaded. With no offline model either, it asks you to download one.</p>
-      <h2 id="gemini">Get a free Gemini key</h2>
+      <p class="lead">Cloud mode sends your recording directly to the AI provider you choose using your own API key. It gives the highest accuracy for Bangla, Banglish, and live Bangla-to-English translation — completely free with Gemini and Groq.</p>
+
+      <h2>How automatic fallback works</h2>
+      <p>Kothalipi tries your configured engines in order: <b>Google Gemini → Groq Whisper (Free) → OpenAI → Offline</b>. If one provider hits its free rate limit, fails, or you lose internet, Kothalipi automatically switches to the next engine so your typing never stops.</p>
+
+      <h2 id="gemini">1. Get a free Google Gemini API key (Recommended)</h2>
       <ol>
-        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in.</li>
-        <li>Click <b>Create API key</b> and copy it.</li>
-        <li>In Kothalipi: <b>Settings → General → Listening</b>, choose <b>Cloud</b>, paste it under Google Gemini and click <b>Check &amp; Save</b>.</li>
+        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in with your Google account.</li>
+        <li>Click <b>Create API key</b> and copy the key (starts with <code>AIzaSy...</code>).</li>
+        <li><b>On Desktop:</b> Open <b>Settings → General → Listening</b> → choose <b>Cloud (your keys)</b> → paste under <b>Google Gemini</b> → click <b>Save</b>.</li>
+        <li><b>On Mobile (Android / iOS):</b> Open <b>⚙️ Settings</b> → paste under <b>Google Gemini API Key</b> → tap <b>Test</b> → tap <b>Save</b>.</li>
       </ol>
-      <p>Gemini has a free tier with daily limits; usage above it is billed by Google to you. Default model: <code>gemini-3.5-transcribe</code>. Full walkthrough: <a href="/guides/free-gemini-api-key">free Gemini API key guide</a>.</p>
-      <h2 id="openai">Add an OpenAI (ChatGPT) key</h2>
-      <p>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a> (paid per minute of audio) and paste it under <b>OpenAI (ChatGPT)</b>. Default model: <code>gpt-transcribe</code>. Use the arrows to try OpenAI before Gemini.</p>
+      <p>Gemini includes a generous free tier with daily limits. Full walkthrough: <a href="/guides/free-gemini-api-key">Free Gemini API key guide →</a></p>
+
+      <h2 id="groq">2. Get a free Groq Whisper API key (Ultra-Fast Backup)</h2>
+      <ol>
+        <li>Open <a href="https://console.groq.com/keys">console.groq.com/keys</a> and sign in with Google or GitHub (free, no card required).</li>
+        <li>Click <b>Create API Key</b>, name it <code>Kothalipi</code>, and copy the key (starts with <code>gsk_...</code>).</li>
+        <li><b>On Desktop (v0.1.8+):</b> Paste under <b>Groq Whisper (Free, Ultra-Fast)</b> in <b>Settings → General → Listening</b> and click <b>Save</b>.</li>
+        <li><b>On Mobile (v0.2.0+):</b> Paste under <b>Groq Whisper Key</b> in <b>⚙️ Settings</b>, tap <b>Test</b>, and tap <b>Save</b>.</li>
+      </ol>
+      <p>Powered by <code>whisper-large-v3-turbo</code> on Groq LPUs for sub-second speed. Full walkthrough: <a href="/guides/free-groq-api-key">Free Groq Whisper key guide →</a></p>
+
+      <h2 id="openai">3. Optional: Add an OpenAI (ChatGPT) key</h2>
+      <ol>
+        <li>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a> (paid per minute of audio).</li>
+        <li>Paste it under <b>OpenAI (ChatGPT)</b> in Desktop or Mobile Settings and click <b>Save / Test</b>.</li>
+      </ol>
+
       <h2 id="claude">What about Claude?</h2>
-      <p>Claude does not take audio input, so it cannot turn speech into text. It can polish your text afterwards: set it up in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
-      <h2>Where your keys and audio go</h2>
-      <ul><li>Keys are stored on your computer and sent only to their provider.</li><li>Audio goes straight from your computer to that provider. Kothalipi has no servers.</li><li>Offline mode sends nothing anywhere.</li></ul>
+      <p>Claude does not take audio input, so it cannot turn speech into text. On Desktop, it can polish your text afterwards in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
+
+      <h2>Privacy: where your keys and audio go</h2>
+      <ul>
+        <li>Your API keys are stored locally on your computer or phone and sent only to their respective provider.</li>
+        <li>Audio goes straight from your device to Google, Groq, or OpenAI. Kothalipi has no middleman servers.</li>
+        <li>Offline mode sends nothing anywhere.</li>
+      </ul>
     """, "Cloud & API keys")
 
     doc("/docs/macos", "Kothalipi on macOS: Install, Permissions, Keys | Docs", "Install Kothalipi on a Mac, allow Microphone and Accessibility, and fix key conflicts.", f"""
@@ -595,7 +664,19 @@ def docs():
       <div class="note"><p><b>অন্যান্য আইফোনের জন্য:</b> <b>Settings → Accessibility → Touch → Back Tap</b>-এ গিয়ে Double Tap-এ কথালিপি শর্টকাট সিলেক্ট করে রাখতে পারেন।</p></div>
 
       <h2>6. ফ্রি API Key সেটআপ (Gemini / Groq Whisper / OpenAI)</h2>
-      <p>কথালিপি অ্যাপের সেটিংস আইকনে ট্যাপ করে আপনার ফ্রি <a href="https://aistudio.google.com/apikey">Google Gemini API Key</a> অথবা সুপার-ফাস্ট ফ্রি <a href="https://console.groq.com/keys">Groq Whisper Key</a> বসিয়ে <b>Test</b> চাপুন (<a href="/guides/free-gemini-api-key">ফ্রি কি পাওয়ার গাইড</a>)। দুটি Key একসাথে দিলে একটির কোটা শেষ হলে অটোমেটিক অন্যটিতে সুইচ হবে—আর নেট না থাকলে <b>Offline</b> মোড তো আছেই!</p>
+      <ol>
+        <li>কথালিপি অ্যাপ ওপেন করে উপরে <b>⚙️ Settings</b> আইকনে ট্যাপ করুন।</li>
+        <li><a href="https://aistudio.google.com/apikey">Google AI Studio</a> থেকে ফ্রি <b>Gemini API Key</b> এবং ব্যাকআপ হিসেবে <a href="https://console.groq.com/keys">Groq Console</a> থেকে ফ্রি <b>Groq Whisper Key</b> নিয়ে পেস্ট করুন (<a href="/docs/cloud">ধাপে ধাপে API Key গাইড →</a>)।</li>
+        <li>প্রতিটি Key-এর পাশে <b>Test</b> চাপুন এবং <b>Save</b> করুন।</li>
+        <li>ইন্টারনেট বা API Key ছাড়াই ব্যবহার করতে চাইলে হোম স্ক্রিনের <b>Offline</b> চিপটি অন করুন।</li>
+      </ol>
+
+      <h2>7. প্রো ফিচার (Snippets, Voice Edit ও Auto-Stop)</h2>
+      <ul>
+        <li><b>ভয়েস স্ন্যাপেট (Snippets ট্যাব):</b> <code>"আমার ঠিকানা বলো"</code> বা <code>"বিকাশ নম্বর"</code> সেভ করে রাখলে মুখে বলার সাথে সাথেই পুরো টেক্সট অটো পেস্ট হবে।</li>
+        <li><b>Voice Edit (AI Rewrite):</b> কোনো টেক্সট টাইপ হওয়ার পর রেজাল্ট কার্ডের <b>Voice Edit</b> বাটনে ট্যাপ করে বলুন <i>"এটাকে ফর্মাল ইমেইল বানাও"</i> বা <i>"পয়েন্ট আকারে সাজাও"</i>।</li>
+        <li><b>Hold-to-Talk &amp; Auto-Stop (VAD):</b> মাইক চেপে ধরে কথা বলে ছেড়ে দিলেই স্টপ হবে, অথবা <b>Auto-Stop</b> অন রাখলে ২ সেকেন্ড চুপ থাকলে অটোমেটিক টাইপ হয়ে যাবে।</li>
+      </ul>
     """, "iPhone / iOS (IPA)")
 
     doc("/docs/troubleshooting", "Troubleshooting Kothalipi | Docs", "Fix common problems: keys not working, nothing typed, wrong Bangla words, or cloud mode stopping.", f"""

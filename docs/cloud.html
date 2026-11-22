@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cloud Mode &amp; API Keys | Kothalipi Docs</title>
-  <meta name="description" content="Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.">
+  <meta name="description" content="Step-by-step guide to getting free Google Gemini and Groq Whisper API keys for Kothalipi Desktop and Mobile, with automatic fallback to offline.">
   <meta name="keywords" content="Bangla voice typing, Bengali speech to text, Banglish code switching, Bangla to English voice translation, Vibe Coding Bangla, bot-free Bangla meeting notes, voice snippets, App-Aware Tone, offline voice typing, Bengali ASR, speech recognition Mac Windows Linux, Whisper Bangla, Qwen3-ASR Bangla, free dictation, AI voice typing">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="theme-color" content="#006a4e">
@@ -20,7 +20,7 @@
   <meta property="og:site_name" content="Kothalipi">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Cloud Mode &amp; API Keys | Kothalipi Docs">
-  <meta property="og:description" content="Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.">
+  <meta property="og:description" content="Step-by-step guide to getting free Google Gemini and Groq Whisper API keys for Kothalipi Desktop and Mobile, with automatic fallback to offline.">
   <meta property="og:url" content="https://kothalipi.tashanto.com/docs/cloud">
   <meta property="og:image" content="https://kothalipi.tashanto.com/assets/og.png">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
   <meta name="twitter:site" content="@iamtashanto">
   <meta name="twitter:creator" content="@iamtashanto">
   <meta name="twitter:title" content="Cloud Mode &amp; API Keys | Kothalipi Docs">
-  <meta name="twitter:description" content="Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.">
+  <meta name="twitter:description" content="Step-by-step guide to getting free Google Gemini and Groq Whisper API keys for Kothalipi Desktop and Mobile, with automatic fallback to offline.">
   <meta name="twitter:image" content="https://kothalipi.tashanto.com/assets/og.png">
   
   <script>
@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/style.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kothalipi.tashanto.com/"},{"@type":"ListItem","position":2,"name":"Docs","item":"https://kothalipi.tashanto.com/docs/"},{"@type":"ListItem","position":3,"name":"Cloud & API keys","item":"https://kothalipi.tashanto.com/docs/cloud"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloud Mode & API Keys | Kothalipi Docs","description":"Use your own Gemini or ChatGPT key for the most accurate Bangla dictation, with automatic fallback to offline.","mainEntityOfPage":"https://kothalipi.tashanto.com/docs/cloud","image":"https://kothalipi.tashanto.com/assets/og.png","datePublished":"2026-11-22","dateModified":"2026-11-22","author":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"publisher":{"@type":"Organization","name":"Kothalipi","url":"https://kothalipi.tashanto.com","logo":"https://kothalipi.tashanto.com/assets/icon-512.png","founder":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"sameAs":["https://github.com/Kothalipi","https://github.com/Kothalipi/kothalipi-desktop"]},"inLanguage":"en"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloud Mode & API Keys | Kothalipi Docs","description":"Step-by-step guide to getting free Google Gemini and Groq Whisper API keys for Kothalipi Desktop and Mobile, with automatic fallback to offline.","mainEntityOfPage":"https://kothalipi.tashanto.com/docs/cloud","image":"https://kothalipi.tashanto.com/assets/og.png","datePublished":"2026-11-22","dateModified":"2026-11-22","author":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"publisher":{"@type":"Organization","name":"Kothalipi","url":"https://kothalipi.tashanto.com","logo":"https://kothalipi.tashanto.com/assets/icon-512.png","founder":{"@type":"Person","name":"TA Shanto","url":"https://tashanto.com"},"sameAs":["https://github.com/Kothalipi","https://github.com/Kothalipi/kothalipi-desktop"]},"inLanguage":"en"}</script>
 </head>
 <body class="">
   <a class="skip" href="#main">Skip to content</a>
@@ -70,22 +70,44 @@
   <main id="main">
 <div class="container docs"><nav class="docs-nav" aria-label="Docs"><h4>Start</h4><a href="/docs/">Getting started</a><a href="/docs/shortcuts">Keys &amp; shortcuts</a><a href="/docs/cloud" aria-current="page">Cloud &amp; API keys</a><h4>Install</h4><a href="/docs/macos">macOS</a><a href="/docs/windows">Windows</a><a href="/docs/linux">Linux</a><a href="/docs/android">Android (APK)</a><a href="/docs/ios">iPhone / iOS (IPA)</a><h4>Help</h4><a href="/docs/troubleshooting">Troubleshooting</a></nav><article class="doc"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/docs/">Docs</a> / Cloud &amp; API keys</nav>
       <h1>Cloud &amp; API keys</h1>
-      <p class="lead">Cloud mode sends your recording to the provider you choose, using your own key. It is the most accurate option, especially for Bangla mixed with English.</p>
-      <h2>How fallback works</h2>
-      <p>Kothalipi tries your engines in order: <b>Gemini</b>, then <b>OpenAI</b>. If a key is over its limit, rejected, the provider is down or you have no internet, it moves to the next. When every cloud engine fails it uses your <b>offline model</b>, so keep the Bangla model downloaded. With no offline model either, it asks you to download one.</p>
-      <h2 id="gemini">Get a free Gemini key</h2>
+      <p class="lead">Cloud mode sends your recording directly to the AI provider you choose using your own API key. It gives the highest accuracy for Bangla, Banglish, and live Bangla-to-English translation — completely free with Gemini and Groq.</p>
+
+      <h2>How automatic fallback works</h2>
+      <p>Kothalipi tries your configured engines in order: <b>Google Gemini → Groq Whisper (Free) → OpenAI → Offline</b>. If one provider hits its free rate limit, fails, or you lose internet, Kothalipi automatically switches to the next engine so your typing never stops.</p>
+
+      <h2 id="gemini">1. Get a free Google Gemini API key (Recommended)</h2>
       <ol>
-        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in.</li>
-        <li>Click <b>Create API key</b> and copy it.</li>
-        <li>In Kothalipi: <b>Settings → General → Listening</b>, choose <b>Cloud</b>, paste it under Google Gemini and click <b>Check &amp; Save</b>.</li>
+        <li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in with your Google account.</li>
+        <li>Click <b>Create API key</b> and copy the key (starts with <code>AIzaSy...</code>).</li>
+        <li><b>On Desktop:</b> Open <b>Settings → General → Listening</b> → choose <b>Cloud (your keys)</b> → paste under <b>Google Gemini</b> → click <b>Save</b>.</li>
+        <li><b>On Mobile (Android / iOS):</b> Open <b>⚙️ Settings</b> → paste under <b>Google Gemini API Key</b> → tap <b>Test</b> → tap <b>Save</b>.</li>
       </ol>
-      <p>Gemini has a free tier with daily limits; usage above it is billed by Google to you. Default model: <code>gemini-3.5-transcribe</code>. Full walkthrough: <a href="/guides/free-gemini-api-key">free Gemini API key guide</a>.</p>
-      <h2 id="openai">Add an OpenAI (ChatGPT) key</h2>
-      <p>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a> (paid per minute of audio) and paste it under <b>OpenAI (ChatGPT)</b>. Default model: <code>gpt-transcribe</code>. Use the arrows to try OpenAI before Gemini.</p>
+      <p>Gemini includes a generous free tier with daily limits. Full walkthrough: <a href="/guides/free-gemini-api-key">Free Gemini API key guide →</a></p>
+
+      <h2 id="groq">2. Get a free Groq Whisper API key (Ultra-Fast Backup)</h2>
+      <ol>
+        <li>Open <a href="https://console.groq.com/keys">console.groq.com/keys</a> and sign in with Google or GitHub (free, no card required).</li>
+        <li>Click <b>Create API Key</b>, name it <code>Kothalipi</code>, and copy the key (starts with <code>gsk_...</code>).</li>
+        <li><b>On Desktop (v0.1.8+):</b> Paste under <b>Groq Whisper (Free, Ultra-Fast)</b> in <b>Settings → General → Listening</b> and click <b>Save</b>.</li>
+        <li><b>On Mobile (v0.2.0+):</b> Paste under <b>Groq Whisper Key</b> in <b>⚙️ Settings</b>, tap <b>Test</b>, and tap <b>Save</b>.</li>
+      </ol>
+      <p>Powered by <code>whisper-large-v3-turbo</code> on Groq LPUs for sub-second speed. Full walkthrough: <a href="/guides/free-groq-api-key">Free Groq Whisper key guide →</a></p>
+
+      <h2 id="openai">3. Optional: Add an OpenAI (ChatGPT) key</h2>
+      <ol>
+        <li>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a> (paid per minute of audio).</li>
+        <li>Paste it under <b>OpenAI (ChatGPT)</b> in Desktop or Mobile Settings and click <b>Save / Test</b>.</li>
+      </ol>
+
       <h2 id="claude">What about Claude?</h2>
-      <p>Claude does not take audio input, so it cannot turn speech into text. It can polish your text afterwards: set it up in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
-      <h2>Where your keys and audio go</h2>
-      <ul><li>Keys are stored on your computer and sent only to their provider.</li><li>Audio goes straight from your computer to that provider. Kothalipi has no servers.</li><li>Offline mode sends nothing anywhere.</li></ul>
+      <p>Claude does not take audio input, so it cannot turn speech into text. On Desktop, it can polish your text afterwards in <b>Settings → Post-Processing</b> with your Anthropic API key.</p>
+
+      <h2>Privacy: where your keys and audio go</h2>
+      <ul>
+        <li>Your API keys are stored locally on your computer or phone and sent only to their respective provider.</li>
+        <li>Audio goes straight from your device to Google, Groq, or OpenAI. Kothalipi has no middleman servers.</li>
+        <li>Offline mode sends nothing anywhere.</li>
+      </ul>
     <div class="pager"><a href="/docs/shortcuts">← Keys & shortcuts</a><a href="/docs/macos">macOS →</a></div></article></div>
   </main>
   <footer class="footer">
