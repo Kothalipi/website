@@ -139,7 +139,7 @@
       "state": "uploaded",
       "size": 90785757,
       "digest": "sha256:0bd326ffff77da1c862f5bdb9078a8831c69357a5a53e364f732b68af690df97",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:49:39Z",
       "updated_at": "2026-11-22T09:49:43Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi-0.1.7-1.x86_64.rpm"
@@ -175,7 +175,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:81c1574a295604fa6072df07ecc3a38f81b1dd5ccbb20c5a1beec490b08feeeb",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:49:43Z",
       "updated_at": "2026-11-22T09:49:43Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi-0.1.7-1.x86_64.rpm.sig"
@@ -247,7 +247,7 @@
       "state": "uploaded",
       "size": 424,
       "digest": "sha256:5373414baabfc3eef0de079292e162c8d250f77e376e05ef3fb9ca6f93c8dda3",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:43:33Z",
       "updated_at": "2026-11-22T09:43:33Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_aarch64.AppImage.sig"
@@ -319,7 +319,7 @@
       "state": "uploaded",
       "size": 127785464,
       "digest": "sha256:5e10b5634f2861ebd3a4cfbe072efcfb67d2831e535ca1fa39db82899ff03c14",
-      "download_count": 0,
+      "download_count": 2,
       "created_at": "2026-11-22T09:49:44Z",
       "updated_at": "2026-11-22T09:49:49Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_amd64.AppImage"
@@ -355,7 +355,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:a5b3ebbcbc0a6072c064c2482a98a4686bc1c44819f8e94894b18e701a004473",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:49:49Z",
       "updated_at": "2026-11-22T09:49:50Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_amd64.AppImage.sig"
@@ -391,7 +391,7 @@
       "state": "uploaded",
       "size": 33926070,
       "digest": "sha256:1c0fbddcba78f013a4acc835f191bfd204368a9adb8312c0836c700a351caed5",
-      "download_count": 0,
+      "download_count": 2,
       "created_at": "2026-11-22T09:46:08Z",
       "updated_at": "2026-11-22T09:46:09Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_amd64.deb"
@@ -427,7 +427,7 @@
       "state": "uploaded",
       "size": 416,
       "digest": "sha256:d6db9051947a2483e40aeda003e6dadd8e6cde707761a04d068599592a3b26bd",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:46:09Z",
       "updated_at": "2026-11-22T09:46:10Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_amd64.deb.sig"
@@ -679,7 +679,7 @@
       "state": "uploaded",
       "size": 16771999,
       "digest": "sha256:6802af66dbf08d08422a74358dc7bdd9725fe8074d956ce7f888f53bae62049e",
-      "download_count": 0,
+      "download_count": 6,
       "created_at": "2026-11-22T09:50:43Z",
       "updated_at": "2026-11-22T09:50:44Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_x64-setup.exe"
@@ -715,7 +715,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:680bf24911385b7c5595a7e4b9c805d59b5734fc23485e0730eb8482afb2c1a7",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:50:45Z",
       "updated_at": "2026-11-22T09:50:45Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_x64-setup.exe.sig"
@@ -787,7 +787,7 @@
       "state": "uploaded",
       "size": 32333824,
       "digest": "sha256:08e8bce5ef422d203e53900404ca49ed4ed213a66315587030fe7f5f12afa12b",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:50:41Z",
       "updated_at": "2026-11-22T09:50:43Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_x64_en-US.msi"
@@ -823,7 +823,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:f9bc88be153056495b391f540707a1d8deacceda7687fdbd5a05e2a06da95645",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T09:50:43Z",
       "updated_at": "2026-11-22T09:50:43Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_0.1.7_x64_en-US.msi.sig"
@@ -859,7 +859,7 @@
       "state": "uploaded",
       "size": 14490582,
       "digest": "sha256:695180c8564524edc972b08362bf032a1ad11c058be5edef6b83313ff4c58f1c",
-      "download_count": 1,
+      "download_count": 2,
       "created_at": "2026-11-22T09:36:12Z",
       "updated_at": "2026-11-22T09:36:13Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/Kothalipi_aarch64.app.tar.gz"
@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 10746,
       "digest": "sha256:f0a96374ba80ea4e8fdb6ef0f69e2dcdfe0c4a879f71b1daf74ea70b084cffb8",
-      "download_count": 0,
+      "download_count": 3,
       "created_at": "2026-11-22T09:50:46Z",
       "updated_at": "2026-11-22T09:50:46Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.7/latest.json"
@@ -1012,8 +1012,8 @@
   "tarball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/tarball/v0.1.7",
   "zipball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/zipball/v0.1.7",
   "body": "## What's New in Kothalipi v0.1.7\n\n- **Natural Banglish Code-Switching (Default ON):** Speak Bangla with English words or technical terms mixed in, and Kothalipi keeps English words in proper English script automatically (toggleable in Settings).\n- **App-Aware Tone & Formatting:** Automatically adapts tone to the active app \u2014 casual Banglish in WhatsApp/Messenger/Slack, formal & polished in Mail/Outlook/Docs, and technical developer prompts in Cursor/VS Code/Terminal.\n- **Context-Aware Vibe Coding Mode:** Speak in Bangla or Banglish and output crisp, structured English developer prompts ready for Cursor, Claude Code, VS Code, or Terminal.\n- **Voice Snippets (Quick Triggers):** Define Bangla or English spoken shortcuts (e.g., `\u0986\u09ae\u09be\u09b0 \u0987\u09ae\u09c7\u0987\u09b2` or `meeting link`) to instantly expand full emails, addresses, or links offline or online.\n- **Bangla-English Personal Dictionary:** Save custom names, brands, and technical terms once \u2014 sent directly to Gemini, OpenAI, and Smart Polish so spellings stay accurate.\n- **Bot-free Bangla-English Meeting Notes:** Record Zoom, Google Meet, or in-person meetings without any bot joining your call, and get structured AI summaries, key points, and action items with one-click Markdown copy.\n- **Unified Bangla & Translation Settings:** Translation, Banglish, App-Aware Tone, Vibe Coding, and Smart Polish now live together in one clean card with live Gemini/offline status.\n- **Dynamic Onboarding & Auto-Download:** Device-aware recommendations with a Single All-in-One model option and automatic background downloads on Continue.\n\n**Full Changelog:** https://github.com/Kothalipi/kothalipi-desktop/compare/v0.1.6...v0.1.7",
-  "total_downloads": 282,
-  "release_downloads": 9,
+  "total_downloads": 283,
   "desktop_downloads": 265,
-  "mobile_downloads": 17
+  "mobile_downloads": 18,
+  "release_downloads": 22
 }
