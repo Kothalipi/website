@@ -308,7 +308,7 @@ def download(lang):
       <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <article class="os-card" id="android">
           <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
-          <p>Wispr Flow floating bubble + Voice keyboard + Offline mode for Bangla & English. Android 8 or later.</p>
+          <p>Wispr Flow floating bubble + Voice keyboard + Offline mode for Bangla & English. Android 8 or later. <span class="muted" style="font-size:13px">· <strong data-android-downloads>—</strong> downloads</span></p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
             <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.apk">Download Android APK (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/android">Setup Guide</a></li>
@@ -322,7 +322,7 @@ def download(lang):
 
         <article class="os-card" id="ios">
           <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
-          <p>SwiftUI Voice Hub + Real iOS Voice Keyboard + Offline mode. iOS 16.0 or later.</p>
+          <p>SwiftUI Voice Hub + Real iOS Voice Keyboard + Offline mode. iOS 16.0 or later. <span class="muted" style="font-size:13px">· <strong data-ios-downloads>—</strong> downloads</span></p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
             <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.ipa">Download iOS IPA (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/ios">Setup Guide</a></li>
@@ -344,7 +344,7 @@ def download(lang):
       <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <article class="os-card" id="android">
           <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
-          <p>Wispr Flow ফ্লোটিং বাবল + ভয়েস কিবোর্ড + ফ্রি অফলাইন মোড। Android 8 বা নতুন।</p>
+          <p>Wispr Flow ফ্লোটিং বাবল + ভয়েস কিবোর্ড + ফ্রি অফলাইন মোড। Android 8 বা নতুন। <span class="muted" style="font-size:13px">· <strong data-android-downloads>—</strong> ডাউনলোড</span></p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
             <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.apk">Android APK ডাউনলোড (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/android">সেটআপ গাইড</a></li>
@@ -358,7 +358,7 @@ def download(lang):
 
         <article class="os-card" id="ios">
           <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
-          <p>SwiftUI ডিকটেশন হাব + iOS ভয়েস কীবোর্ড + ফ্রি অফলাইন মোড। iOS 16.0 বা নতুন।</p>
+          <p>SwiftUI ডিকটেশন হাব + iOS ভয়েস কীবোর্ড + ফ্রি অফলাইন মোড। iOS 16.0 বা নতুন। <span class="muted" style="font-size:13px">· <strong data-ios-downloads>—</strong> ডাউনলোড</span></p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
             <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.ipa">iOS IPA ডাউনলোড (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/ios">সেটআপ গাইড</a></li>

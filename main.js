@@ -171,6 +171,8 @@
         totalDownloads: j.total_downloads,
         desktopDownloads: j.desktop_downloads,
         mobileDownloads: j.mobile_downloads,
+        androidDownloads: j.android_downloads,
+        iosDownloads: j.ios_downloads,
         releaseDownloads: j.release_downloads,
         assets: (j.assets || []).map((a) => ({ name: a.name, size: a.size, url: a.browser_download_url, downloads: a.download_count }))
       };
@@ -180,15 +182,19 @@
     return relP;
   };
 
-  /* ---------- live download counters: Total (landing), Desktop, and Mobile ---------- */
+  /* ---------- live download counters: Total, Desktop, Mobile, Android, and iOS ---------- */
   const totalEls = $$("[data-total-downloads]");
   const desktopEls = $$("[data-desktop-downloads]");
   const mobileEls = $$("[data-mobile-downloads]");
-  if (totalEls.length || desktopEls.length || mobileEls.length) {
-    const renderCounts = ({ total, desktop, mobile }) => {
+  const androidEls = $$("[data-android-downloads]");
+  const iosEls = $$("[data-ios-downloads]");
+  if (totalEls.length || desktopEls.length || mobileEls.length || androidEls.length || iosEls.length) {
+    const renderCounts = ({ total, desktop, mobile, android, ios }) => {
       if (total > 0) totalEls.forEach((el) => (el.textContent = `${total.toLocaleString()}+`));
       if (desktop > 0) desktopEls.forEach((el) => (el.textContent = `${desktop.toLocaleString()}+`));
       if (mobile > 0) mobileEls.forEach((el) => (el.textContent = `${mobile.toLocaleString()}+`));
+      if (android >= 0 && android !== undefined) androidEls.forEach((el) => (el.textContent = `${android.toLocaleString()}`));
+      if (ios >= 0 && ios !== undefined) iosEls.forEach((el) => (el.textContent = `${ios.toLocaleString()}`));
     };
     const sumInstallers = (rels) => {
       if (!Array.isArray(rels)) return 0;
@@ -200,10 +206,20 @@
       }
       return n;
     };
+    const sumByExt = (rels, ext) => {
+      if (!Array.isArray(rels)) return 0;
+      let n = 0;
+      for (const rel of rels) {
+        for (const a of rel.assets || []) {
+          if (a.name && a.name.toLowerCase().endsWith(ext)) n += Number(a.download_count || 0);
+        }
+      }
+      return n;
+    };
     (async () => {
       try {
-        const cached = JSON.parse(sessionStorage.getItem("kl-dl-counts") || "null");
-        if (cached && Date.now() - cached.t < 600000 && cached.total > 0) {
+        const cached = JSON.parse(sessionStorage.getItem("kl-dl-counts-v2") || "null");
+        if (cached && Date.now() - cached.t < 300000 && cached.total > 0) {
           renderCounts(cached);
           return;
         }
@@ -214,6 +230,8 @@
           total: rel.totalDownloads || 0,
           desktop: rel.desktopDownloads || 0,
           mobile: rel.mobileDownloads || 0,
+          android: rel.androidDownloads,
+          ios: rel.iosDownloads,
         });
       }).catch(() => {});
       // 2. Fetch live counts from GitHub API (Desktop + Mobile)
@@ -223,12 +241,14 @@
           fetch("https://api.github.com/repos/Kothalipi/kothalipi-mobile/releases?per_page=100").then((r) => (r.ok ? r.json() : [])).catch(() => []),
         ]);
         const desktop = sumInstallers(deskRels);
-        const mobile = sumInstallers(mobRels);
+        const android = sumByExt(mobRels, ".apk");
+        const ios = sumByExt(mobRels, ".ipa");
+        const mobile = android + ios;
         const total = desktop + mobile;
         if (total > 0) {
-          const counts = { t: Date.now(), total, desktop, mobile };
+          const counts = { t: Date.now(), total, desktop, mobile, android, ios };
           renderCounts(counts);
-          try { sessionStorage.setItem("kl-dl-counts", JSON.stringify(counts)); } catch (_) {}
+          try { sessionStorage.setItem("kl-dl-counts-v2", JSON.stringify(counts)); } catch (_) {}
         }
       } catch (_) {}
     })();
@@ -264,9 +284,6 @@
   if (dlButtons.length && os) {
     getRelease().then(async (rel) => {
       $$("[data-version]").forEach((el) => (el.textContent = rel.tag));
-      if (rel.totalDownloads) {
-        $$("[data-total-downloads]").forEach((el) => (el.textContent = `${rel.totalDownloads.toLocaleString()}+`));
-      }
       const asset = await pick(rel, os);
       if (!asset) return;
       const dlLabel = $("#dl-label"), dlb = $("#dl-button");

@@ -33,7 +33,9 @@ jobs:
           is_app = lambda n: not n.endswith((".sig", ".json"))
 
           desktop = sum(a.get("download_count", 0) for r in desk_rels for a in r.get("assets", []) if is_app(a.get("name", "")))
-          mobile = sum(a.get("download_count", 0) for r in mob_rels for a in r.get("assets", []) if is_app(a.get("name", "")))
+          android = sum(a.get("download_count", 0) for r in mob_rels for a in r.get("assets", []) if a.get("name", "").lower().endswith(".apk"))
+          ios = sum(a.get("download_count", 0) for r in mob_rels for a in r.get("assets", []) if a.get("name", "").lower().endswith(".ipa"))
+          mobile = android + ios
           total = desktop + mobile
 
           latest = fetch("https://api.github.com/repos/Kothalipi/kothalipi-desktop/releases/latest")
@@ -41,6 +43,8 @@ jobs:
           latest["total_downloads"] = total
           latest["desktop_downloads"] = desktop
           latest["mobile_downloads"] = mobile
+          latest["android_downloads"] = android
+          latest["ios_downloads"] = ios
           latest["release_downloads"] = rel_dl
 
           with open("latest.json", "w", encoding="utf-8") as f:

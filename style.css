@@ -611,3 +611,38 @@ body.bn h2 { line-height: 1.22; letter-spacing: -0.01em; }
 @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
 @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; } }
 @media (hover: none) { .kbd-hint { display: none; } }
+
+/* Floating SupportKori button */
+.support-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #006a4e 0%, #059669 100%);
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(0, 106, 78, 0.34), 0 2px 8px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.support-fab svg { color: #fde68a; flex-shrink: 0; }
+.support-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 106, 78, 0.44), 0 4px 12px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  .support-fab {
+    right: 14px;
+    bottom: 14px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
