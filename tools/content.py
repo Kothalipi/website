@@ -484,8 +484,8 @@ def docs():
       <p class="lead">Hands-free Bangla voice typing with a Wispr Flow-style floating mic bubble and voice keyboard. Works on Android 8.0 and newer.</p>
       <h2>1. Download and Install the APK</h2>
       <ol>
-        <li>Download the latest release: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.apk">Download Kothalipi-v0.1.0.apk (18 MB)</a></li>
-        <li>Open your browser's Downloads or Files app and tap <code>Kothalipi-v0.1.0.apk</code>.</li>
+        <li>Download the latest release: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.apk">Download Kothalipi-v0.2.0.apk</a></li>
+        <li>Open your browser's Downloads or Files app and tap <code>Kothalipi-v0.2.0.apk</code>.</li>
         <li>If prompted with <b>“For your security, your phone is not allowed to install unknown apps from this source”</b>, tap <b>Settings</b> and toggle on <b>Allow from this source</b>, then tap <b>Install</b>.</li>
       </ol>
       <div class="note"><p>You can also download the APK directly from our <a href="{DESK}/releases/tag/v0.1.6">Desktop Release page</a> or the <a href="/download#mobile">Download section</a>.</p></div>
@@ -527,8 +527,8 @@ def docs():
       <p class="lead">Minimalist voice dictation for iPhone with a custom SwiftUI Voice Hub, system keyboard extension, 3 dictation modes (Bangla, English, and Bangla-to-English translation), and Action Button integration. Requires iOS 16.0 or newer.</p>
 
       <h2>1. Download the IPA &amp; Source Code</h2>
-      <p>Download the iOS package: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">Download Kothalipi-v0.1.0.ipa</a></p>
-      <p>The IPA is also mirrored on <a href="{DESK}/releases/tag/v0.1.6">GitHub Releases (v0.1.6)</a> and the <a href="/download#mobile">Download page</a>.</p>
+      <p>Download the latest iOS package: <a class="btn btn-primary btn-sm" style="display:inline-flex;margin:4px 0" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.ipa">Download Kothalipi-v0.2.0.ipa</a></p>
+      <p>Also available on the <a href="/download#mobile">Download page</a> and <a href="https://github.com/Kothalipi/kothalipi-mobile/releases/tag/v0.2.0">GitHub Releases (v0.2.0)</a>.</p>
 
       <h2>2. How to Install on your Physical iPhone (আপনার আসল আইফোনে ইনস্টল)</h2>
       <p>হ্যাঁ, ১০০% আপনার নিজের আইফোনে ইনস্টল করা যাবে! অ্যাপল কোনো পেইড ডেভেলপার অ্যাকাউন্ট ছাড়াই ব্যক্তিগত ব্যবহারের জন্য নিজের ফোনে অ্যাপ ইনস্টল করার সম্পূর্ণ সুযোগ দেয়। নিচে সবচেয়ে সহজ ৩টি উপায় দেওয়া হলো:</p>
@@ -552,19 +552,27 @@ def docs():
       <p>যদি কম্পিউটারের সাথে না লাগিয়ে নিজের ফোনেই সবসময় অ্যাপ ইনস্টল ও সাইডলোড রাখতে চান:</p>
       <ol>
         <li>আইফোনে <a href="https://altstore.io">AltStore</a> অথবা <a href="https://sidestore.io">SideStore</a> সেটআপ করে নিন।</li>
-        <li>আমাদের রিলিজ পেইজ থেকে <code>Kothalipi-v0.1.0.ipa</code> ফাইলটি Safari দিয়ে ডাউনলোড করুন।</li>
+        <li>আমাদের রিলিজ পেইজ থেকে <code>Kothalipi-v0.2.0.ipa</code> ফাইলটি Safari দিয়ে ডাউনলোড করুন।</li>
         <li>AltStore অ্যাপে গিয়ে <b>My Apps → “+” বাটনে</b> চাপ দিয়ে ডাউনলোড করা IPA ফাইলটি সিলেক্ট করুন। আপনার নিজস্ব Apple ID দিয়ে অ্যাপটি সাইন হয়ে ফোনে ইনস্টল হয়ে যাবে।</li>
       </ol>
 
-      <h3>উপায় ৩: TrollStore (iOS 14.0 – 16.6.1)</h3>
+      <h3>উপায় ৩: Sideloadly দিয়ে (Windows / Mac)</h3>
+      <ol>
+        <li><a href="https://sideloadly.io">Sideloadly</a> ডাউনলোড করে ওপেন করুন এবং iPhone USB দিয়ে কানেক্ট করুন।</li>
+        <li><code>Kothalipi-v0.2.0.ipa</code> ড্র্যাগ-অ্যান্ড-ড্রপ করে আপনার Apple ID দিয়ে <b>Start</b> ক্লিক করুন।</li>
+        <li>ইনস্টল শেষে <b>Settings → General → VPN &amp; Device Management → Trust</b> করুন।</li>
+      </ol>
+
+      <h3>উপায় ৪: TrollStore (iOS 14.0 – 16.6.1)</h3>
       <p>যদি আপনার আইফোনে iOS 14.0 থেকে 16.6.1 এর মধ্যে থাকে এবং TrollStore ইনস্টল থাকে, তবে কোনো ৭ দিনের রিনিউয়াল ঝামেলা ছাড়াই পার্মানেন্টলি Kothalipi IPA এক ক্লিকে ইনস্টল করে আজীবন ব্যবহার করতে পারবেন।</p>
 
-      <h2>3. ৩টি ডিকটেশন মোড (Dictation Modes)</h2>
-      <p>কথালিপি মোবাইলে রয়েছে এক ক্লিকে মোড পরিবর্তনের সুবিধা:</p>
+      <h2>3. ৪টি ডিকটেশন মোড + অফলাইন মোড</h2>
+      <p>কথালিপি মোবাইল v0.2.0-এ রয়েছে এক ক্লিকে মোড পরিবর্তনের সুবিধা:</p>
       <ul>
         <li><b>🇧🇩 বাংলা:</b> আপনি মুখে যা বলবেন, তা খাঁটি বাংলা হরফে নিখুঁতভাবে টাইপ হবে।</li>
         <li><b>🇬🇧 English:</b> শুধুমাত্র ইংরেজিতে মুখে কথা বলে সরাসরি ইংলিশ টেক্সট টাইপ হবে।</li>
-        <li><b>বাংলা ➔ 🇬🇧 English (Live Translation):</b> কথ্য বাংলায় স্বাভাবিকভাবে কথা বলবেন (যেমন: <i>“আজকের মিটিংটা কালকে নিলে ভালো হতো”</i>), আর ব্যাকরণগতভাবে শতভাগ নির্ভুল প্রফেশনাল ইংরেজিতে টাইপ হয়ে যাবে (<i>“It would be better if we could reschedule today's meeting to tomorrow.”</i>)।</li>
+        <li><b>বাংলা ➔ 🇬🇧 English (Live Translation):</b> কথ্য বাংলায় স্বাভাবিকভাবে কথা বলবেন, আর ব্যাকরণগতভাবে নির্ভুল ইংরেজিতে টাইপ হয়ে যাবে।</li>
+        <li><b>✨ Auto &amp; 📴 Offline Mode:</b> বাংলা-ইংরেজি অটো ডিটেক্ট এবং ইন্টারনেট/API Key ছাড়াই ফ্রি On-Device Offline ডিক্টেশন!</li>
       </ul>
 
       <h2>4. Enable the Voice Keyboard Extension</h2>
@@ -586,8 +594,8 @@ def docs():
       </ol>
       <div class="note"><p><b>অন্যান্য আইফোনের জন্য:</b> <b>Settings → Accessibility → Touch → Back Tap</b>-এ গিয়ে Double Tap-এ কথালিপি শর্টকাট সিলেক্ট করে রাখতে পারেন।</p></div>
 
-      <h2>6. Google Gemini API Key সেটআপ (সম্পূর্ণ ফ্রি)</h2>
-      <p>কথালিপি অ্যাপের সেটিংস আইকনে ট্যাপ করে আপনার ফ্রি Google Gemini API Key বসিয়ে দিন (<a href="/guides/free-gemini-api-key">ফ্রি কি পাওয়ার গাইড</a>)। আপনার ভয়েস অডিও সরাসরি গুগল এআই স্টুডিওর ফ্রি এন্ডপয়েন্টে প্রসেস হবে—কোনো থার্ড-পার্টি বা মিডলম্যান সার্ভার নেই।</p>
+      <h2>6. ফ্রি API Key সেটআপ (Gemini / Groq Whisper / OpenAI)</h2>
+      <p>কথালিপি অ্যাপের সেটিংস আইকনে ট্যাপ করে আপনার ফ্রি <a href="https://aistudio.google.com/apikey">Google Gemini API Key</a> অথবা সুপার-ফাস্ট ফ্রি <a href="https://console.groq.com/keys">Groq Whisper Key</a> বসিয়ে <b>Test</b> চাপুন (<a href="/guides/free-gemini-api-key">ফ্রি কি পাওয়ার গাইড</a>)। দুটি Key একসাথে দিলে একটির কোটা শেষ হলে অটোমেটিক অন্যটিতে সুইচ হবে—আর নেট না থাকলে <b>Offline</b> মোড তো আছেই!</p>
     """, "iPhone / iOS (IPA)")
 
     doc("/docs/troubleshooting", "Troubleshooting Kothalipi | Docs", "Fix common problems: keys not working, nothing typed, wrong Bangla words, or cloud mode stopping.", f"""

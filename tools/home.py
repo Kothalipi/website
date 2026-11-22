@@ -307,30 +307,30 @@ def download(lang):
       </div>
       <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <article class="os-card" id="android">
-          <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
-          <p>Wispr Flow floating bubble + Voice keyboard for Bangla & English. Android 8 or later.</p>
+          <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
+          <p>Wispr Flow floating bubble + Voice keyboard + Offline mode for Bangla & English. Android 8 or later.</p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
-            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.apk">Download Android APK (v0.1.0)</a></li>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.apk">Download Android APK (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/android">Setup Guide</a></li>
           </ul>
           <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
-            <li><strong>Floating Bubble:</strong> Speak over WhatsApp, Facebook, or Notes without switching keyboards.</li>
-            <li><strong>Bangla ➔ English:</strong> Speak in Bangla, automatically types fluent English.</li>
-            <li><strong>AI Smart Polish:</strong> Strips stutters and fixes punctuation with Google Gemini.</li>
+            <li><strong>Multi-AI + Offline:</strong> Free Gemini, Groq Whisper, OpenAI auto-fallback, plus 100% free Offline Mode.</li>
+            <li><strong>Floating Bubble &amp; Snippets:</strong> Dictate over WhatsApp/Gmail, expand Voice Snippets &amp; AI Voice Edit.</li>
+            <li><strong>Hold-to-Talk &amp; Auto-Stop:</strong> Hold to speak or auto-stop after 2 seconds of silence.</li>
           </ul>
         </article>
 
         <article class="os-card" id="ios">
-          <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
-          <p>SwiftUI Voice Hub + iOS Keyboard Extension. iOS 16.0 or later.</p>
+          <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
+          <p>SwiftUI Voice Hub + Real iOS Voice Keyboard + Offline mode. iOS 16.0 or later.</p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
-            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">Download iOS IPA (v0.1.0)</a></li>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.ipa">Download iOS IPA (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/ios">Setup Guide</a></li>
           </ul>
           <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
             <li><strong>iOS Voice Keyboard:</strong> Hands-free voice typing directly in any iOS text field.</li>
-            <li><strong>Action Button & Siri:</strong> Trigger instant voice dictation with 1 press.</li>
-            <li><strong>Haptic Waves:</strong> Real-time audio waveform and fluent translations.</li>
+            <li><strong>Multi-AI + Offline:</strong> Gemini, Groq Whisper, OpenAI + Free On-Device Speech Recognition.</li>
+            <li><strong>Action Button &amp; Voice Edit:</strong> 1-press dictation, Voice Snippets, and AI Rewrite commands.</li>
           </ul>
         </article>
       </div>
@@ -338,35 +338,35 @@ def download(lang):
     <section class="container" id="mobile" style="padding-bottom:30px">
       <div class="section-head" style="margin-bottom:24px">
         <h2>কথালিপি মোবাইল (Android ও iOS)</h2>
-        <p>এআই ভয়েস ডিকটেশন, Wispr Flow স্টাইল ফ্লোটিং বাবল এবং সরাসরি বাংলা থেকে ইংরেজি লাইভ অনুবাদ।</p>
+        <p>এআই ভয়েস ডিকটেশন, Wispr Flow স্টাইল ফ্লোটিং বাবল, ভয়েস স্ন্যাপেট, ফ্রি অফলাইন মোড এবং বাংলা-টু-ইংলিশ লাইভ অনুবাদ।</p>
         <p class="muted" style="margin-top:8px;font-size:14px"><strong data-mobile-downloads>17+</strong> টি মোবাইল ডাউনলোড</p>
       </div>
       <div class="os-cards" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <article class="os-card" id="android">
-          <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
-          <p>Wispr Flow ফ্লোটিং বাবল + বাংলা ও ইংরেজির ভয়েস কিবোর্ড। Android 8 বা নতুন।</p>
+          <h3>Android <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
+          <p>Wispr Flow ফ্লোটিং বাবল + ভয়েস কিবোর্ড + ফ্রি অফলাইন মোড। Android 8 বা নতুন।</p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
-            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.apk">Android APK ডাউনলোড (v0.1.0)</a></li>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.apk">Android APK ডাউনলোড (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/android">সেটআপ গাইড</a></li>
           </ul>
           <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
-            <li><strong>ফ্লোটিং বাবল:</strong> কীবোর্ড না বদলেই WhatsApp, Facebook বা Notes-এর ওপর ডিকটেশন করুন।</li>
-            <li><strong>বাংলা ➔ ইংরেজি:</strong> মুখে বাংলায় বললেই সরাসরি প্রফেশনাল ইংরেজিতে টাইপ হবে।</li>
-            <li><strong>স্মার্ট পলিশ:</strong> তোতলানো ফিল্টার ও বিরামচিহ্ন ঠিক করে প্রফেশনাল টেক্সট দেয়।</li>
+            <li><strong>Multi-AI + অফলাইন:</strong> ফ্রি Gemini, Groq Whisper ও OpenAI অটো-ফলব্যাক + ১০০% ফ্রি অফলাইন মোড।</li>
+            <li><strong>ফ্লোটিং বাবল ও স্ন্যাপেট:</strong> WhatsApp/Gmail-এ সরাসরি টাইপ, ভয়েস স্ন্যাপেট ও AI Voice Edit।</li>
+            <li><strong>Hold-to-Talk ও Auto-Stop:</strong> চেপে ধরে বলা বা ২ সেকেন্ড চুপ থাকলে অটো স্টপ।</li>
           </ul>
         </article>
 
         <article class="os-card" id="ios">
-          <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.1.0</span></h3>
-          <p>SwiftUI ডিকটেশন হাব + iOS কীবোর্ড এক্সটেনশন। iOS 16.0 বা নতুন।</p>
+          <h3>iPhone / iOS <span class="tag" style="margin-left:8px;background:#8A2BE2;color:white">v0.2.0</span></h3>
+          <p>SwiftUI ডিকটেশন হাব + iOS ভয়েস কীবোর্ড + ফ্রি অফলাইন মোড। iOS 16.0 বা নতুন।</p>
           <ul style="display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:6px 0">
-            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.1.0/Kothalipi-v0.1.0.ipa">iOS IPA ডাউনলোড (v0.1.0)</a></li>
+            <li><a class="btn btn-primary btn-sm" style="display:inline-flex;width:auto;padding:10px 18px" href="https://github.com/Kothalipi/kothalipi-mobile/releases/download/v0.2.0/Kothalipi-v0.2.0.ipa">iOS IPA ডাউনলোড (v0.2.0)</a></li>
             <li><a class="btn btn-secondary btn-sm" style="display:inline-flex;width:auto;padding:10px 14px" href="/docs/ios">সেটআপ গাইড</a></li>
           </ul>
           <ul class="muted" style="margin-top:12px;font-size:14px;list-style:disc;padding-left:18px">
             <li><strong>iOS ভয়েস কীবোর্ড:</strong> আইফোনের যেকোনো ইনপুট ফিল্ডে সরাসরি ভয়েস টাইপিং।</li>
-            <li><strong>অ্যাকশন বাটন ও সিরি:</strong> এক ক্লিকেই ভয়েস টাইপিং চালু করুন।</li>
-            <li><strong>হ্যাপটিক ওয়েভস:</strong> রিয়েল-টাইম অডিও সাউন্ডওয়েভ ও ফ্লুয়েন্ট অনুবাদ।</li>
+            <li><strong>Multi-AI + অফলাইন:</strong> ফ্রি Gemini, Groq Whisper, OpenAI এবং On-Device অফলাইন মোড।</li>
+            <li><strong>অ্যাকশন বাটন ও Voice Edit:</strong> এক চাপে ডিক্টেশন, ভয়েস স্ন্যাপেট ও AI রিরাইট।</li>
           </ul>
         </article>
       </div>
