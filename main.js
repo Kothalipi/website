@@ -177,6 +177,52 @@
     })();
     return relP;
   };
+
+  /* ---------- live total download counter (Desktop + Mobile, excludes .sig/.json) ---------- */
+  const dlCounters = $$("[data-total-downloads]");
+  if (dlCounters.length) {
+    const renderCount = (n) => {
+      if (!n || n <= 0) return;
+      dlCounters.forEach((el) => (el.textContent = `${n.toLocaleString()}+`));
+    };
+    (async () => {
+      try {
+        const cached = JSON.parse(sessionStorage.getItem("kl-dl-total") || "null");
+        if (cached && Date.now() - cached.t < 600000 && cached.n > 0) {
+          renderCount(cached.n);
+          return;
+        }
+      } catch (_) {}
+      // 1. Show fast fallback from /latest.json first
+      getRelease().then((rel) => { if (rel.totalDownloads) renderCount(rel.totalDownloads); }).catch(() => {});
+      // 2. Fetch live count across all Desktop + Mobile releases from GitHub API
+      try {
+        const repos = ["Kothalipi/kothalipi-desktop", "Kothalipi/kothalipi-mobile"];
+        const lists = await Promise.all(
+          repos.map((rp) =>
+            fetch(`https://api.github.com/repos/${rp}/releases?per_page=100`)
+              .then((res) => (res.ok ? res.json() : []))
+              .catch(() => [])
+          )
+        );
+        let total = 0;
+        for (const rels of lists) {
+          if (!Array.isArray(rels)) continue;
+          for (const rel of rels) {
+            for (const a of rel.assets || []) {
+              if (a.name && !/\.(sig|json)$/i.test(a.name)) {
+                total += Number(a.download_count || 0);
+              }
+            }
+          }
+        }
+        if (total > 0) {
+          renderCount(total);
+          try { sessionStorage.setItem("kl-dl-total", JSON.stringify({ t: Date.now(), n: total })); } catch (_) {}
+        }
+      } catch (_) {}
+    })();
+  }
   const pick = async (rel, os) => {
     const find = (re) => rel.assets.find((a) => re.test(a.name));
     if (os === "mac") return find((await isArm()) ? /_aarch64\.dmg$/ : /_x64\.dmg$/);

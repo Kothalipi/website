@@ -1,0 +1,67 @@
+name: Sync Downloads & Updater
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update latest.json and updater.json from GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "User-Agent": "kothalipi-site-sync"})
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  return json.loads(r.read().decode("utf-8"))
+
+          desk_rels = fetch("https://api.github.com/repos/Kothalipi/kothalipi-desktop/releases?per_page=100")
+          mob_rels = fetch("https://api.github.com/repos/Kothalipi/kothalipi-mobile/releases?per_page=100")
+          is_app = lambda n: not n.endswith((".sig", ".json"))
+
+          total = sum(
+              a.get("download_count", 0)
+              for rels in (desk_rels, mob_rels)
+              for r in rels
+              for a in r.get("assets", [])
+              if is_app(a.get("name", ""))
+          )
+
+          latest = fetch("https://api.github.com/repos/Kothalipi/kothalipi-desktop/releases/latest")
+          rel_dl = sum(a.get("download_count", 0) for a in latest.get("assets", []) if is_app(a.get("name", "")))
+          latest["total_downloads"] = total
+          latest["release_downloads"] = rel_dl
+
+          with open("latest.json", "w", encoding="utf-8") as f:
+              json.dump(latest, f, indent=2)
+
+          for a in latest.get("assets", []):
+              if a.get("name") == "latest.json":
+                  upd = fetch(a["browser_download_url"])
+                  with open("updater.json", "w", encoding="utf-8") as f:
+                      json.dump(upd, f, indent=2)
+                  break
+
+          print(f"Synced {latest.get('tag_name')} — total_downloads={total}, release_downloads={rel_dl}")
+          PY
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet latest.json updater.json; then
+            git add latest.json updater.json
+            git commit -m "chore: sync live download count and updater.json"
+            git push
+          fi

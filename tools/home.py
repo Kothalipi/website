@@ -76,7 +76,7 @@ def home(lang):
         cta2="See how it works" if en else "কীভাবে কাজ করে দেখুন",
         trust=["MIT open source", "No account", "Works offline", "Gemini or ChatGPT optional"] if en else ["MIT ওপেন সোর্স", "অ্যাকাউন্ট লাগে না", "অফলাইনে চলে", "Gemini বা ChatGPT ঐচ্ছিক"],
     )
-    dl_trust = f"<li>{ICON['check']}<strong data-total-downloads>150+</strong> {'downloads' if en else 'ডাউনলোড'}</li>"
+    dl_trust = f"<li>{ICON['check']}<strong data-total-downloads>280+</strong> {'downloads' if en else 'ডাউনলোড'}</li>"
     trust = dl_trust + "".join(f"<li>{ICON['check']}{esc(x)}</li>" for x in t["trust"])
     hold = "Hold to speak" if en else "চেপে ধরে বলুন"
     note = "Preview only. In the app you hold a key and your real words appear." if en else "এটা শুধু প্রিভিউ। অ্যাপে কি চেপে ধরলে আপনার আসল কথা লেখা হয়।"
@@ -378,7 +378,7 @@ def download(lang):
       <div class="dl-main">
         <a class="btn btn-primary btn-lg" id="dl-button" data-dl data-labels='{labels}' data-soon="{esc(soon)}" href="{DESK}/releases/latest">{ICON["download"]}<span id="dl-label">{main_label}</span></a>
         <span class="dl-meta" id="dl-size">{loading}</span>
-        <p class="muted center" style="margin-top:14px;font-size:14px">{ICON['check']} <strong data-total-downloads>150+</strong> {'downloads across all platforms' if en else 'টি মোট ডাউনলোড'}</p>
+        <p class="muted center" style="margin-top:14px;font-size:14px">{ICON['check']} <strong data-total-downloads>280+</strong> {'downloads across all platforms' if en else 'টি মোট ডাউনলোড'}</p>
       </div>
     </section>
     <section class="container" style="padding-bottom:20px"><div class="os-cards">{cards}</div></section>
