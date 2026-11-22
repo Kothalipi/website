@@ -96,9 +96,9 @@ def page(path, title, desc, body, *, lang="en", current="", alt=None, og="/asset
     og_locale = "bn_BD" if lang == "bn" else "en_US"
     og_url = abs_url(og)
     keywords = (
-        "Bangla voice typing, Bengali speech to text, Bangla to English voice translation, offline voice typing, Bengali ASR, speech recognition Mac Windows Linux, Whisper Bangla, Qwen3-ASR Bangla, free dictation, AI voice typing"
+        "Bangla voice typing, Bengali speech to text, Banglish code switching, Bangla to English voice translation, Vibe Coding Bangla, bot-free Bangla meeting notes, voice snippets, App-Aware Tone, offline voice typing, Bengali ASR, speech recognition Mac Windows Linux, Whisper Bangla, Qwen3-ASR Bangla, free dictation, AI voice typing"
         if lang == "en"
-        else "বাংলা ভয়েস টাইপিং, বাংলা স্পিচ টু টেক্সট, বাংলা থেকে ইংরেজি ভয়েস অনুবাদ, অফলাইন ভয়েস টাইপিং, মুখে বলে বাংলা লেখা, ফ্রি ভয়েস টাইপিং সফটওয়্যার, উইন্ডোজে বাংলা ভয়েস টাইপিং, ম্যাকে বাংলা ভয়েস টাইপিং"
+        else "বাংলা ভয়েস টাইপিং, বাংলিশ ভয়েস টাইপিং, বাংলা স্পিচ টু টেক্সট, বাংলা থেকে ইংরেজি ভয়েস অনুবাদ, বাংলা মিটিং নোট, ভয়েস স্নিপেট, অফলাইন ভয়েস টাইপিং, মুখে বলে বাংলা লেখা, ফ্রি ভয়েস টাইপিং সফটওয়্যার, উইন্ডোজে বাংলা ভয়েস টাইপিং, ম্যাকে বাংলা ভয়েস টাইপিং"
     )
     switch_href = alt.get("bn" if lang == "en" else "en") or ("/bn/" if lang == "en" else "/")
     switch_label = "বাংলা" if lang == "en" else "English"
@@ -248,7 +248,7 @@ def app_schema(lang="en"):
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS 10.15+, Windows 10/11, Linux (Debian, Ubuntu, Fedora, Arch)",
         "softwareVersion": VERSION,
-        "description": "Free, open-source Bangla and English voice typing and translation. Hold a key, speak, and text appears in any app. Works offline, or with optional Google Gemini and OpenAI cloud.",
+        "description": "Free, open-source Bangla & Banglish voice typing, live Bangla-to-English translation, App-Aware Tone, Vibe Coding prompts, Voice Snippets, Personal Dictionary, and Bot-free Meeting Notes for Mac, Windows and Linux.",
         "inLanguage": ["bn", "en"],
         "url": SITE + "/",
         "downloadUrl": SITE + "/download",
@@ -267,13 +267,14 @@ def app_schema(lang="en"):
         "image": SITE + "/assets/og.png",
         "screenshot": [SITE + "/assets/screens/voices.webp", SITE + "/assets/screens/listen.webp", SITE + "/assets/screens/settings.webp"],
         "featureList": [
-            "Bangla and English dictation in any desktop app",
-            "Real-time Bangla to English voice translation with AI",
-            "One dedicated hotkey per language",
-            "100% offline mode with Bangla-trained speech models (Qwen3-ASR, Whisper)",
-            "Optional Google Gemini and OpenAI cloud models with automatic fallback",
-            "Device-aware model recommendations based on RAM and CPU",
-            "Instant typing without clipboard hijack or telemetry",
+            "Bangla and natural Banglish code-switching (keeps English words in English script)",
+            "Real-time Bangla to English voice translation with Google Gemini or offline Whisper",
+            "App-Aware Tone & Formatting (casual in WhatsApp/Slack, formal in Mail/Docs)",
+            "Context-Aware Vibe Coding Mode (speak Bangla/Banglish, paste clean English developer prompts in Cursor/VS Code)",
+            "Voice Snippets / Quick Triggers (expand spoken shortcuts like 'আমার ইমেইল' instantly)",
+            "Bangla-English Personal Dictionary for custom names, brands, and technical terms",
+            "Bot-free Bangla-English Meeting Notes with AI summary, key points, and action items",
+            "100% offline mode with Bangla-trained speech models (Qwen3-ASR, Whisper) and auto-download onboarding",
         ],
     }
 
