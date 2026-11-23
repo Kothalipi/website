@@ -167,7 +167,7 @@
       if (!r.ok) throw new Error(String(r.status));
       const j = await r.json();
       const slim = {
-        tag: j.tag_name || (j.version ? `v${j.version}` : "v0.1.7"),
+        tag: j.tag_name || (j.version ? `v${j.version}` : "v0.1.8"),
         totalDownloads: j.total_downloads,
         desktopDownloads: j.desktop_downloads,
         mobileDownloads: j.mobile_downloads,
