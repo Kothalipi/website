@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 77140865,
       "digest": "sha256:79e015652b70cbe0b7ce48b0118e7c2cddafc5d7b04cf65e8e2e4041dc611e77",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:56:28Z",
       "updated_at": "2026-11-22T19:56:32Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi-0.1.8-1.aarch64.rpm"
@@ -103,7 +103,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:ec74271acd1ca0c375abc70192e6fc33e8fba3cca2b1dff14faaa305e818a8a3",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:56:32Z",
       "updated_at": "2026-11-22T19:56:33Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi-0.1.8-1.aarch64.rpm.sig"
@@ -139,7 +139,7 @@
       "state": "uploaded",
       "size": 90807901,
       "digest": "sha256:45c4127e1c83c7bb00c84ace99756e5e487a0779ef6bd81228d33bad8f269db2",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:54:53Z",
       "updated_at": "2026-11-22T19:54:58Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi-0.1.8-1.x86_64.rpm"
@@ -175,7 +175,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:de72dff5d492acf2fcae978d9dd7b7722379bf1750566234cffe19a832d174f7",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:54:58Z",
       "updated_at": "2026-11-22T19:54:59Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi-0.1.8-1.x86_64.rpm.sig"
@@ -211,7 +211,7 @@
       "state": "uploaded",
       "size": 115579400,
       "digest": "sha256:c0b8f754373dd8c01672b7742c4a7f4df305f069eac00bc381b7300c33ea2858",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:56:33Z",
       "updated_at": "2026-11-22T19:56:38Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_aarch64.AppImage"
@@ -247,7 +247,7 @@
       "state": "uploaded",
       "size": 424,
       "digest": "sha256:fa89f7a1cf93b9c1b4a3e6694e53639979709640a70e56ab6de936b39402859b",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:56:38Z",
       "updated_at": "2026-11-22T19:56:39Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_aarch64.AppImage.sig"
@@ -283,7 +283,7 @@
       "state": "uploaded",
       "size": 14086060,
       "digest": "sha256:6f70ab489ac5a69803bdc276a68c65432ff5f797ee315fb3a3c2d8c67b86460d",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:51:42Z",
       "updated_at": "2026-11-22T19:51:43Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_aarch64.dmg"
@@ -319,7 +319,7 @@
       "state": "uploaded",
       "size": 127781368,
       "digest": "sha256:9422041ac2dc6fe09b7b583c60bf91057d806904effc3db65aa042fd4688e3fc",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:54:59Z",
       "updated_at": "2026-11-22T19:55:04Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_amd64.AppImage"
@@ -355,7 +355,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:db384a2e140a160e02dcb812c72e2566ecd82bc75f62a0ec18bf28b0126ca918",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:55:05Z",
       "updated_at": "2026-11-22T19:55:05Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_amd64.AppImage.sig"
@@ -391,7 +391,7 @@
       "state": "uploaded",
       "size": 33935886,
       "digest": "sha256:a44a0629639be874a9c1a7ca3e6926a1011efaa49415c3969e7ce68161ea12b8",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:49:59Z",
       "updated_at": "2026-11-22T19:50:00Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_amd64.deb"
@@ -427,7 +427,7 @@
       "state": "uploaded",
       "size": 416,
       "digest": "sha256:d3f878ece4d71bc0f7a50693bd64f08b2cf899dfe606e1cc9b085dbb4e67e829",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:50:01Z",
       "updated_at": "2026-11-22T19:50:01Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_amd64.deb.sig"
@@ -463,7 +463,7 @@
       "state": "uploaded",
       "size": 10315431,
       "digest": "sha256:90da985bbf3eb966cfd5e17e16e7daada248ae0b1327b5de7f982aa91d16c5d4",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:52:24Z",
       "updated_at": "2026-11-22T19:52:25Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64-setup.exe"
@@ -499,7 +499,7 @@
       "state": "uploaded",
       "size": 424,
       "digest": "sha256:76bb49c29e51683a9c8544d9c0e3d7b60e489cbd6ca12833b9a1c2a14e5ef8c5",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:52:25Z",
       "updated_at": "2026-11-22T19:52:26Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64-setup.exe.sig"
@@ -535,7 +535,7 @@
       "state": "uploaded",
       "size": 29481586,
       "digest": "sha256:2ab876924a602943c3476a46dbaf83e6ed209fb490290b861ef8cd10ffd2b15e",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:56:25Z",
       "updated_at": "2026-11-22T19:56:27Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64.deb"
@@ -571,7 +571,7 @@
       "state": "uploaded",
       "size": 416,
       "digest": "sha256:21a59f77dffa08be8fff36fdda140b34b861b6e728bbf67fdcd86e8b1b9d2b07",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:56:27Z",
       "updated_at": "2026-11-22T19:56:27Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64.deb.sig"
@@ -607,7 +607,7 @@
       "state": "uploaded",
       "size": 14999552,
       "digest": "sha256:bf6085b69354886ead10c613cc75fb5bb615e4cba8db3c9fa8c2d504bd065ef5",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:52:23Z",
       "updated_at": "2026-11-22T19:52:24Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64_en-US.msi"
@@ -643,7 +643,7 @@
       "state": "uploaded",
       "size": 424,
       "digest": "sha256:6eca6079f19fa069dfb9b811634d66925728c2b1165391655f86c001fd339b4a",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:52:24Z",
       "updated_at": "2026-11-22T19:52:24Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64_en-US.msi.sig"
@@ -679,7 +679,7 @@
       "state": "uploaded",
       "size": 16781763,
       "digest": "sha256:4e80f6acc8f372001cea582ab52ffbe561db743537a31e559b5ed3d7a274eb6b",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:50:47Z",
       "updated_at": "2026-11-22T19:50:48Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_x64-setup.exe"
@@ -715,7 +715,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:a2adb30fee7045d6cd41ca1dc8a79e32d64075c4de90e528c2b06f2bda71b254",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:50:49Z",
       "updated_at": "2026-11-22T19:50:49Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_x64-setup.exe.sig"
@@ -751,7 +751,7 @@
       "state": "uploaded",
       "size": 14414017,
       "digest": "sha256:96665f4eeb978d87b21f109c2de6ed9cdb55e6c271503727d32f5440e3fd3848",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:53:33Z",
       "updated_at": "2026-11-22T19:53:34Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_x64.dmg"
@@ -787,7 +787,7 @@
       "state": "uploaded",
       "size": 32350208,
       "digest": "sha256:87bb8113a3a8f549f54f046e9f87b2154902ff7dcfa464b72fe7b9c57092a5f9",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:50:45Z",
       "updated_at": "2026-11-22T19:50:46Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_x64_en-US.msi"
@@ -823,7 +823,7 @@
       "state": "uploaded",
       "size": 420,
       "digest": "sha256:3d47c5e0570935ae5b6097a99f3d2af4db60ba3b86fbdb301faf8cf5f82b6603",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:50:47Z",
       "updated_at": "2026-11-22T19:50:47Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_x64_en-US.msi.sig"
@@ -859,7 +859,7 @@
       "state": "uploaded",
       "size": 14500944,
       "digest": "sha256:63fd55a7c29c9c98ec057e5c4ae488bd212ee9bbec677fae88ae1982e89b2942",
-      "download_count": 0,
+      "download_count": 2,
       "created_at": "2026-11-22T19:51:44Z",
       "updated_at": "2026-11-22T19:51:45Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_aarch64.app.tar.gz"
@@ -895,7 +895,7 @@
       "state": "uploaded",
       "size": 408,
       "digest": "sha256:9a0b0db7411c497a1526ea23b9f66f90fc63f1c8ab65963940593bc74b07b8b6",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:51:46Z",
       "updated_at": "2026-11-22T19:51:46Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_aarch64.app.tar.gz.sig"
@@ -931,7 +931,7 @@
       "state": "uploaded",
       "size": 14681798,
       "digest": "sha256:a4a704d46f39d04642a7bff0368f621c1245a5293072c0c5d72cac5aff3d8c07",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:53:35Z",
       "updated_at": "2026-11-22T19:53:36Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_x64.app.tar.gz"
@@ -967,7 +967,7 @@
       "state": "uploaded",
       "size": 408,
       "digest": "sha256:da1edeb57648b2e5ff7e53987d175fe04f278304e894a20f5b9bbbb441d95023",
-      "download_count": 0,
+      "download_count": 1,
       "created_at": "2026-11-22T19:53:36Z",
       "updated_at": "2026-11-22T19:53:36Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_x64.app.tar.gz.sig"
@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 10746,
       "digest": "sha256:28f82dbd28b9d8c56652fde8fa9991b93faf480f5a6cbc9b27197e037f5a180a",
-      "download_count": 0,
+      "download_count": 3,
       "created_at": "2026-11-22T19:56:40Z",
       "updated_at": "2026-11-22T19:56:41Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/latest.json"
@@ -1012,8 +1012,10 @@
   "tarball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/tarball/v0.1.8",
   "zipball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/zipball/v0.1.8",
   "body": "## What's New in Kothalipi v0.1.8\n\n- **Engine Priority & Fallback Controls:** Choose Cloud API First (Gemini/OpenAI/Groq \u2192 Local fallback) or Local Model First (Offline \u2192 Cloud fallback), toggle Local Offline Model On/Off independently, toggle Automatic Backup Fallback On/Off, and see the live priority chain.\n- **Free Groq Whisper Provider:** Added Groq (`whisper-large-v3-turbo`) as a super-fast, free-tier cloud speech-to-text provider with a one-click Get Key link.\n\n**Full Changelog:** https://github.com/Kothalipi/kothalipi-desktop/compare/v0.1.7...v0.1.8",
-  "total_downloads": 289,
-  "desktop_downloads": 267,
+  "total_downloads": 304,
+  "desktop_downloads": 282,
   "mobile_downloads": 22,
-  "release_downloads": 0
+  "android_downloads": 11,
+  "ios_downloads": 11,
+  "release_downloads": 15
 }
