@@ -679,7 +679,7 @@
       "state": "uploaded",
       "size": 16781763,
       "digest": "sha256:4e80f6acc8f372001cea582ab52ffbe561db743537a31e559b5ed3d7a274eb6b",
-      "download_count": 2,
+      "download_count": 7,
       "created_at": "2026-11-22T19:50:47Z",
       "updated_at": "2026-11-22T19:50:48Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_x64-setup.exe"
@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 10746,
       "digest": "sha256:28f82dbd28b9d8c56652fde8fa9991b93faf480f5a6cbc9b27197e037f5a180a",
-      "download_count": 5,
+      "download_count": 6,
       "created_at": "2026-11-22T19:56:40Z",
       "updated_at": "2026-11-22T19:56:41Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/latest.json"
@@ -1012,10 +1012,10 @@
   "tarball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/tarball/v0.1.8",
   "zipball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/zipball/v0.1.8",
   "body": "## What's New in Kothalipi v0.1.8\n\n- **Engine Priority & Fallback Controls:** Choose Cloud API First (Gemini/OpenAI/Groq \u2192 Local fallback) or Local Model First (Offline \u2192 Cloud fallback), toggle Local Offline Model On/Off independently, toggle Automatic Backup Fallback On/Off, and see the live priority chain.\n- **Free Groq Whisper Provider:** Added Groq (`whisper-large-v3-turbo`) as a super-fast, free-tier cloud speech-to-text provider with a one-click Get Key link.\n\n**Full Changelog:** https://github.com/Kothalipi/kothalipi-desktop/compare/v0.1.7...v0.1.8",
-  "total_downloads": 307,
-  "desktop_downloads": 284,
-  "mobile_downloads": 23,
-  "android_downloads": 12,
+  "total_downloads": 314,
+  "desktop_downloads": 289,
+  "mobile_downloads": 25,
+  "android_downloads": 14,
   "ios_downloads": 11,
-  "release_downloads": 17
+  "release_downloads": 22
 }
