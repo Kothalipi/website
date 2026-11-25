@@ -283,7 +283,7 @@
       "state": "uploaded",
       "size": 14086060,
       "digest": "sha256:6f70ab489ac5a69803bdc276a68c65432ff5f797ee315fb3a3c2d8c67b86460d",
-      "download_count": 2,
+      "download_count": 3,
       "created_at": "2026-11-22T19:51:42Z",
       "updated_at": "2026-11-22T19:51:43Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_aarch64.dmg"
@@ -319,7 +319,7 @@
       "state": "uploaded",
       "size": 127781368,
       "digest": "sha256:9422041ac2dc6fe09b7b583c60bf91057d806904effc3db65aa042fd4688e3fc",
-      "download_count": 1,
+      "download_count": 2,
       "created_at": "2026-11-22T19:54:59Z",
       "updated_at": "2026-11-22T19:55:04Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_amd64.AppImage"
@@ -391,7 +391,7 @@
       "state": "uploaded",
       "size": 33935886,
       "digest": "sha256:a44a0629639be874a9c1a7ca3e6926a1011efaa49415c3969e7ce68161ea12b8",
-      "download_count": 1,
+      "download_count": 2,
       "created_at": "2026-11-22T19:49:59Z",
       "updated_at": "2026-11-22T19:50:00Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_amd64.deb"
@@ -463,7 +463,7 @@
       "state": "uploaded",
       "size": 10315431,
       "digest": "sha256:90da985bbf3eb966cfd5e17e16e7daada248ae0b1327b5de7f982aa91d16c5d4",
-      "download_count": 1,
+      "download_count": 2,
       "created_at": "2026-11-22T19:52:24Z",
       "updated_at": "2026-11-22T19:52:25Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/Kothalipi_0.1.8_arm64-setup.exe"
@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 10746,
       "digest": "sha256:28f82dbd28b9d8c56652fde8fa9991b93faf480f5a6cbc9b27197e037f5a180a",
-      "download_count": 10,
+      "download_count": 11,
       "created_at": "2026-11-22T19:56:40Z",
       "updated_at": "2026-11-22T19:56:41Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/latest.json"
@@ -1012,10 +1012,10 @@
   "tarball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/tarball/v0.1.8",
   "zipball_url": "https://api.github.com/repos/Kothalipi/kothalipi-desktop/zipball/v0.1.8",
   "body": "## What's New in Kothalipi v0.1.8\n\n- **Engine Priority & Fallback Controls:** Choose Cloud API First (Gemini/OpenAI/Groq \u2192 Local fallback) or Local Model First (Offline \u2192 Cloud fallback), toggle Local Offline Model On/Off independently, toggle Automatic Backup Fallback On/Off, and see the live priority chain.\n- **Free Groq Whisper Provider:** Added Groq (`whisper-large-v3-turbo`) as a super-fast, free-tier cloud speech-to-text provider with a one-click Get Key link.\n\n**Full Changelog:** https://github.com/Kothalipi/kothalipi-desktop/compare/v0.1.7...v0.1.8",
-  "total_downloads": 322,
-  "desktop_downloads": 296,
+  "total_downloads": 326,
+  "desktop_downloads": 300,
   "mobile_downloads": 26,
   "android_downloads": 15,
   "ios_downloads": 11,
-  "release_downloads": 29
+  "release_downloads": 33
 }
