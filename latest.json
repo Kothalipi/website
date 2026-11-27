@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 10746,
       "digest": "sha256:28f82dbd28b9d8c56652fde8fa9991b93faf480f5a6cbc9b27197e037f5a180a",
-      "download_count": 14,
+      "download_count": 15,
       "created_at": "2026-11-22T19:56:40Z",
       "updated_at": "2026-11-22T19:56:41Z",
       "browser_download_url": "https://github.com/Kothalipi/kothalipi-desktop/releases/download/v0.1.8/latest.json"
